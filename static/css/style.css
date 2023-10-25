@@ -1,0 +1,15 @@
+/* Nav Bar*/
+
+.navbar-brand {
+    text-align: center;
+    margin-left: 50px;
+}
+
+li.nav-item {
+    padding-left: 50px;
+}
+
+.nav-book-tee {
+    border: solid 1px;
+    border-radius: 10px;
+}
