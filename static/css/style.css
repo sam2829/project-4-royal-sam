@@ -100,3 +100,18 @@ h5 {
     margin-right: 20px;
     margin-left: 20px;
 }
+
+/* main signup section */
+
+.main-signup {
+    justify-content: center;
+    padding-top: 50px;
+    background-color: rgba(248, 249, 250, 0.8);
+    height: auto;
+    width: 60vh;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
