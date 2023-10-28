@@ -53,6 +53,14 @@ h5 {
     font-size: 20px;
 }
 
+.social-network-items:hover {
+    font-size: 200%;
+    transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -webkit-transition: all 0.3=50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}
+
 /* main section home page */
 
 .home-main-section {
