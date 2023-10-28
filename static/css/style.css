@@ -33,6 +33,8 @@ li.nav-item:hover {
     border-color: #0d6efd;
 }
 
+
+
 /*  Footer  */
 
 .footer {
@@ -64,7 +66,15 @@ h5 {
     border: solid 4px;
     border-radius: 10px;
     border-color: white;
-    background-color: #0d6efd;
-    opacity: 0.8;
+    background-color: rgba(13, 110, 253, 0.6);
     margin-top: 80px;
+}
+
+.book-tee-main:hover {
+    font-size: 300%;
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    background-color: rgba(13, 110, 253, 1);
 }
