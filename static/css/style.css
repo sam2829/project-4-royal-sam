@@ -86,3 +86,17 @@ h5 {
     -o-transition: all 1s ease-in-out;
     background-color: rgba(13, 110, 253, 1);
 }
+
+/* main login section */
+
+.main-login {
+    justify-content: center;
+    padding-top: 50px;
+    background-color: rgba(248, 249, 250, 0.8);
+    height: 60vh;
+    width: 70vh;
+    margin-top: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
