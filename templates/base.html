@@ -71,11 +71,14 @@
     </header>
 
     <main
-      class="bg-image d-flex justify-content-center align-items-center"
+      class="bg-image d-flex justify-content-center"
       style="
-        background-image: url('{% static 'background_images/golf.jpg' %}');
+        background-image: url('{% static 'background_images/golf-3.jpg' %}');
         height: 100vh;
-        opacity: 0.6;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
       "
     >
       {% block content %}
