@@ -1,7 +1,57 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
 <!-- Main section of reviews page to show reviews -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
 
+        <!-- Review entries -->
+        <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+            <div class="row justify-content-sm-center review-card">
+                {% for post in post_list %}
+                <div class="col-12 mt-3">
+                    <div class="card mb-3" style="max-width: 540px; max-height: 250px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img src="{% static 'review_default_logo/review-default.png' %}" class="img-fluid rounded-start" alt="...">
+                                {% else %}
+                                <img src="{{ post.featured_image }}" class="img-fluid rounded-start" alt="...">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author text-primary fs-6">Author: {{ post.author }}</p>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">{{ post.title }}</h5>
+                                    <p class="card-text">{{ post.excerpt }}</p>
+                                    <hr/>
+                                    <p class="card-text"><small class="text-primary">{{ post.created_on}} <i class="far fa-heart"></i>
+                                    {{ post.number_of_likes }}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+    
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
 {% endblock %}
