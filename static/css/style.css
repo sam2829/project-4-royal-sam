@@ -142,3 +142,23 @@ h5 {
 .page-link {
     border-radius: 10px;
 }
+
+.leave-review-link {
+    padding: 6px;
+    border: solid 4px;
+    border-radius: 10px;
+    border-color: white;
+    background-color: rgba(13, 110, 253, 0.6);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.leave-review-link:hover {
+    font-size: 300%;
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    background-color: rgba(13, 110, 253, 1);
+}

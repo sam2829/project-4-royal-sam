@@ -11,7 +11,7 @@
         <div class="col-12 col-sm-8 col-md-6 col-xl-4">
             <div class="row justify-content-sm-center review-card">
                 {% for post in post_list %}
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-5">
                     <div class="card mb-3" style="max-width: 540px; max-height: 250px;">
                         <div class="row g-0">
                             <div class="col-4">
@@ -40,6 +40,13 @@
             </div>
         </div>
     </div>
+    {% if user.is_authenticated %}
+    <div class="row justify-content-sm-center">
+        <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+            <a href="#" class="nav-link fs-6 fw-bold leave-review-link text-white">Leave A Review</a>
+        </div>
+    </div>
+    {% endif %}
     {% if is_paginated %}
     <nav aria-label="Page navigation" class="mb-3">
         <ul class="pagination justify-content-center">
