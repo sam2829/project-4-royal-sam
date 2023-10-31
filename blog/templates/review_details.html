@@ -10,7 +10,7 @@
         <div class="col-12">
             <div class="row justify-content-sm-center full-review-card">
                 <div class="col-12 mt-5">
-                    <div class="card mb-3" style="">
+                    <div class="card mb-3 pb-3">
                         <div class="row g-0">
                             <div class="col-4">
                                 <!-- review image -->
@@ -55,6 +55,19 @@
                         <div class="row">
                             <div class="col-12">
                                 <h3 class="ms-5 text-primary">Comments:</h3>
+                                <!-- for loop to iterate through the comments made -->
+                                {% for comment in comments %}
+                                <div class="ms-5 me-5">
+                                    <p class="comment-author">
+                                        {{ comment.name }},
+                                        <span class="comment-date">{{ comment.created_on }}</span>
+                                    </p>
+                                    <div class="comments">
+                                        <i>{{ comment.body | linebreaks }}</i>
+                                    </div>
+                                    <hr/>
+                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -66,7 +79,7 @@
     {% if user.is_authenticated %}
     <div class="row justify-content-sm-center">
         <div class="col-12 col-sm-8 col-md-6 col-xl-4">
-            <a href="#" class="nav-link fs-6 fw-bold leave-review-link text-white">Leave A Comment</a>
+            <a href="#" class="nav-link fs-6 fw-bold leave-comment-link text-white">Leave A Comment</a>
         </div>
     </div>
     {% endif %}

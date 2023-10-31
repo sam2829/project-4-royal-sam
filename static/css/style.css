@@ -173,3 +173,36 @@ h5 {
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+
+.comment-date {
+    padding-left: 2rem;
+}
+
+.comments {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.comment-author {
+    font-weight: 700;
+}
+
+.leave-comment-link {
+    padding: 6px;
+    border: solid 4px;
+    border-radius: 10px;
+    border-color: white;
+    background-color: rgba(13, 110, 253, 0.6);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.leave-comment-link:hover {
+    font-size: 300%;
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    background-color: rgba(13, 110, 253, 1);
+}
