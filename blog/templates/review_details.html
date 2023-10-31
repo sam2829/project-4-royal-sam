@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Main section of reviews page to show reviews -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+
+        <!-- Review card -->
+        <div class="col-12">
+            <div class="row justify-content-sm-center full-review-card">
+                <div class="col-12 mt-5">
+                    <div class="card mb-3" style="">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <!-- review image -->
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img src="{% static 'review_default_logo/review-default.png' %}"
+                                    class="img-fluid rounded-start" alt="...">
+                                {% else %}
+                                <img src="{{ post.featured_image }}" class="img-fluid rounded-start" alt="...">
+                                {% endif %}
+                            </div>
+                            <!-- review content -->
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <a href="{% url 'review_details' post.slug %}" class="">
+                                        <h1 class="card-title text-primary">{{ post.title }}</h1>
+                                        <p class="author text-primary fs-6">Author: {{ post.author }}, {{ post.created_on}} </p>
+                                    </a>
+                                    <hr />
+                                    <div class="review-content">
+                                        <p class="card-text"><i class="text-secondar font-weight-bold">{{ post.content | safe }}</i></p>
+                                    </div>
+                                    <hr/>
+                                    <!-- number of likes and comments -->
+                                    <div class="row">
+                                        <strong class="text-primary">
+                                            <div class="col-2">
+                                                <i class="far fa-heart"></i> {{ post.number_of_likes }}
+                                            </div>
+                                            <div class="col-2">
+                                                {% with comments.count as total_comments %}
+                                                <i class="far fa-comments"></i>
+                                                {{ total_comments }}
+                                                {% endwith %}
+                                            </div>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <!-- comments section -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="ms-5 text-primary">Comments:</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Leave review link which is only visible when user logged in -->
+    {% if user.is_authenticated %}
+    <div class="row justify-content-sm-center">
+        <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+            <a href="#" class="nav-link fs-6 fw-bold leave-review-link text-white">Leave A Comment</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+
+
+{% endblock %}

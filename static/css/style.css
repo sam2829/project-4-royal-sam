@@ -162,3 +162,14 @@ h5 {
     -o-transition: all 1s ease-in-out;
     background-color: rgba(13, 110, 253, 1);
 }
+
+/* full review page section */
+
+.full-review-card {
+    text-align: left;
+}
+
+.review-content {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
