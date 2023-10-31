@@ -40,12 +40,14 @@
             </div>
         </div>
     </div>
+    <!-- Leave review link which is only visible when user logged in -->
     {% if user.is_authenticated %}
     <div class="row justify-content-sm-center">
         <div class="col-12 col-sm-8 col-md-6 col-xl-4">
             <a href="#" class="nav-link fs-6 fw-bold leave-review-link text-white">Leave A Review</a>
         </div>
     </div>
+    <!-- This is code used for page pagination -->
     {% endif %}
     {% if is_paginated %}
     <nav aria-label="Page navigation" class="mb-3">
