@@ -7,12 +7,12 @@
     <div class="row justify-content-center">
 
         <!-- Review card -->
-        <div class="col-12">
+        <div class="col-12 mt-5">
             <div class="row justify-content-sm-center full-review-card">
-                <div class="col-12 mt-5">
+                <div class="col-12">
                     <div class="card mb-3 pb-3">
                         <div class="row g-0">
-                            <div class="col-4">
+                            <div class="col-4 justify-content-center">
                                 <!-- review image -->
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img src="{% static 'review_default_logo/review-default.png' %}"
@@ -26,7 +26,8 @@
                                 <div class="card-body">
                                     <a href="{% url 'review_details' post.slug %}" class="">
                                         <h1 class="card-title text-primary">{{ post.title }}</h1>
-                                        <p class="author text-primary fs-6">Author: {{ post.author }}, {{ post.created_on}} </p>
+                                        <p class="author text-primary">Author: {{ post.author }}, 
+                                        <span class="review-creator-info"></span>{{ post.created_on}}</p>
                                     </a>
                                     <hr />
                                     <div class="review-content">
@@ -50,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <hr/>
+                        <hr />
                         <!-- comments section -->
                         <div class="row">
                             <div class="col-12">
