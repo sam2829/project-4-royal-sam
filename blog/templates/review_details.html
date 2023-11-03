@@ -35,12 +35,31 @@
                                 </p>
                             </div>
                             <hr/>
-                            <!-- Number of likes and comments -->
                             <div class="row">
                                 <div class="col-1">
-                                    <strong class="text-primary">
-                                        <i class="far fa-heart"></i>{{ post.number_of_likes }}
+                                    <!-- user can like a post if logged in -->
+                                    <strong>
+                                        {% if user.is_authenticated %}
+                                        <form action="{% url 'review_like' post.slug %}" method="POST">
+                                            {% csrf_token %}
+                                            {% if liked %}
+                                            <button class="btn-like text-primary" type="submit" name="blogpost_id" value="{{ post.slug }}">
+                                                <i class="fas fa-heart"></i>
+                                            </button>
+                                            {% else %}
+                                            <button class="btn-like text-primary" type="submit" name="blogpost_id" value="{{ post.slug }}">
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                            {% endif %}
+                                        </form>
+                                        {% else %}
+                                        <!-- Number of likes -->
+                                        <strong class="text-primary"><i class="far fa-heart"></i>
+                                            {{ post.number_of_likes }}
+                                        </strong>
+                                        {% endif %}
                                     </strong>
+                                    <!-- Number of comments -->
                                 </div>
                                 <div class="col-1">
                                     <strong class="text-primary">
@@ -83,7 +102,7 @@
                         {% if user.is_authenticated %}
                         <h3 class="text-primary">Leave a comment</h3>
                         <p>Posting as: {{ user.username }}</p>
-                        <form method="post" style="marging-top: 1.3rem;">
+                        <form method="POST" style="marging-top: 1.3rem;">
                             {{ comment_form | crispy }}
                             {% csrf_token %}
                             <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">Leave Comment</button>
