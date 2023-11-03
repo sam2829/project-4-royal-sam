@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
+from .forms import CommentForm
 
 # This class is to create a view to display posts on the reviews page
 
@@ -30,6 +31,7 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm(),
             },
         )

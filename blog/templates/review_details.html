@@ -1,89 +1,93 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 <!-- Main section of reviews page to show reviews -->
 <div class="container-fluid">
-    <div class="row justify-content-center">
-
-        <!-- Review card -->
-        <div class="col-12 mt-5">
-            <div class="row justify-content-sm-center full-review-card">
-                <div class="col-12">
-                    <div class="card mb-3 pb-3">
-                        <div class="row g-0">
-                            <div class="col-4 justify-content-center">
-                                <!-- review image -->
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img src="{% static 'review_default_logo/review-default.png' %}"
-                                    class="img-fluid rounded-start" alt="...">
-                                {% else %}
-                                <img src="{{ post.featured_image }}" class="img-fluid rounded-start" alt="...">
-                                {% endif %}
+    <!-- Review Card --> 
+    <div class="row justify-content-sm-center full-review-card">
+        <div class="col-12 col-lg-10 mt-5">
+            <div class="card mb-3 pb3">
+                <div class="row g-0">
+                    <div class="col-4">
+                        <!-- Review Image -->
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img src="{% static 'review_default_logo/review-default.png' %}" 
+                        class="img-fluid rounded-start" alt="...">
+                        {% else %}
+                        <img src="{{ post.featured_image }}" class="img-fluid rounded-start" alt="">
+                        {% endif %}
+                    </div>
+                    <!--  Review Content -->
+                    <div class="col-8">
+                        <div class="card-body me-5">
+                            <a href="{% url 'review_details' post.slug %}">
+                                <h1 class="card-title text-primary">{{ post.title }}</h1>
+                                <p class="author text-primary">Author: {{ post.author }},
+                                    <span class="review-creator-info">{{ post.created_on }}</span>
+                                </p>
+                            </a>
+                            <hr/>
+                            <div class="review-content">
+                                <p class="card-text"><i class="font-weight-bold">
+                                {{ post.content | safe }}</i>
+                                </p>
                             </div>
-                            <!-- review content -->
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <a href="{% url 'review_details' post.slug %}" class="">
-                                        <h1 class="card-title text-primary">{{ post.title }}</h1>
-                                        <p class="author text-primary">Author: {{ post.author }}, 
-                                        <span class="review-creator-info"></span>{{ post.created_on}}</p>
-                                    </a>
-                                    <hr />
-                                    <div class="review-content">
-                                        <p class="card-text"><i class="text-secondar font-weight-bold">{{ post.content | safe }}</i></p>
-                                    </div>
-                                    <hr/>
-                                    <!-- number of likes and comments -->
-                                    <div class="row">
-                                        <strong class="text-primary">
-                                            <div class="col-2">
-                                                <i class="far fa-heart"></i> {{ post.number_of_likes }}
-                                            </div>
-                                            <div class="col-2">
-                                                {% with comments.count as total_comments %}
-                                                <i class="far fa-comments"></i>
-                                                {{ total_comments }}
-                                                {% endwith %}
-                                            </div>
-                                        </strong>
-                                    </div>
+                            <hr/>
+                            <!-- Number of likes and comments -->
+                            <div class="row">
+                                <div class="col-1">
+                                    <strong class="text-primary">
+                                        <i class="far fa-heart"></i>{{ post.number_of_likes }}
+                                    </strong>
                                 </div>
-                            </div>
-                        </div>
-                        <hr />
-                        <!-- comments section -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h3 class="ms-5 text-primary">Comments:</h3>
-                                <!-- for loop to iterate through the comments made -->
-                                {% for comment in comments %}
-                                <div class="ms-5 me-5">
-                                    <p class="comment-author">
-                                        {{ comment.name }},
-                                        <span class="comment-date">{{ comment.created_on }}</span>
-                                    </p>
-                                    <div class="comments">
-                                        <i>{{ comment.body | linebreaks }}</i>
-                                    </div>
-                                    <hr/>
+                                <div class="col-1">
+                                    <strong class="text-primary">
+                                        {% with comments.count as total_comments %}
+                                        <i class="far fa-comments"></i>
+                                        {{ total_comments }}
+                                        {% endwith %}
+                                    </strong>
                                 </div>
-                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Comments section -->
+                <div class="row mt-5">
+                    <div class="col-md-8 mb-3">
+                        <h3 class="ms-5 text-primary">Comments:</h3>
+                        <!-- for loop to iterate through the comments made -->
+                        {% for comment in comments %}
+                        <div class="ms-5 me-5">
+                            <p class="comment-author">
+                                {{ comment.name }},
+                                <span class="comment-date">{{ comment.created_on }}</span>
+                            </p>
+                            <div class="comments">
+                                <i>{{ comment.body | linebreaks }}</i>
+                            </div>
+                            <hr/>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Display comment form if user is signed in -->
+                    {% if user.is_authenticated %}
+                    <div class="col-md-4 ps-5 pe-5">
+                        <h3 class="text-primary">Leave a comment</h3>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form method="post" style="marging-top: 1.3rem;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">Leave Comment</button>
+                        </form>
+                    </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
-    <!-- Leave review link which is only visible when user logged in -->
-    {% if user.is_authenticated %}
-    <div class="row justify-content-sm-center">
-        <div class="col-12 col-sm-8 col-md-6 col-xl-4">
-            <a href="#" class="nav-link fs-6 fw-bold leave-comment-link text-white">Leave A Comment</a>
-        </div>
-    </div>
-    {% endif %}
 </div>
 
 
