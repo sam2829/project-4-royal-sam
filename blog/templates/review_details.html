@@ -72,9 +72,15 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <!-- Display comment form if user is signed in -->
-                    {% if user.is_authenticated %}
                     <div class="col-md-4 ps-5 pe-5">
+                        <!-- Let user know that there comment is awaiting approval -->
+                        {% if commented %}
+                        <div class="alert alert-success" role="alert">
+                            Your comment is awaiting approval
+                        </div>
+                        {% else %}
+                        <!-- Display comment form if user is signed in -->
+                        {% if user.is_authenticated %}
                         <h3 class="text-primary">Leave a comment</h3>
                         <p>Posting as: {{ user.username }}</p>
                         <form method="post" style="marging-top: 1.3rem;">
@@ -83,6 +89,7 @@
                             <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">Leave Comment</button>
                         </form>
                     </div>
+                    {% endif %}
                     {% endif %}
                 </div>
             </div>
