@@ -98,3 +98,26 @@ class LeaveReview(View):
         {
             "review_form": ReviewForm(),
         })
+
+
+    def post(self, request):
+
+        review_form = ReviewForm(data=request.POST)
+
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.email = request.user.email
+            review.name = request.user.username
+            review.author = request.user
+            review.slug = review_form.cleaned_data['title'].replace(' ', '-')
+            review.save()
+        else:
+            review_form = ReviewForm()
+
+        return render(
+            request,
+            "leave_review.html",
+            {
+                "review_form": ReviewForm(),
+            },
+        )
