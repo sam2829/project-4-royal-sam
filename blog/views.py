@@ -14,6 +14,7 @@ class PostList(generic.ListView):
     paginate_by = 4
 
 
+
 # This class is to create a view so the user can see the entire post / review when clicked
 
 class PostDetail(View):
@@ -84,3 +85,13 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('review_details', args=[slug]))
+
+
+# This class is to view for the user to post a review
+
+
+class LeaveReview(View):
+
+    def get(self, request):
+        
+        return render(request, 'leave_review.html',)

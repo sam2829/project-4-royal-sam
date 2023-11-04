@@ -2,7 +2,7 @@ from .models import Comment
 from django import forms
 
 # This class is for the comments form to leave a comment
-# and which fields i want to be shown
+# and which fields I want to be shown
 
 class CommentForm(forms.ModelForm):
     class Meta:
