@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, ReviewForm
 
 # This class is to create a view to display posts on the reviews page
 
@@ -94,4 +94,7 @@ class LeaveReview(View):
 
     def get(self, request):
         
-        return render(request, 'leave_review.html',)
+        return render(request, 'leave_review.html',
+        {
+            "review_form": ReviewForm(),
+        })
