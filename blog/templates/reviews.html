@@ -19,7 +19,7 @@
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img src="{% static 'background_images/golf-2.jpg' %}" class="img-fluid rounded-start" alt="...">
                                 {% else %}
-                                <img src="{{ post.featured_image }}" class="img-fluid rounded-start" alt="...">
+                                <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start  image-container" alt="...">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author text-primary fs-6">Author: {{ post.author }}</p>
