@@ -7,7 +7,7 @@ from django import forms
 
 class BookingForm(forms.ModelForm):
     class Meta:
-        model = Comment
+        model = Booking
         fields = ('email', 'date', 'time', 'number_of_players', 'member',
                  'buggy',)
 
