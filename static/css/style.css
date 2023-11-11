@@ -231,3 +231,27 @@ h5 {
     margin-top: 60px;
     margin-bottom: 60px;
 }
+
+/* booking a tee section */
+
+.booking-form {
+    justify-content: center;
+    padding-top: 50px;
+    background-color: rgba(248, 249, 250, 0.8);
+    height: auto;
+    max-width: 60vh;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.login-to-book {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.login-to-book-links {
+    text-align: center;
+}
