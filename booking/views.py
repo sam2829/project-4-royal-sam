@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import *
 from .forms import BookingFormDate, BookingFormTime
+from django.utils import timezone
 
 # This class is so the user can view the book a tee form
 
@@ -58,10 +59,24 @@ class BookATime(View):
             existing_times = Booking.objects.filter(
                 date=selected_date).values_list('time', flat=True)
             
+            # Filter out times that are in the past
+            current_time = timezone.now().time()
             available_times = [
-                time[0] for time in AVAILABLE_TIMES if time[0] not in existing_times]
+                time[0] for time in AVAILABLE_TIMES
+                if time[0] not in existing_times and (
+                    selected_date != timezone.now().date() or
+                    datetime.combine(selected_date, datetime.strptime(time[0], '%H:%M').time(
+                    )) > datetime.combine(timezone.now().date(), current_time)
+                )
+            ]
         else:
-            available_times = [time[0] for time in AVAILABLE_TIMES]
+            available_times = [
+                time[0] for time in AVAILABLE_TIMES if (
+                    selected_date != timezone.now().date() or
+                    datetime.combine(selected_date, time[0]) > datetime.combine(
+                        timezone.now().date(), current_time)
+                )
+            ]
 
         return render(
             request,
