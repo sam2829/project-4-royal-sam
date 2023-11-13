@@ -25,8 +25,7 @@ class BookATee(View):
     def post(self, request, *args, **kwargs):
 
         booking_form_date = BookingFormDate(data=request.POST)
-        print(request.POST)
-
+        
         if booking_form_date.is_valid():
             booking_date = booking_form_date.save(commit=False)
             booking_date.user = request.user
@@ -43,7 +42,8 @@ class BookATee(View):
                     "booking_form_date": BookingFormDate(),
                 },
             )
-    # this is so the user can view the booking time form
+
+# this is so the user can view the booking time form
 
 class BookATime(View):
 
@@ -57,7 +57,7 @@ class BookATime(View):
                 selected_date_str, '%Y-%m-%d').date()
             existing_times = Booking.objects.filter(
                 date=selected_date).values_list('time', flat=True)
-            # Replace YourModel and TIME_CHOICES with your actual model and choices
+            
             available_times = [
                 time[0] for time in AVAILABLE_TIMES if time[0] not in existing_times]
         else:
@@ -70,3 +70,44 @@ class BookATime(View):
                 "booking_form_time": BookingFormTime(available_times=available_times),
             },
         )
+
+    # User has selected time and posts form
+
+    def post(self, request, *args, **kwargs):
+
+        selected_date_str = request.session.get('date')
+
+        if selected_date_str:
+            selected_date = datetime.strptime(selected_date_str, '%Y-%m-%d').date()
+            existing_times = Booking.objects.filter(
+                date=selected_date).values_list('time', flat=True)
+            available_times = [time[0]
+                            for time in AVAILABLE_TIMES if time[0] not in existing_times]
+        else:
+            available_times = [time[0] for time in AVAILABLE_TIMES]
+
+        booking_form_time = BookingFormTime(
+            data=request.POST, available_times=available_times)
+
+
+        if booking_form_time.is_valid():
+            booking_time = booking_form_time.save(commit=False)
+            booking_time.user = request.user
+
+            if selected_date_str:
+                booking_time.date = selected_date
+
+            booking_time.save()
+
+            return redirect('book_a_tee')
+        else:
+        
+            return render(
+                request,
+                "book_a_time.html",
+                {
+                    "booking_form_time": BookingFormTime(available_times=available_times),
+                },
+            )
+
+        
