@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
@@ -115,13 +115,14 @@ class LeaveReview(View):
             review.save()
             messages.success(request, 'You have succesffully left a review and '
                             'is awaiting approval.')
+            return redirect('reviews')
         else:
-            review_form = ReviewForm()
+            
 
-        return render(
-            request,
-            "leave_review.html",
-            {
-                "review_form": ReviewForm(),
-            },
-        )
+            return render(
+                request,
+                "leave_review.html",
+                {
+                    "review_form": ReviewForm(),
+                },
+            )
