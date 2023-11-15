@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import *
 from .forms import BookingFormDate, BookingFormTime
 from django.utils import timezone
+from django.contrib import messages
 
 # This class is so the user can view the book a tee form
 
@@ -77,7 +78,7 @@ class BookATime(View):
                         timezone.now().date(), current_time)
                 )
             ]
-
+        messages.info(request, f'You have selected the date: {selected_date}')
         return render(
             request,
             "book_a_time.html",
