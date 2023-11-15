@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, ReviewForm
+from django.contrib import messages
 
 # This class is to create a view to display posts on the reviews page
 
@@ -57,6 +58,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(request, 'You have succesfully left a comment.')    
         else:
             comment_form = CommentForm()
 
@@ -111,6 +113,8 @@ class LeaveReview(View):
             review.author = request.user
             review.slug = review_form.cleaned_data['title'].replace(' ', '-')
             review.save()
+            messages.success(request, 'You have succesffully left a review and '
+                            'is awaiting approval.')
         else:
             review_form = ReviewForm()
 
