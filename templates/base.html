@@ -42,14 +42,28 @@
                   >Home</a
                 >
               </li>
+              <!-- I User is logged in -->
               {% if user.is_authenticated %}
-              <li class="nav-item">
+              <li class="nav-item dropdown">
                 <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="{% url 'account_logout' %}"
-                  >Logout</a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
+                  My Account
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">My Bookings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'account_logout' %}"
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
               </li>
               {% else %}
               <li class="nav-item dropdown">
@@ -83,7 +97,9 @@
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-book-tee" href="{% url 'book_a_tee' %}">Book A Tee</a>
+                <a class="nav-link nav-book-tee" href="{% url 'book_a_tee' %}"
+                  >Book A Tee</a
+                >
               </li>
             </ul>
           </div>
@@ -92,16 +108,25 @@
     </header>
     <!-- User messages display -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                    {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                {% endfor %}
-            </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div
+            class="alert {{ message.tags }} alert-dismissible fade show"
+            id="msg"
+            role="alert"
+          >
+            {{ message | safe }}
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
 
     <main
@@ -173,11 +198,11 @@
     ></script>
     <!-- script to timeout user messages -->
     <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 4000);
+      setTimeout(function () {
+        let messages = document.getElementById("msg");
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+      }, 4000);
     </script>
   </body>
 </html>
