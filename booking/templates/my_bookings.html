@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Main section of my_bookings page to show user bookings -->
+<div class="container-fluid">
+  <div class="row justify-content-sm-center">
+    <!-- Review entries -->
+    <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+      <div class="row review-card">
+        <!-- for loop to iterate through the user bookings -->
+        {% for booking in booking_list %}
+        <div class="col-12 mt-5 single-review-card">
+          <div class="card mb-3" style="max-width: 540px; max-height: 250px">
+            <div class="row">
+              <div class="col-6">
+                <p>{{ booking.user }}</p>
+              </div>
+              <div class="col-6">
+                <p>{{ booking.email }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p>{{ booking.date }}</p>
+              </div>
+              <div class="col-6">
+                <p>{{ booking.time }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <p>{{ booking.number_of_players }}</p>
+              </div>
+              <div class="col-4">
+                <p>{{ booking.buggy }}</p>
+              </div>
+              <div class="col-4">
+                <p>{{ booking.member }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- This is code used for page pagination -->
+  {% if is_paginated %}
+  <nav aria-label="Page navigation" class="mb-3">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li>
+        <a
+          href="?page={{ page_obj.previous_page_number }}"
+          class="page-link me-3"
+          >&laquo; PREV
+        </a>
+      </li>
+      {% endif %} {% if page_obj.has_next %}
+      <li>
+        <a href="?page={{ page_obj.next_page_number }}" class="page-link ms-3">
+          NEXT &raquo;</a
+        >
+      </li>
+
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+</div>
+{% endblock %}
