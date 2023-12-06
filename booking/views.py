@@ -123,7 +123,7 @@ class BookATime(View):
             messages.success(request, f' You have successfully booked your tee '
                              f'time for: {booking_time.user}, {selected_date} '
                              f'at {booking_time.time} for {booking_time.number_of_players}.')
-            return redirect('book_a_tee')
+            return redirect('my_bookings')
 
         else:
 
