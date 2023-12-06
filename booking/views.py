@@ -34,6 +34,8 @@ class BookATee(View):
             selected_date = booking_form_date.cleaned_data['date']
             selected_date_str = selected_date.isoformat()
             request.session['date'] = selected_date_str
+            booking_email = request.POST.get('email')
+            request.session['booking_email'] = booking_email
 
             return redirect('book_a_time')
         else:
@@ -110,6 +112,8 @@ class BookATime(View):
         if booking_form_time.is_valid():
             booking_time = booking_form_time.save(commit=False)
             booking_time.user = request.user
+            booking_email = request.session.get('booking_email')
+            booking_time.email = booking_email
 
             if selected_date_str:
                 booking_time.date = selected_date
