@@ -142,7 +142,7 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
 
     model = Booking
     template_name = 'my_bookings.html'
-    paginate_by = 4
+    paginate_by = 3
 
     def get_queryset(self):
         # Filter queryset based on the current user
