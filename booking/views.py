@@ -146,4 +146,4 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         # Filter queryset based on the current user
-        return Booking.objects.filter(user=self.request.user)
+        return Booking.objects.filter(user=self.request.user).order_by('-date')

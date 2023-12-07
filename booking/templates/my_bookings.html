@@ -9,33 +9,40 @@
         <!-- for loop to iterate through the user bookings -->
         {% for booking in booking_list %}
         <div class="col-12 mt-5 single-review-card">
-          <div class="card mb-3" style="max-width: 540px; max-height: 250px">
+          <div class="card mb-3 pt-3 pb-3 text-primary" style="max-width: 540px; max-height:">
             <div class="row">
-              <div class="col-6">
-                <p>{{ booking.user }}</p>
-              </div>
-              <div class="col-6">
-                <p>{{ booking.email }}</p>
-              </div>
+                <div class="col-10 offset-md-1 text-primary mb-3">
+                    <h3>Your Booking:</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <p><strong>Name:</strong> {{ booking.user }}</p>
+                </div>
+                <div class="col-5">
+                    <p><strong>Email:</strong> {{ booking.email }}</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <p><strong>Date:</strong> {{ booking.date }}</p>
+                </div>
+                <div class="col-5">
+                    <p><strong>Time:</strong> {{ booking.time }}</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <p><strong>Number of players:</strong> {{ booking.number_of_players }}</p>
+                </div>
+                <div class="col-5">
+                    <p><strong>Member:</strong> {{ booking.member }}</p>
+                </div>
             </div>
             <div class="row">
-              <div class="col-6">
-                <p>{{ booking.date }}</p>
-              </div>
-              <div class="col-6">
-                <p>{{ booking.time }}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <p>{{ booking.number_of_players }}</p>
-              </div>
-              <div class="col-4">
-                <p>{{ booking.buggy }}</p>
-              </div>
-              <div class="col-4">
-                <p>{{ booking.member }}</p>
-              </div>
+                <div class="col-10 offset-md-1">
+                    <p><strong>Buggy required:</strong> {{ booking.buggy }}</p>
+                </div>
             </div>
           </div>
         </div>
