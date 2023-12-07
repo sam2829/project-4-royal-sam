@@ -7,6 +7,7 @@ from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
 # This class is so the user can view the book a tee form
 
 
@@ -145,5 +146,7 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
     paginate_by = 3
 
     def get_queryset(self):
-        # Filter queryset based on the current user
-        return Booking.objects.filter(user=self.request.user).order_by('-date')
+        # Filter to show bookings for the user ordered by date and time
+        bookings = Booking.objects.filter(user=self.request.user).order_by('date', 'time')
+
+        return bookings
