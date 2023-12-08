@@ -150,3 +150,18 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
         bookings = Booking.objects.filter(user=self.request.user).order_by('date', 'time')
 
         return bookings
+
+# This class is for the user to edit a booking
+
+class EditBooking(View):
+
+    # Booking date form appears, user must select date and email
+    def get(self, request, *args, **kwargs):
+
+        return render(
+            request,
+            "edit_tee_time.html",
+            {
+                "booking_form_date": BookingFormDate(),
+            },
+        )
