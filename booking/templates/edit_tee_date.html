@@ -3,18 +3,19 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<!-- Book a tee time form -->
+<!-- Book a tee date form -->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-10 booking-form">
             <h3 class="text-primary">Change Tee Time!</h3>
             <p>Booking under: {{ user.username }}</p>
             <form method="POST" style="marging-top: 1.3rem;">
-                {{ booking_form_time | crispy }}
+                {{ booking_form_date | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">Update</button>
+                <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">Next</button>
             </form>
         </div>
     </div>
 </div>
+
 {% endblock %}
