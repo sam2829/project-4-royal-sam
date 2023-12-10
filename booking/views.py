@@ -289,3 +289,14 @@ class EditBookingTime(View):
                     "booking_form_time": booking_form_time,
                 },
             )
+
+
+# This class is for the user to delete a booking
+
+class DeleteBooking(View):
+
+    def get(self, request, item_id):
+
+        booking = get_object_or_404(Booking, id=item_id)
+        booking.delete()
+        return redirect('my_bookings')

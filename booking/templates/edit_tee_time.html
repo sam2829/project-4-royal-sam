@@ -13,6 +13,9 @@
                 {{ booking_form_time | crispy }}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">Update</button>
+                <a href="{% url 'my_bookings' %}">
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </a>
             </form>
         </div>
     </div>
