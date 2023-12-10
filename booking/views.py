@@ -291,6 +291,15 @@ class EditBookingTime(View):
             )
 
 
+# This class is for the user to confirm deletion a booking
+
+class ConfirmDelete(View):
+
+    def get(self, request, item_id):
+
+        booking = get_object_or_404(Booking, id=item_id)
+        return render(request, 'confirm_delete.html', {'booking': booking})
+
 # This class is for the user to delete a booking
 
 class DeleteBooking(View):

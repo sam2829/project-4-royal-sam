@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Main section of delete_bookings -->
+<div class="container-fluid">
+  <div class="row review-card justify-content-sm-center">
+    <div class="col-12 mt-5 single-review-card">
+      <div
+        class="card mb-3 pt-3 pb-3 text-primary"
+        style="max-width: 540px; max-height: auto"
+      >
+        <div class="row justify-content-center">
+          <div class="col-10 text-primary mb-3">
+            <h3>Are you sure you want to delete this booking?</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-5 mb-3">
+            <a href="{% url 'delete_booking' item_id=booking.id %}">
+              <button class="btn btn-primary btn-lg">Yes</button>
+            </a>
+          </div>
+          <div class="col-5 mb-3">
+            <a href="{% url 'my_bookings' %}">
+              <button class="btn btn-danger btn-lg">No</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is code used for page pagination -->
+  {% if is_paginated %}
+  <nav aria-label="Page navigation" class="mb-3">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li>
+        <a
+          href="?page={{ page_obj.previous_page_number }}"
+          class="page-link me-3"
+          >&laquo; PREV
+        </a>
+      </li>
+      {% endif %} {% if page_obj.has_next %}
+      <li>
+        <a href="?page={{ page_obj.next_page_number }}" class="page-link ms-3">
+          NEXT &raquo;</a
+        >
+      </li>
+
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+</div>
+{% endblock %}
