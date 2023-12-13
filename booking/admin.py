@@ -8,6 +8,6 @@ class BookingAdmin(SummernoteModelAdmin):
 
     list_display = ('user', 'email', 'date', 'time',
                     'number_of_players', 'member', 'buggy')
-    search_fields = ['user', 'email', 'date', 'time']
+    search_fields = ('user__username', 'email', 'date', 'time')
     list_filter = ('date', 'time')
     summernote_fields = ('content')

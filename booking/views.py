@@ -309,3 +309,4 @@ class DeleteBooking(View):
         booking = get_object_or_404(Booking, id=item_id)
         booking.delete()
         return redirect('my_bookings')
+        
