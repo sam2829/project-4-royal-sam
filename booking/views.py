@@ -154,14 +154,22 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
     paginate_by = 3
 
     def get_queryset(self):
-        # Filter to show bookings for the user ordered by date and time
-        bookings = Booking.objects.filter(
-            user=self.request.user).order_by('date', 'time')
 
+        # Get current date and time
+        current_date = timezone.now().date()
+        current_time = timezone.now().time()
+        # Filter to show bookings for the user ordered by date and time
+        # Filter also shows bookings that havnt passed
+        bookings = Booking.objects.filter(
+            user=self.request.user,
+            date__gte=current_date,
+        ).exclude(
+            date=current_date,
+            time__lte=current_time
+        ).order_by('date', 'time')
         return bookings
 
 # This class is for the user to edit a booking date
-
 
 class EditBookingDate(View):
 
