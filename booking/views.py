@@ -38,7 +38,7 @@ class BookATee(View):
             booking_email = request.POST.get('email')
             request.session['booking_email'] = booking_email
 
-            return redirect('book_a_time')
+            return redirect('book_a_time')  
         else:
             return render(
                 request,
@@ -74,6 +74,14 @@ class BookATime(View):
                     )) > datetime.combine(timezone.now().date(), current_time)
                 )
             ]
+
+            # If there is no times available for for selected date user will be 
+            # informed and redirected back to book a date form
+
+            if not available_times:
+                messages.warning(
+                    request, 'No tee times available for the selected date. Please choose another date.')
+                return HttpResponseRedirect(reverse('book_a_tee'))
         else:
             available_times = [
                 time[0] for time in AVAILABLE_TIMES if (
