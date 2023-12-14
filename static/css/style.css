@@ -255,3 +255,18 @@ h5 {
 .login-to-book-links {
     text-align: center;
 }
+
+/* Style for gallery main page */
+
+.gallery-main-section {
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}

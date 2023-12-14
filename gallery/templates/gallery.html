@@ -12,7 +12,7 @@ class="bg-image d-flex justify-content-center"
         background-size: cover;
         background-position: center;
       ">
-    <div class="container home-main-section">
+    <div class="container gallery-main-section">
         <div class="row">
             <div class="column col-sm-12">
                 <h1 class="text-white fw-bold">
@@ -20,11 +20,12 @@ class="bg-image d-flex justify-content-center"
                 </h1>
             </div>
         </div>
-        <div class="gallery">
+        <div class="row gallery justify-content-center">
             {% for image in images %}
-            <div class="image">
-                <img src="{{ image.image.url }}" alt="{{ image.caption }}">
-                <p>{{ image.caption }}</p>
+            <div class="col-sm-10 col-md-6 col-lg-4 image">
+                <div class="image-container mb-3 mt-3">
+                    <img src="{{ image.image.url }}" alt="{{ image.caption }}" class="img-fluid">
+                </div>
             </div>
             {% endfor %}
         </div>
