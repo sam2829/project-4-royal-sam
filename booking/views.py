@@ -6,6 +6,7 @@ from .forms import BookingFormDate, BookingFormTime
 from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 
 
 # This class is so the user can view the book a tee form
@@ -156,17 +157,20 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
     def get_queryset(self):
 
         # Get current date and time
-        current_date = timezone.now().date()
-        current_time = timezone.now().time()
+        current_datetime = timezone.now()
+
         # Filter to show bookings for the user ordered by date and time
-        # Filter also shows bookings that havnt passed
+        # Filter also shows bookings that haven't passed
         bookings = Booking.objects.filter(
             user=self.request.user,
-            date__gte=current_date,
+            # Filter for dates greater than the current date
+            date__gt=current_datetime.date(),
         ).exclude(
-            date=current_date,
-            time__lte=current_time
+            # Q was imported as its used for complex querires in django
+            Q(date=current_datetime.date(), time__lt=current_datetime.time())
+            | Q(date__lt=current_datetime.date())  
         ).order_by('date', 'time')
+
         return bookings
 
 # This class is for the user to edit a booking date
