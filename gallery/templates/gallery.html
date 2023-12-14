@@ -1,14 +1,25 @@
 {% extends "base.html" %} {% block content %}
 
 <!--  Main Section of the home page-->
-
-<div class="container home-main-section">
-    <div class="row">
-        <div class="column col-sm-12">
-            <h1 class="text-white fw-bold">
-                Gallery
-            </h1>
+<main
+class="bg-image d-flex justify-content-center"
+      style="
+        background-image: none;
+        background-color: black;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      ">
+    <div class="container home-main-section">
+        <div class="row">
+            <div class="column col-sm-12">
+                <h1 class="text-white fw-bold">
+                    Gallery
+                </h1>
+            </div>
         </div>
     </div>
-</div>
+</main>
 {% endblock %}
