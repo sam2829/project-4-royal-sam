@@ -20,6 +20,14 @@ class="bg-image d-flex justify-content-center"
                 </h1>
             </div>
         </div>
+        <div class="gallery">
+            {% for image in images %}
+            <div class="image">
+                <img src="{{ image.image.url }}" alt="{{ image.caption }}">
+                <p>{{ image.caption }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </main>
 {% endblock %}
