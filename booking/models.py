@@ -18,6 +18,12 @@ AVAILABLE_TIMES = (
     ("17:10", "17:10"), ("17:30", "17:30"), ("17:50", "17:50"),
 )
 
+# List of number of players
+
+NUMBER_OF_PLAYERS = (
+    ("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"),
+)
+
 # This is the model and necessary fields for booking a tee time
 
 
@@ -28,8 +34,8 @@ class Booking(models.Model):
     date = models.DateField(default=datetime.now)
     time = models.CharField(choices=AVAILABLE_TIMES,
                             max_length=10, default="7:30")
-    number_of_players = models.PositiveIntegerField(
-        default=1, validators=[MinValueValidator(1), MaxValueValidator(4)])
+    number_of_players = models.CharField(choices=NUMBER_OF_PLAYERS,
+                                         max_length=1, default="1")
     member = models.BooleanField(default=False)
     buggy = models.BooleanField(default=False)
 
