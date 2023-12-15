@@ -19,31 +19,39 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-5">
-                    <p><strong>Name:</strong> {{ booking.user }}</p>
+                    <p><strong>Name: </strong> {{ booking.user }}</p>
                 </div>
                 <div class="col-5">
-                    <p><strong>Email:</strong> {{ booking.email }}</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-5">
-                    <p><strong>Date:</strong> {{ booking.date }}</p>
-                </div>
-                <div class="col-5">
-                    <p><strong>Time:</strong> {{ booking.time }}</p>
+                    <p><strong>Email: </strong> {{ booking.email }}</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-5">
-                    <p><strong>Number of players:</strong> {{ booking.number_of_players }}</p>
+                    <p><strong>Date: </strong> {{ booking.date }}</p>
                 </div>
                 <div class="col-5">
-                    <p><strong>Member:</strong> {{ booking.member }}</p>
+                    <p><strong>Time: </strong> {{ booking.time }}</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <p><strong>Number of players: </strong> {{ booking.number_of_players }}</p>
+                </div>
+                <div class="col-5">
+                    {% if booking.member %}
+                    <p><strong>Member: </strong>Yes</p>
+                    {% else %}
+                    <p><strong>Member: </strong>No</p>
+                    {% endif %}
                 </div>
             </div>
             <div class="row">
                 <div class="col-10 offset-md-1">
-                    <p><strong>Buggy required:</strong> {{ booking.buggy }}</p>
+                    {% if booking.buggy %}
+                    <p><strong>Buggy required: </strong> Yes</p>
+                    {% else %}
+                    <p><strong>Buggy required: </strong> No</p>
+                    {% endif %}
                 </div>
             </div>
             <div class="row justify-content-center">
