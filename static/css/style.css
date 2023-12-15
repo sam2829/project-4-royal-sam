@@ -270,3 +270,10 @@ h5 {
     height: 400px;
     object-fit: cover;
 }
+
+/* Style for contact us main section */
+
+.contact-main-section {
+    text-align: center;
+    padding-top: 50px;
+}
