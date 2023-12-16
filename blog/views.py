@@ -7,13 +7,13 @@ from django.contrib import messages
 
 # This class is to create a view to display posts on the reviews page
 
+
 class PostList(generic.ListView):
-    
+
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'reviews.html'
     paginate_by = 4
-
 
 
 # This class is to create a view so the user can see the entire post / review when clicked
@@ -58,7 +58,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, 'You have succesfully left a comment.')    
+            messages.success(request, 'You have succesfully left a comment.')
         else:
             comment_form = CommentForm()
 
@@ -75,6 +75,7 @@ class PostDetail(View):
         )
 
 # This view is for being able to like posts / reviews
+
 
 class PostLike(View):
 
@@ -95,12 +96,11 @@ class PostLike(View):
 class LeaveReview(View):
 
     def get(self, request):
-        
-        return render(request, 'leave_review.html',
-        {
-            "review_form": ReviewForm(),
-        })
 
+        return render(request, 'leave_review.html',
+                      {
+                          "review_form": ReviewForm(),
+                      })
 
     def post(self, request):
 
@@ -114,10 +114,9 @@ class LeaveReview(View):
             review.slug = review_form.cleaned_data['title'].replace(' ', '-')
             review.save()
             messages.success(request, 'You have succesffully left a review and '
-                            'is awaiting approval.')
+                             'is awaiting approval.')
             return redirect('reviews')
         else:
-            
 
             return render(
                 request,
