@@ -155,7 +155,7 @@ USE_TZ = True
 
 # Google Maps API Key
 
-GOOGLE_API_KEY = os.environ.get('GOOGLE_MAPS_URL')
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY')
 
 
 # Static files (CSS, JavaScript, Images)
