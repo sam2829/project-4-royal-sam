@@ -49,7 +49,6 @@ h5 {
 }
 
 .social-network-items {
-    margin-right: 50px;
     font-size: 20px;
 }
 
@@ -276,4 +275,8 @@ h5 {
 .contact-main-section {
     text-align: center;
     padding-top: 50px;
+}
+
+.google-map {
+    border-radius: 5px;
 }
