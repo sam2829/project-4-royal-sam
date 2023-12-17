@@ -14,9 +14,9 @@
                         <!-- Review Image -->
                         {% if "placeholder" in post.featured_image.url %}
                         <img src="{% static 'background_images/golf-2.jpg' %}" 
-                        class="img-fluid rounded-start" alt="...">
+                        class="img-fluid rounded-start" alt="review image">
                         {% else %}
-                        <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start" alt="">
+                        <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start" alt="review image">
                         {% endif %}
                     </div>
                     <!--  Review Content -->
