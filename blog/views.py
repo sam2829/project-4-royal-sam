@@ -104,7 +104,7 @@ class LeaveReview(View):
 
     def post(self, request):
 
-        review_form = ReviewForm(data=request.POST)
+        review_form = ReviewForm(data=request.POST, files=request.FILES)
 
         if review_form.is_valid():
             review = review_form.save(commit=False)
@@ -112,6 +112,10 @@ class LeaveReview(View):
             review.name = request.user.username
             review.author = request.user
             review.slug = review_form.cleaned_data['title'].replace(' ', '-')
+
+            if 'featured_image' in request.FILES:
+                review.featured_image = request.FILES['featured_image']
+
             review.save()
             messages.success(request, 'You have succesffully left a review and '
                              'is awaiting approval.')
