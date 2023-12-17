@@ -36,7 +36,7 @@
                             </div>
                             <hr/>
                             <div class="row">
-                                <div class="col-1">
+                                <div class="col-3">
                                     <!-- user can like a post if logged in -->
                                     <strong>
                                         {% if user.is_authenticated %}
@@ -54,14 +54,14 @@
                                         </form>
                                         {% else %}
                                         <!-- Number of likes -->
-                                        <strong class="text-primary"><i class="far fa-heart"></i>
+                                        <strong class="text-primary"><i class="far fa-heart pe-2"></i>
                                             {{ post.number_of_likes }}
                                         </strong>
                                         {% endif %}
                                     </strong>
                                     <!-- Number of comments -->
                                 </div>
-                                <div class="col-1">
+                                <div class="col-3">
                                     <strong class="text-primary">
                                         {% with comments.count as total_comments %}
                                         <i class="far fa-comments"></i>
