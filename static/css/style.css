@@ -173,6 +173,10 @@ h5 {
     text-align: left;
 }
 
+.bg-full-review {
+    background-color: rgba(248, 249, 250, 0.90);
+}
+
 .review-content {
     margin-top: 3rem;
     margin-bottom: 3rem;
