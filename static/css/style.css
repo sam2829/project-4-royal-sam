@@ -139,6 +139,10 @@ h5 {
     text-align: -webkit-center;
 }
 
+.bg-review {
+    background-color: rgba(248, 249, 250, 0.80);
+}
+
 .page-link {
     border-radius: 10px;
 }
