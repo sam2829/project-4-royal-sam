@@ -6,11 +6,17 @@ from django import forms
 
 
 class BookingFormDate(forms.ModelForm):
-    
+   
     
     class Meta:
         model = Booking
         fields = ('email', 'date',)
+
+        # Widget is used so the date is a calender option
+        widgets = {
+
+            'date': forms.DateInput(attrs={'type': 'date'})
+        }
 
 
 class BookingFormTime(forms.ModelForm):

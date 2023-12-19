@@ -6,6 +6,7 @@ from .forms import BookingFormDate, BookingFormTime
 from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from datetime import date
 
 
 # This class is so the user can view the book a tee form
@@ -30,6 +31,18 @@ class BookATee(View):
         booking_form_date = BookingFormDate(data=request.POST)
 
         if booking_form_date.is_valid():
+            # Check if date selected hasnt already passed
+            selected_date = booking_form_date.cleaned_data['date']
+            if selected_date < date.today():
+                messages.warning(request, 'Please select a future date.')
+                return render(
+                    request,
+                    "book_a_tee.html",
+                    {
+                        "booking_form_date": booking_form_date,
+                    },
+                )
+            
             booking_date = booking_form_date.save(commit=False)
             booking_date.user = request.user
             selected_date = booking_form_date.cleaned_data['date']
