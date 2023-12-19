@@ -269,6 +269,12 @@ h5 {
     background-color: rgba(248, 249, 250, 0.80);
 }
 
+/* Delete booking confirm */
+
+.delete-card {
+    background-color: rgba(248, 249, 250, 0.80);
+}
+
 /* Style for gallery main page */
 
 .gallery-main-section {
