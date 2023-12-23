@@ -22,6 +22,8 @@ This is my fourth portfolio project for the Code Institute and my goal with this
       - [Site Goals](#site-goals)
       - [First Time Visitor Goals](#first-time-visitor-goals)
       - [Returning Visitor Goals](#returning-visitor-goals)
+    - [Agile Planning](#agile-planning)
+  
   
 ## User Experience
 
@@ -60,3 +62,13 @@ Royal Sam Golf Club is intended to help golfers be able to book tee times to pla
 - To provide user the ability to to book and manage their tee times.
 - To provide user the ability to leave their own review.
 - To provide user the ability to leave comments and like other reviews.
+
+### Agile Planning
+
+This project was developed using agile methodologies by delivering small features across the duration of the project. This broke down the build of the project into alot more manageable parts and was able to select which user stories were more important for the site.
+
+It was carried out this way to try ensure that all core requirements were completed first to give the project a complete feel and to make sure the most important user stories were implemented.
+
+The kanban board was created using Github projects, this helped me be able to see all my user stories and be able to keep track of which ones had been done, to do or in progress.
+
+screenshot goes here:
