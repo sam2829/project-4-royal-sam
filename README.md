@@ -67,8 +67,8 @@ Royal Sam Golf Club is intended to help golfers be able to book tee times to pla
 
 This project was developed using agile methodologies by delivering small features across the duration of the project. This broke down the build of the project into alot more manageable parts and was able to select which user stories were more important for the site.
 
-It was carried out this way to try ensure that all core requirements were completed first to give the project a complete feel and to make sure the most important user stories were implemented.
+It was carried out this way to try ensure that all core requirements were completed first to give the project a complete feel and to make sure the most important user stories were implemented. When clicked on and opened the user story, the user story was assigned a label "must have", "should have" or "could have" so I would know the importance of the user story.
 
 The kanban board was created using Github projects, this helped me be able to see all my user stories and be able to keep track of which ones had been done, to do or in progress.
 
-screenshot goes here:
+![User Stories Screenshot](static/screeshots/user-stories-screenshot.png)
