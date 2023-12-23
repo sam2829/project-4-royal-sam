@@ -10,3 +10,53 @@ Here is a live version of my project: [Royal Sam Golf Club](https://royal-sam-02
 
 This is my fourth portfolio project for the Code Institute and my goal with this project is to display my new skills in using frameworks such as Django and Bootstrap. I decided to build a site for a golf club which allows users to book and manage there tee times and also being able to leave reviews and comments about the golf club.
 
+## Contents
+
+- [Royal Sam Golf Club](#royal-sam-golf-club)
+  - [Overview](#overview)
+  - [Project Goals](#project-goals)
+  - [Contents](#contents)
+  - [User Experience](#user-experience)
+    - [The Strategy Plane](#the-strategy-plane)
+      - [The Ideal User](#the-ideal-user)
+      - [Site Goals](#site-goals)
+      - [First Time Visitor Goals](#first-time-visitor-goals)
+      - [Returning Visitor Goals](#returning-visitor-goals)
+  
+## User Experience
+
+### The Strategy Plane
+
+Royal Sam Golf Club is intended to help golfers be able to book tee times to play at the golf course whether they are a member of a guest of the golf club. User will also be able to manage there bookings and be able to leave reviews and comment on other reviews.
+
+#### The Ideal User
+
+- Someone who enjoys playing golf.
+- Someone who likes to play different golf courses.
+- Someone who who is member of the Royal Sam Golf Club
+- Someone who would like to share the experience of playing at the golf club.
+- Someone who would like to book and manage all of their tee times online.
+
+#### Site Goals
+
+- To provide users with the ability to login or register an account to the site.
+- To provide users with the ability to book and manager their tee times to play at the golf course.
+- To provide users with the ability to review the golf club and view other reviews and leave comments and like.
+- To provide users with images of the golf course.
+- To provide the users with contact information.
+
+#### First Time Visitor Goals
+
+- To provide the user the ability to register an account.
+- To stop user from being able to book tee times, leave reviews or commenting on reviews unless registering an account.
+- To provide the user with images of the golf course.
+- To provide user with contact information.
+- To provide user the ability once registered to book and manage their tee times.
+  
+#### Returning Visitor Goals
+
+- To provide user the ability to login to their account.
+- To provide user the ability to logout of their account.
+- To provide user the ability to to book and manage their tee times.
+- To provide user the ability to leave their own review.
+- To provide user the ability to leave comments and like other reviews.
