@@ -24,26 +24,6 @@ This is my fourth portfolio project for the Code Institute and my goal with this
       - [Returning Visitor Goals](#returning-visitor-goals)
     - [Agile Planning](#agile-planning)
       - [User Stories](#user-stories)
-        - [Account Registration](#account-registration)
-        - [User Login](#user-login)
-        - [User Logout](#user-logout)
-        - [Book A Tee Time](#book-a-tee-time)
-        - [Manage Tee Times](#manage-tee-times)
-        - [Approve comments and reviews](#approve-comments-and-reviews)
-        - [Contact Club](#contact-club)
-        - [Create Review / Post](#create-review--post)
-        - [Manage Reviews / Posts](#manage-reviews--posts)
-        - [Like A Review / Post](#like-a-review--post)
-        - [Open A Review / Post](#open-a-review--post)
-        - [Site Pagination](#site-pagination)
-        - [Update Gallery](#update-gallery)
-        - [View Gallery](#view-gallery)
-        - [Create Drafts](#create-drafts)
-        - [Commen On A Post / Review](#commen-on-a-post--review)
-        - [View Comments](#view-comments)
-        - [View Likes](#view-likes)
-        - [Paginated Bookings](#paginated-bookings)
-  
   
 ## User Experience
 
@@ -97,78 +77,78 @@ The kanban board was created using Github projects, this helped me be able to se
 
 The following user stories were completed throughout the development.
 
-##### Account Registration
+Account Registration:
   
 - As a site user I can register an account so that I can book a tee time, create a post, comment or like.
 
-##### User Login
+User Login:
 
 - As a site user I can login to my account so that I can manage my bookings, leave reviews or comment on posts / reviews.
 
-##### User Logout
+User Logout:
 
 - As a user I can logout of my account so that I can protect my bookings.
 
-##### Book A Tee Time
+Book A Tee Time:
 
 - As a site user I can book a tee time so that I can arrange to play golf the time I want.
 
-##### Manage Tee Times
+Manage Tee Times:
 
 - As a user / admin I can manage my bookings, edit and delete them so that I can easily change times to play golf.
   
-##### Approve comments and reviews
+Approve comments and reviews:
 
 - As a site admin I can approve or disapprove comments and reviews so that I can filter out objectionable comments and reviews.
 
-##### Contact Club
+Contact Club:
 
 - As a site user I can find contact information so that I can have any of my queries answered.
 
-##### Create Review / Post
+Create Review / Post:
 
 - As a site user / admin I can create a post to update users or reply to reviews as admin and leave reviews as user so that I can leave my views and updates on the golf course.
 
-##### Manage Reviews / Posts
+Manage Reviews / Posts:
 
 - As a admin I can create, read, update and delete posts / reviews so that iI can manage my content.
 
-##### Like A Review / Post
+Like A Review / Post:
 
 - As a site user I can like or unlike a post so that I can interact with the content.
 
-##### Open A Review / Post
+Open A Review / Post:
 
 - As a site user I can click on a post / review so that I can read the full text.
 
-##### Site Pagination
+Site Pagination:
 
 - As a site user I can view a paginated list of reviews so that I can easily select a review I want to view.
 
-##### Update Gallery
+Update Gallery:
 
 - As a admin I can create, update or delete the gallery photos so that the user can see updated photos of the golf course.
 
-##### View Gallery
+View Gallery:
 
 - As a user I can view the course gallery so that I can see how good the golf course is.
 
-##### Create Drafts
+Create Drafts:
 
 - As a site admin I can create draft posts so that I can finish writing the content later.
 
-##### Commen On A Post / Review
+Comment On A Post / Review:
 
 - As a site user I can leave comments on a post / review so that I can be involved in the conversation.
 
-##### View Comments
+View Comments:
 
 - As a site user I can view comments on an individual post / review so that I can read the conversation.
 
-##### View Likes
+View Likes:
 
 - As a site user I can view the number of likes on each post / review so that I can see whichis the most popular or liked.
 
-##### Paginated Bookings
+Paginated Bookings:
 
 - As a user I can view a paginated list of my bookings so that I can clearly see the list of my bookings.
