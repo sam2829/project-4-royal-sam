@@ -184,3 +184,27 @@ Reviews Page:
 ![Desktop Reviews Page](static/screenshots/desktop-reviews-page.png)
 
 </details>
+
+<details>
+
+<summary>Mobile</summary>
+
+<br>
+
+Homepage:
+
+
+
+Register Page:
+
+
+
+Login Page:
+
+
+
+Reviews Page:
+
+
+
+</details>
