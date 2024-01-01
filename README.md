@@ -174,19 +174,19 @@ Wireframes were used to create a prototype of the project which may change durin
 
 Homepage:
 
-![Desktop Homepage Screenshot](static/screenshots/desktop-homepage.png)
+![Desktop Homepage Screenshot](static/screenshots/desktop-homepage-wireframe.png)
 
 Register Page:
 
-![Desktop Register Page Screenshot](static/screenshots/desktop-register-page.png)
+![Desktop Register Page Screenshot](static/screenshots/desktop-register-page-wireframe.png)
 
 Login Page:
 
-![Desktop Login Page](static/screenshots/desktop-login-page.png)
+![Desktop Login Page](static/screenshots/desktop-login-page-wireframe.png)
 
 Reviews Page:
 
-![Desktop Reviews Page](static/screenshots/desktop-reviews-page.png)
+![Desktop Reviews Page](static/screenshots/desktop-reviews-page-wireframe.png)
 
 </details>
 
@@ -286,4 +286,10 @@ Desktop:
 Mobile Devices:
 
 ![Mobile Footer Screenshot](static/screenshots/mobile-footer.png)
+
+**Homepage**
+
+Users will be presented by a welcoming message with a background image of the golf course on display. Book a Tee link will be displayed on the home page which depending whether user is logged in or not will be taken to book a tee time form or option for user to register or login.
+
+![Homepage Screenshot](static/screenshots/desktop-homepage.png)
 
