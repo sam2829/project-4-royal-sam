@@ -26,6 +26,8 @@ This is my fourth portfolio project for the Code Institute and my goal with this
       - [User Stories](#user-stories)
     - [The Skeleton Plane](#the-skeleton-plane)
       - [Wireframes](#wireframes)
+      - [Database Schema](#database-schema)
+      - [Security](#security)
   
 ## User Experience
 
@@ -208,3 +210,18 @@ Reviews Page:
 
 
 </details>
+
+#### Database Schema
+
+The profile model is linked directly to the built in UserModel in conjunction with Django Allauth with the user progile being created when the user registers with the site. The Post (reviews) model has a relationship with the User model by foriegn key, this allows for the reviews left to be linked back to the specific user and their profile. The comment model is linked by foreign key to the Post model (reviews) to store comments for the specific review.
+
+The Booking model is also linked directly to the built in UserMdodel so all bookings to be linked back to the specific user.
+
+The GalleryIamge model was also created so that the site admin can upload images of the golf course when they please.
+
+#### Security
+
+In the code I have used if authenticated where needed so that users who are not logged in can not access or see information unless logged in.
+
+Enviroment variables were stored in an env.py file for local development for security purposes to ensure that no secret keys, API keys, or any sensitive information was added to the repository. In production, these variables were also added to the Heroku config vars within the project.
+
