@@ -29,6 +29,8 @@ This is my fourth portfolio project for the Code Institute and my goal with this
       - [Database Schema](#database-schema)
       - [Security](#security)
     - [The Scope Plane](#the-scope-plane)
+    - [The Structure Plane](#the-structure-plane)
+      - [Features](#features)
   
 ## User Experience
 
@@ -234,3 +236,40 @@ Enviroment variables were stored in an env.py file for local development for sec
 - Restricted role-based features for leaving reviews and comments, booking and editing tee times.
 - Homepage welcomeing user to the site and links to navigate through the site and options to login or register and account.
   
+### The Structure Plane
+
+#### Features
+
+As a User I would like to view the site on all my different devices so I can view site where ever I am.
+
+**Navbar**
+
+As a user I want to see a clear way of navigating around the site so that I can easily find the relative information I am looking for.
+
+The Navbar contains links for Home, My Account, Reviews About Us and Book A Tee options.
+
+This is a list of the navigation options on all pages:
+
+- Home -> index.html - Visible to all
+- My Account (Dropdown):
+  - Register -> signup.html - Visible to all logged out users
+  - Login -> login.html - Visible to all logged out users
+  - My Bookings -> my_bookings.html - Visible to all logged in users
+  - Logout -> logout.html - Visible to all logged in users
+- Reviews -> reviews.html - Visible to all users
+- About Us (Dropdown):
+  - Gallery -> gallery.html - Visible to all users
+  - Contact Us -> contact_us.html - Visible to all users
+- Book A Tee -> book_a_tee.html - Visible to all logged in users.
+
+The navigation menu is displayed on all pages and forms into a hamburger menu on smaller devices. This allows users to view the site from any device and not take up to much space on mobile devices. Its very clear and easy to use.
+
+Desktop:
+
+![Desktop Navbar Screenshot](static/screenshots/desktop-navbar.png)
+
+Mobile Device:
+
+![Mobile Navbar Screenshot 1](static/screenshots/mobile-navbar-1.png)
+![Mobile Navbar Screenshot 2](static/screenshots/mobile-navbar-2.png)
+
