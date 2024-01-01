@@ -24,6 +24,8 @@ This is my fourth portfolio project for the Code Institute and my goal with this
       - [Returning Visitor Goals](#returning-visitor-goals)
     - [Agile Planning](#agile-planning)
       - [User Stories](#user-stories)
+    - [The Skeleton Plane](#the-skeleton-plane)
+      - [Wireframes](#wireframes)
   
 ## User Experience
 
@@ -71,7 +73,7 @@ It was carried out this way to try ensure that all core requirements were comple
 
 The kanban board was created using Github projects, this helped me be able to see all my user stories and be able to keep track of which ones had been done, to do or in progress.
 
-![User Stories Screenshot](static/screeshots/user-stories-screenshot.png)
+![User Stories Screenshot](static/screenshots/user-stories-screenshot.png)
 
 #### User Stories
 
@@ -152,3 +154,33 @@ View Likes:
 Paginated Bookings:
 
 - As a user I can view a paginated list of my bookings so that I can clearly see the list of my bookings.
+
+### The Skeleton Plane
+
+#### Wireframes
+
+Wireframes were used to create a prototype of the project which may change during its development.
+
+<details>
+
+<summary>Desktop</summary>
+
+<br>
+
+Homepage:
+
+![Desktop Homepage Screenshot](static/screenshots/desktop-homepage.png)
+
+Register Page:
+
+![Desktop Register Page Screenshot](static/screenshots/desktop-register-page.png)
+
+Login Page:
+
+![Desktop Login Page](static/screenshots/desktop-login-page.png)
+
+Reviews Page:
+
+![Desktop Reviews Page](static/screenshots/desktop-reviews-page.png)
+
+</details>
