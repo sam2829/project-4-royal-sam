@@ -28,6 +28,7 @@ This is my fourth portfolio project for the Code Institute and my goal with this
       - [Wireframes](#wireframes)
       - [Database Schema](#database-schema)
       - [Security](#security)
+    - [The Scope Plane](#the-scope-plane)
   
 ## User Experience
 
@@ -225,3 +226,11 @@ In the code I have used if authenticated where needed so that users who are not 
 
 Enviroment variables were stored in an env.py file for local development for security purposes to ensure that no secret keys, API keys, or any sensitive information was added to the repository. In production, these variables were also added to the Heroku config vars within the project.
 
+### The Scope Plane
+
+- Responsive Design - The site should be fully functional on all devices from 320px wide and up.
+- Hamburger menu for navbar on mobile devices.
+- Ability to perform CRUD functionality on Profiles, Reviews, Comments and Bookings.
+- Restricted role-based features for leaving reviews and comments, booking and editing tee times.
+- Homepage welcomeing user to the site and links to navigate through the site and options to login or register and account.
+  
