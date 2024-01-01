@@ -273,3 +273,17 @@ Mobile Device:
 ![Mobile Navbar Screenshot 1](static/screenshots/mobile-navbar-1.png)
 ![Mobile Navbar Screenshot 2](static/screenshots/mobile-navbar-2.png)
 
+**Footer**
+
+The footer is placed at the bottom of ever page. The social media links are displayed with icons provided by Font Awesome. This is where the user can click on one of the social media links and reach out for news and updates, these icons will also open up in new tabs as they will lead the user away from the site.
+
+There is also contact information in the form of email address and telephone number.
+
+Desktop:
+
+![Desktop Footer Screenshot](static/screenshots/desktop-footer.png)
+
+Mobile Devices:
+
+![Mobile Footer Screenshot](static/screenshots/mobile-footer.png)
+
