@@ -335,4 +335,22 @@ NUmber of players can only be between numbers 1 and 4.
 
 All fields must be filled out before user can book there time.
 
+Once User has successfully booked, they will be redirected to their my bookings page.
+
 ![Book A Time Page Screenshot](static/screenshots/book-a-time-screenshot.png)
+
+**My Bookings Page**
+
+As a User the my bookings page is only available once the user has logged in.
+
+If the user has any current bookings this will be displayed in order of their next tee time. Three bookings will be displayed per page and user can click next or previous to paginate through the pages to see all their bookings.
+
+The User will also be able to edit or delete any of there bookings from this page.
+
+![My Bookings Page Screenshot 1](static/screenshots/my-bookings-screenshot-1.png)
+
+![My Bookings Page Screenshot 2](static/screenshots/my-bookings-screenshot-2.png)
+
+If the user has no current bookings, a message willbe displayed informing them they have no bookings and option to then book a tee.
+
+![My Bookings Page Screenshot 3](static/screenshots/my-bookings-screenshot-3.png)
