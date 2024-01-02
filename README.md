@@ -315,3 +315,24 @@ As a User if I am already logged in, I would like the ability to log out of my a
 
 ![Logout Page Screenshot](static/screenshots/logout-screenshot.png)
 
+**Book A Tee Page**
+
+As a User if I click on the the book a tee page, what page is rendered depends on if the user is logged in or logged out.
+
+If the user is logged out a page will be rendered offering the user chance to either login or register account, providing links to each option.
+
+![Login or Register Message Page](static/screenshots/login-or-register-screenshot.png)
+
+If the user is logged in, the user is taken to the first part of the booking form where the user provides email address and selects the date they wish to book. Both fields must be filled out correclty. The date selected must also have available times and be the present or furture date.
+
+![Book A Tee Page Screenshot](static/screenshots/book-a-tee-screenshot.png)
+
+Once the user has filled out the first part of the form correctly, the user will then be asked to fill out the second part of the form where they can easily select which time they would like out of the available times shown, how many players, if they are a member of the golf club and if the require a buggy.
+
+Available times shown will only be times that havnt already been booked and times that havnt already passed.
+
+NUmber of players can only be between numbers 1 and 4.
+
+All fields must be filled out before user can book there time.
+
+![Book A Time Page Screenshot](static/screenshots/book-a-time-screenshot.png)
