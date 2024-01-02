@@ -301,3 +301,10 @@ As a User if I havnt already made an online account I would like to be able to r
 
 ![Register Screenshot 2](static/screenshots/register-screenshot-2.png)
 
+**Login Page**
+
+As a User if I have already registered an account I would like to be able to log into my account when ever I wish, Whether it to be to book a tee time or leave a review.
+
+![Login Page Screenshot 1](static/screenshots/login-screenshot-1.png)
+
+![Login Page Screenshot 2](static/screenshots/login-screenshot-2.png)
