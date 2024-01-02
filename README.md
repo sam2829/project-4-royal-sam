@@ -354,3 +354,27 @@ The User will also be able to edit or delete any of there bookings from this pag
 If the user has no current bookings, a message willbe displayed informing them they have no bookings and option to then book a tee.
 
 ![My Bookings Page Screenshot 3](static/screenshots/my-bookings-screenshot-3.png)
+
+
+**Reviews Page**
+
+As a User you can go onto the reviews page and be able to see all reviews left about the golf club and also be able to see any posts the golf club may have made.
+
+User will also be able to paginate through the reviews from page to page.
+
+All reviews and posts will be displayed in most recent order.
+
+User will also be able to click on any review they like to then view the review in full.
+
+If the user hasnt logged in they are not able to leave a review of their own:
+
+![Reviews Page Logged Out 1](static/screenshots/reviews-logout-screenshot-1.png)
+
+![Reviews Page Logged Out 2](static/screenshots/reviews-logout-screenshot-2.png)
+
+If the user is logged in they able to leave a review of their own by clicking on the Leave A Review link at the bottom of the page:
+
+![Reviews Page Logged In](static/screenshots/reviews-login-screenshot.png)
+
+
+
