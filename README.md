@@ -376,5 +376,18 @@ If the user is logged in they able to leave a review of their own by clicking on
 
 ![Reviews Page Logged In](static/screenshots/reviews-login-screenshot.png)
 
+**Leave A Review Page**
+
+If the User is logged in they have the option to leave their own review.
+To do this they click on the leave review link on the reviews page, they then must fill out the Leave A Review form.
+
+On the form the title and content section must be filled out to be able to submit the form. If the user has not selected an image for their review then the sites custom image will be applied to the review.
+
+Once submitted a pop up message will confirm user has submitted a review and is awaiting approval and redirected back to reviews page.
+
+![Leave Review Page 1](static/screenshots/leave-review-screenshot-1.png)
+
+![Leave Review Page 2](static/screenshots/leave-review-screenshot-2.png)
+
 
 
