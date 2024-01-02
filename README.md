@@ -389,5 +389,38 @@ Once submitted a pop up message will confirm user has submitted a review and is 
 
 ![Leave Review Page 2](static/screenshots/leave-review-screenshot-2.png)
 
+**Full Review Page**
 
+If the user clicks on a review and are not logged in they are able to view the review in full, what comments have been made and how many comments there are.
 
+Desktop:
+
+![Full Review Page Logged Out](static/screenshots/full-review-screenshot-1.png)
+
+Mobile:
+
+![Full Review Page Logged Out Mobile](static/screenshots/mobile-full-review-screenshot-1.png)
+
+If the user is logged in, they are also able to like the review and leave a comment in the comment form which is now available.
+
+desktop:
+
+![Full Review Page Logged In 1](static/screenshots/full-review-screenshot-2.png)
+
+Mobile:
+
+![Full Review Page Logged In 1 - 1 Mobile](static/screenshots/mobile-full-review-screenshot-4.png)
+
+![Full Review Page Logged In 1 -2 Mobile](static/screenshots/mobile-full-review-screenshot-5.png)
+
+If the user decides to comment on the review both fields must be filled out correctly on the leave a comment form.
+
+Once the user has submitted the form they will be notiified that their comment is awaiting approval.
+
+desktop:
+
+![Full Review Page Logged In 2](static/screenshots/full-review-screenshot-3.png)
+
+Mobile:
+
+![Full Review Page Logged In 2 Mobile](static/screenshots/mobile-full-review-screenshot-3.png)
