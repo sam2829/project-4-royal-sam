@@ -293,3 +293,11 @@ Users will be presented by a welcoming message with a background image of the go
 
 ![Homepage Screenshot](static/screenshots/desktop-homepage.png)
 
+**Register Page**
+
+As a User if I havnt already made an online account I would like to be able to register an account using the register form from allauth, so I can then be able to take part in all the site has to offer.
+
+![Register Screenshot 1](static/screenshots/register-screenshot-1.png)
+
+![Register Screenshot 2](static/screenshots/register-screenshot-2.png)
+

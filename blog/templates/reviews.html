@@ -16,11 +16,14 @@
                     <div class="card mb-3 bg-review" style="max-width: 540px; max-height: 250px;">
                         <div class="row g-0">
                             <div class="col-4">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img src="{% static 'background_images/golf-2.jpg' %}" class="img-fluid rounded-start" alt="course image">
-                                {% else %}
-                                <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start  image-container" alt="review image">
-                                {% endif %}
+                                <div class="card-image-container">
+                                    {% if "placeholder" in post.featured_image.url %}
+                                    <img src="{% static 'background_images/golf-2.jpg' %}" class="img-fluid rounded-start"
+                                        alt="course image">
+                                    {% else %}
+                                    <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start" alt="review image">
+                                    {% endif %}
+                                </div>
                                 <div class="image-flash">
                                     <p class="author text-primary fs-6">Author: {{ post.author }}</p>
                                 </div>
