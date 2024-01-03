@@ -33,6 +33,11 @@ This is my fourth portfolio project for the Code Institute and my goal with this
       - [Features](#features)
     - [The Surface Plane](#the-surface-plane)
       - [Design](#design)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks and Tools Used](#frameworks-and-tools-used)
+    - [Libraries Used](#libraries-used)
+  - [Testing](#testing)
   
 ## User Experience
 
@@ -468,4 +473,38 @@ This hopefully makes the site easy and clear to read / use.
 Background images and gallery page images were taken from google images.
 
 Font awesome was used for social links and for golf ball on a tee icon in the page title.
+
+## Technologies Used
+
+### Languages Used
+
+- HTML5
+- CSS
+- Javascript
+- Python
+
+### Frameworks and Tools Used
+
+- Django
+  - Django was used as the main python framework in the development of this project.
+- Bootstrap
+  - Bootstrap was used for the general layout, spacing and style for the website.
+- ElephantSQL
+  - ElephantSQL was used for the production database.
+- Cloudinary
+  - Cloudinary was used to store static files and images.
+- Codeanywhere
+  - Codeanywhere was used to write the code for the site.
+- GitHub
+  - GitHub was used to store the projects code after being pushed from codeanywhere.
+- Heroku
+  - Heroku was used to deploy the app.
+- Balsamiq
+  - Balsamiq was used to create my wireframes.
+- Google Maps
+  - Google Maps was used from my google account to show google maps on site.
+
+### Libraries Used
+
+## Testing
 
