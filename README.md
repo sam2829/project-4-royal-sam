@@ -31,6 +31,8 @@ This is my fourth portfolio project for the Code Institute and my goal with this
     - [The Scope Plane](#the-scope-plane)
     - [The Structure Plane](#the-structure-plane)
       - [Features](#features)
+    - [The Surface Plane](#the-surface-plane)
+      - [Design](#design)
   
 ## User Experience
 
@@ -449,4 +451,21 @@ Mobile:
 
 **Contact Us Page**
 
-As a User I can view the Contact Us page and be able to see contact information as a telephone number and email address, I can also click on social links to follow the golf club and also able to view the location of the golf club from google maps. 
+As a User I can view the Contact Us page and be able to see contact information as a telephone number and email address, I can also click on social links to follow the golf club and also able to view the location of the golf club from google maps.
+
+### The Surface Plane
+
+#### Design
+
+**Colour Scheme**
+
+I opted for a very few choice of colours throughout the site. The same colours have been implemented across the site and are included in the buttons styles.
+
+This hopefully makes the site easy and clear to read / use.
+
+**Imagery**
+
+Background images and gallery page images were taken from google images.
+
+Font awesome was used for social links and for golf ball on a tee icon in the page title.
+
