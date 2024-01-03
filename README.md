@@ -447,3 +447,6 @@ Mobile:
 
 ![Gallery Page 4 Mobile](static/screenshots/mobile-gallery-screenshot-4.png)
 
+**Contact Us Page**
+
+As a User I can view the Contact Us page and be able to see contact information as a telephone number and email address, I can also click on social links to follow the golf club and also able to view the location of the golf club from google maps. 
