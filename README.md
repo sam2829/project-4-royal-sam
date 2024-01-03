@@ -424,3 +424,26 @@ desktop:
 Mobile:
 
 ![Full Review Page Logged In 2 Mobile](static/screenshots/mobile-full-review-screenshot-3.png)
+
+**Gallery Page**
+
+As a user I can go onto the gallery page and view photos of the golf course.
+
+Images can be uploaded and deleted by the site administrator.
+
+Desktop:
+
+![Gallery Page 1 Desktop](static/screenshots/desktop-gallery-screenshot-1.png)
+
+![Gallery Page 2 Desktop](static/screenshots/desktop-gallery-screenshot-2.png)
+
+Mobile:
+
+![Gallery Page 1 Mobile](static/screenshots/mobile-gallery-screenshot-1.png)
+
+![Gallery Page 2 Mobile](static/screenshots/mobile-gallery-screenshot-2.png)
+
+![Gallery Page 3 Mobile](static/screenshots/mobile-gallery-screenshot-3.png)
+
+![Gallery Page 4 Mobile](static/screenshots/mobile-gallery-screenshot-4.png)
+
