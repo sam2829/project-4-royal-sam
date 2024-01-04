@@ -39,6 +39,7 @@ This is my fourth portfolio project for the Code Institute and my goal with this
     - [Libraries Used](#libraries-used)
   - [Testing](#testing)
   - [Deployment](#deployment)
+  - [Credits](#credits)
   
 ## User Experience
 
@@ -559,7 +560,7 @@ For deployment to Heroku the following steps were made:
     - PORT: 8000
     - GOOGLE_API_KEY: (Enter your google account API key for google maps)
   - I then had to add a buildpack. To do this I clicked on the "Add Buildpack" button, a pop-up window then appears and I then have to click on "python" then the button "Add Buildpack".
-  I then had to repeat this process but this time adding the "node.js" buildpack. It is important to make sure these buildpacks are added in this order.
+  - I then had to repeat this process but this time adding the "node.js" buildpack. It is important to make sure these buildpacks are added in this order.
   - I then went back to the tabs row at the top of the page and clicked on the "Deploy" tab to take me to the deploy page.
   - On the deployment page, I scrolled down to deployment method and confirmed I wanted to deploy through GitHub.
   - When I click on GitHub a search bar will appear underneath which will allow me to search for my GitHub repository. I made sure I spelt the repository I'm searching for exactly as I named it and then clicked the search button.
@@ -570,3 +571,14 @@ For deployment to Heroku the following steps were made:
 
 [Back to top](#royal-sam-golf-club)
 
+## Credits
+
+* Code Institute - Provided the template and codeanywhere so that I was able to build this project. Also, without the knowledge gained through out doing the course I would not have been able to build this project. The tutor support was also very helpful.
+* Slack - The slack community help me search for any issues I came accross and build this project.
+* Django - For being able to use django to build my project and all the documentation to help build and set up correctly.
+* Allauth - For being able to use their templates.
+* Google - For use of all images in the project.
+* Youtube - For extra learning material to try and understand more about django.
+* Mentor Jubril - For helping me realise whats needed to build a good project and also for encouragement and understanding.
+
+[Back to top](#royal-sam-golf-club)
