@@ -77,3 +77,5 @@ Booking buggy. | When user is filling out the booking form they are able to sele
 | Admin delete booking. | As admin they are able to delete a booking. | Logged in as admin and deleted a booking. | I was successfully able to delete a booking. | Pass |
 | Admin add to photo gallery. | As admin they are able to upload new photos onto the sites gallery page. | Logged in as admin and tried uploading new photos to the gallery page. | Photos were successfully added to the gallery page. | Pass |
 | Admin delete photos from gallery. | As admin they able to delete any existing photos from the sites gallery page. | Logged in as admin and tried deleting photos from the gallery. | 
+
+[Back to top](#royal-sam-golf-club-testing)

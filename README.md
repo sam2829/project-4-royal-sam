@@ -38,6 +38,7 @@ This is my fourth portfolio project for the Code Institute and my goal with this
     - [Frameworks and Tools Used](#frameworks-and-tools-used)
     - [Libraries Used](#libraries-used)
   - [Testing](#testing)
+  - [Deployment](#deployment)
   
 ## User Experience
 
@@ -517,3 +518,55 @@ Font awesome was used for social links and for golf ball on a tee icon in the pa
 ## Testing
 
 I have included details of my testing during and post development in a seperate file called [TESTING.md](TESTING.md)
+
+[Back to top](#royal-sam-golf-club)
+
+## Deployment
+
+**GitHub**
+
+This project was developed by using a specialized code institute template which is set up to run in codeanywhere.
+
+* Once loaded the template provided by code institute, in the top right of the file click on the green drop down menu labelled "code".
+* Then select HTTPS.
+* Next copy the url given to you.
+* Next I loaded up the codeanywhere and clicked on "new workspace" at the top of the page.
+* In the repository url, paste in the url copied from the github account.
+* Next click on create and the bottom right of the page.
+
+**Version Control**
+
+For version control the following tteps were made:
+
+* If any changes were made to my codeanywhere project.
+* First files were made ready for commit with command - git add filename or git add . to add all files.
+* To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what changes have occured.
+* To then move the changes to GitHub use the following command - git push
+
+**Deployment to Heroku**
+
+For deployment to Heroku the following steps were made:
+
+- First sign in to your Heroku account.
+  - On the top right of the page there is a drop-down menu called "new", click this and click on "create new app".
+  - You then need to decide your unique app name using '-' between each word. Then select which region you are working from and then click on the button "create app".
+  - Once you have clicked on "create app" you will be taken to a new page. On this page you will see a row of tabs at the top left of the page. You first need to click on the "settings" tab and go to the settings page.
+  - If you have any code that you have kept private which has been prevented from loading to your GitHub, then you must click on the button "Reveal Config Vars". A small table will then appear with columns "key" and "value". Config Vars used:
+    - CLOUDINARY_URL: (Enter Cloudinary API URL)
+    - DATABASE URL: (Enter the database URL from ElephantSQL)
+    - DISABLE_COLLECTSTATIC:
+    - SECRET_KEY: (Enter your secret key)
+    - PORT: 8000
+    - GOOGLE_API_KEY: (Enter your google account API key for google maps)
+  - I then had to add a buildpack. To do this I clicked on the "Add Buildpack" button, a pop-up window then appears and I then have to click on "python" then the button "Add Buildpack".
+  I then had to repeat this process but this time adding the "node.js" buildpack. It is important to make sure these buildpacks are added in this order.
+  - I then went back to the tabs row at the top of the page and clicked on the "Deploy" tab to take me to the deploy page.
+  - On the deployment page, I scrolled down to deployment method and confirmed I wanted to deploy through GitHub.
+  - When I click on GitHub a search bar will appear underneath which will allow me to search for my GitHub repository. I made sure I spelt the repository I'm searching for exactly as I named it and then clicked the search button.
+  - The repository then appeared underneath my search, I checked this was the correct repository and then clicked the "connect" button. This has now linked up my Heroku app and my GitHub repository code.
+  - I then scrolled down and clicked on the button "Enable Automatic Deploys", this allows my Heroku app to automatically update every time I've pushed a new change to my code to GitHub.
+  - I then scrolled down and clicked on the button "Deploy Branch" which is now building the app.
+  - Once the app is successfully deployed, a message appeared saying "your app was successfully deployed." Then click on the "view" button which will take me to the deployed link.
+
+[Back to top](#royal-sam-golf-club)
+
