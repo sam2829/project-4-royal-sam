@@ -2,13 +2,13 @@
 
 ## Overview
 
-Royal Sam Golf Club is a site designed for a specific golf club so that the user is able to see about the golf club and book tee times to play. The user will be able to register or login, be able to search and book available tee times, be able to view, edit and delete any of the users bookings. The user will also be able to to leave reviews, comment and like on other reviews and also be able to view the the gallery and contact information.
+Royal Sam Golf Club is a site designed for a specific golf club so that the user is able to see about the golf club and book tee times to play. The user will be able to register or login, be able to search and book available tee times, be able to view, edit and delete any of the user's bookings. The user will also be able to leave reviews, comment and like on other reviews and also be able to view the gallery and contact information.
 
 Here is a live version of my project: [Royal Sam Golf Club](https://royal-sam-02fa0ed9cfe2.herokuapp.com/)
 
 ## Project Goals
 
-This is my fourth portfolio project for the Code Institute and my goal with this project is to display my new skills in using frameworks such as Django and Bootstrap. I decided to build a site for a golf club which allows users to book and manage there tee times and also being able to leave reviews and comments about the golf club.
+This is my fourth portfolio project for the Code Institute and my goal with this project is to display my new skills in using frameworks such as Django and Bootstrap. I decided to build a site for a golf club which allows users to book and manage their tee times and also being able to leave reviews and comments about the golf club.
 
 ## Contents
 
@@ -45,13 +45,13 @@ This is my fourth portfolio project for the Code Institute and my goal with this
 
 ### The Strategy Plane
 
-Royal Sam Golf Club is intended to help golfers be able to book tee times to play at the golf course whether they are a member of a guest of the golf club. User will also be able to manage there bookings and be able to leave reviews and comment on other reviews.
+Royal Sam Golf Club is intended to help golfers be able to book tee times to play at the golf course whether they are a member of a guest of the golf club. User will also be able to manage their bookings and be able to leave reviews and comment on other reviews.
 
 #### The Ideal User
 
 - Someone who enjoys playing golf.
 - Someone who likes to play different golf courses.
-- Someone who who is member of the Royal Sam Golf Club
+- Someone who is member of the Royal Sam Golf Club
 - Someone who would like to share the experience of playing at the golf club.
 - Someone who would like to book and manage all of their tee times online.
 
@@ -75,15 +75,15 @@ Royal Sam Golf Club is intended to help golfers be able to book tee times to pla
 
 - To provide user the ability to login to their account.
 - To provide user the ability to logout of their account.
-- To provide user the ability to to book and manage their tee times.
+- To provide user the ability to book and manage their tee times.
 - To provide user the ability to leave their own review.
 - To provide user the ability to leave comments and like other reviews.
 
 ### Agile Planning
 
-This project was developed using agile methodologies by delivering small features across the duration of the project. This broke down the build of the project into alot more manageable parts and was able to select which user stories were more important for the site.
+This project was developed using agile methodologies by delivering small features across the duration of the project. This broke down the build of the project into a lot more manageable parts and was able to select which user stories were more important for the site.
 
-It was carried out this way to try ensure that all core requirements were completed first to give the project a complete feel and to make sure the most important user stories were implemented. When clicked on and opened the user story, the user story was assigned a label "must have", "should have" or "could have" so I would know the importance of the user story.
+It was carried out this way to try ensuring that all core requirements were completed first to give the project a complete feel and to make sure the most important user stories were implemented. When clicked on and opened the user story, the user story was assigned a label "must have", "should have" or "could have" so I would know the importance of the user story.
 
 The kanban board was created using Github projects, this helped me be able to see all my user stories and be able to keep track of which ones had been done, to do or in progress.
 
@@ -127,7 +127,7 @@ Create Review / Post:
 
 Manage Reviews / Posts:
 
-- As a admin I can create, read, update and delete posts / reviews so that iI can manage my content.
+- As a site admin I can create, read, update and delete posts / reviews so that I can manage my content.
 
 Like A Review / Post:
 
@@ -143,7 +143,7 @@ Site Pagination:
 
 Update Gallery:
 
-- As a admin I can create, update or delete the gallery photos so that the user can see updated photos of the golf course.
+- As a site admin I can create, update or delete the gallery photos so that the user can see updated photos of the golf course.
 
 View Gallery:
 
@@ -153,7 +153,7 @@ Create Drafts:
 
 - As a site admin I can create draft posts so that I can finish writing the content later.
 
-Comment On A Post / Review:
+Comment On a Post / Review:
 
 - As a site user I can leave comments on a post / review so that I can be involved in the conversation.
 
@@ -163,7 +163,7 @@ View Comments:
 
 View Likes:
 
-- As a site user I can view the number of likes on each post / review so that I can see whichis the most popular or liked.
+- As a site user I can view the number of likes on each post / review so that I can see which is the most popular or liked.
 
 Paginated Bookings:
 
@@ -227,17 +227,17 @@ Reviews Page:
 
 #### Database Schema
 
-The profile model is linked directly to the built in UserModel in conjunction with Django Allauth with the user progile being created when the user registers with the site. The Post (reviews) model has a relationship with the User model by foriegn key, this allows for the reviews left to be linked back to the specific user and their profile. The comment model is linked by foreign key to the Post model (reviews) to store comments for the specific review.
+The profile model is linked directly to the built in User Model in conjunction with Django Allauth with the user profile being created when the user registers with the site. The Post (reviews) model has a relationship with the User model by foreign key, this allows for the reviews left to be linked back to the specific user and their profile. The comment model is linked by foreign key to the Post model (reviews) to store comments for the specific review.
 
-The Booking model is also linked directly to the built in UserMdodel so all bookings to be linked back to the specific user.
+The Booking model is also linked directly to the built in User Model so all bookings to be linked back to the specific user.
 
-The GalleryIamge model was also created so that the site admin can upload images of the golf course when they please.
+The Gallery Image model was also created so that the site admin can upload images of the golf course when they please.
 
 #### Security
 
-In the code I have used if authenticated where needed so that users who are not logged in can not access or see information unless logged in.
+In the code I have used if authenticated where needed so that users who are not logged in cannnot access or see information unless logged in.
 
-Enviroment variables were stored in an env.py file for local development for security purposes to ensure that no secret keys, API keys, or any sensitive information was added to the repository. In production, these variables were also added to the Heroku config vars within the project.
+Environment variables were stored in an env.py file for local development for security purposes to ensure that no secret keys, API keys, or any sensitive information was added to the repository. In production, these variables were also added to the Heroku config vars within the project.
 
 ### The Scope Plane
 
@@ -245,7 +245,7 @@ Enviroment variables were stored in an env.py file for local development for sec
 - Hamburger menu for navbar on mobile devices.
 - Ability to perform CRUD functionality on Profiles, Reviews, Comments and Bookings.
 - Restricted role-based features for leaving reviews and comments, booking and editing tee times.
-- Homepage welcomeing user to the site and links to navigate through the site and options to login or register and account.
+- Homepage welcoming user to the site and links to navigate through the site and options to login or register and account.
 
 [Back to top](#royal-sam-golf-club)
   
@@ -253,7 +253,7 @@ Enviroment variables were stored in an env.py file for local development for sec
 
 #### Features
 
-As a User I would like to view the site on all my different devices so I can view site where ever I am.
+As a User I would like to view the site on all my different devices so I can view site wherever I am.
 
 **Navbar**
 
@@ -265,17 +265,17 @@ This is a list of the navigation options on all pages:
 
 - Home -> index.html - Visible to all
 - My Account (Dropdown):
-  - Register -> signup.html - Visible to all logged out users
-  - Login -> login.html - Visible to all logged out users
-  - My Bookings -> my_bookings.html - Visible to all logged in users
-  - Logout -> logout.html - Visible to all logged in users
-- Reviews -> reviews.html - Visible to all users
+  - Register -> signup.html - Visible to all logged out users.
+  - Login -> login.html - Visible to all logged out users.
+  - My Bookings -> my_bookings.html - Visible to all logged in users.
+  - Logout -> logout.html - Visible to all logged in users.
+- Reviews -> reviews.html - Visible to all users.
 - About Us (Dropdown):
-  - Gallery -> gallery.html - Visible to all users
-  - Contact Us -> contact_us.html - Visible to all users
+  - Gallery -> gallery.html - Visible to all users.
+  - Contact Us -> contact_us.html - Visible to all users.
 - Book A Tee -> book_a_tee.html - Visible to all logged in users.
 
-The navigation menu is displayed on all pages and forms into a hamburger menu on smaller devices. This allows users to view the site from any device and not take up to much space on mobile devices. Its very clear and easy to use.
+The navigation menu is displayed on all pages and forms into a hamburger menu on smaller devices. This allows users to view the site from any device and not take up too much space on mobile devices. It's very clear and easy to use.
 
 Desktop:
 
@@ -302,13 +302,13 @@ Mobile Devices:
 
 **Homepage**
 
-Users will be presented by a welcoming message with a background image of the golf course on display. Book a Tee link will be displayed on the home page which depending whether user is logged in or not will be taken to book a tee time form or option for user to register or login.
+Users will be presented by a welcoming message with a background image of the golf course on display. Book a Tee link will be displayed on the home page which depending on whether user is logged in or not will be taken to book a tee time form or option for user to register or login.
 
 ![Homepage Screenshot](static/screenshots/desktop-homepage.png)
 
 **Register Page**
 
-As a User if I havnt already made an online account I would like to be able to register an account using the register form from allauth, so I can then be able to take part in all the site has to offer.
+As a User if I havn't already made an online account, I would like to be able to register an account using the register form from Allauth, so I can then be able to take part in all the site has to offer.
 
 ![Register Screenshot 1](static/screenshots/register-screenshot-1.png)
 
@@ -316,7 +316,7 @@ As a User if I havnt already made an online account I would like to be able to r
 
 **Login Page**
 
-As a User if I have already registered an account I would like to be able to log into my account when ever I wish, Whether it to be to book a tee time or leave a review. I would login by using the allauth login form.
+As a User if I have already registered an account, I would like to be able to log into my account when ever I wish, whether it to be to book a tee time or leave a review. I would login by using the allauth login form.
 
 ![Login Page Screenshot 1](static/screenshots/login-screenshot-1.png)
 
@@ -324,31 +324,31 @@ As a User if I have already registered an account I would like to be able to log
 
 **Logout Page**
 
-As a User if I am already logged in, I would like the ability to log out of my account and would like to be asked if I'm sure incase I was logging out by mistake. This will be done by the allauth templates.
+As a User if I am already logged in, I would like the ability to log out of my account and would like to be asked if I'm sure in case I was logging out by mistake. This will be done by the Allauth templates.
 
 ![Logout Page Screenshot](static/screenshots/logout-screenshot.png)
 
 **Book A Tee Page**
 
-As a User if I click on the the book a tee page, what page is rendered depends on if the user is logged in or logged out.
+As a User if I click on the book a tee page, what page is rendered depends on if the user is logged in or logged out.
 
 If the user is logged out a page will be rendered offering the user chance to either login or register account, providing links to each option.
 
 ![Login or Register Message Page](static/screenshots/login-or-register-screenshot.png)
 
-If the user is logged in, the user is taken to the first part of the booking form where the user provides email address and selects the date they wish to book. Both fields must be filled out correclty. The date selected must also have available times and be the present or furture date.
+If the user is logged in, the user is taken to the first part of the booking form where the user provides email address and selects the date they wish to book. Both fields must be filled out correctly. The date selected must also have available times and be the present or future date.
 
 ![Book A Tee Page Screenshot](static/screenshots/book-a-tee-screenshot.png)
 
-Once the user has filled out the first part of the form correctly, the user will then be asked to fill out the second part of the form where they can easily select which time they would like out of the available times shown, how many players, if they are a member of the golf club and if the require a buggy.
+Once the user has filled out the first part of the form correctly, the user will then be asked to fill out the second part of the form where they can easily select which time they would like out of the available times shown, how many players, if they are a member of the golf club and if they require a buggy.
 
-Available times shown will only be times that havnt already been booked and times that havnt already passed.
+Available times shown will only be times that havn't already been booked and times that havn't already passed.
 
-NUmber of players can only be between numbers 1 and 4.
+Number of players can only be between numbers 1 and 4.
 
-All fields must be filled out before user can book there time.
+All fields must be filled out before user can book their time.
 
-Once User has successfully booked, they will be redirected to their my bookings page.
+Once User has successfully booked, they will be redirected to the main my bookings page.
 
 ![Book A Time Page Screenshot](static/screenshots/book-a-time-screenshot.png)
 
@@ -358,13 +358,13 @@ As a User the my bookings page is only available once the user has logged in.
 
 If the user has any current bookings this will be displayed in order of their next tee time. Three bookings will be displayed per page and user can click next or previous to paginate through the pages to see all their bookings.
 
-The User will also be able to edit or delete any of there bookings from this page.
+The User will also be able to edit or delete any of their bookings from this page.
 
 ![My Bookings Page Screenshot 1](static/screenshots/my-bookings-screenshot-1.png)
 
 ![My Bookings Page Screenshot 2](static/screenshots/my-bookings-screenshot-2.png)
 
-If the user has no current bookings, a message willbe displayed informing them they have no bookings and option to then book a tee.
+If the user has no current bookings, a message will be displayed informing them they have no bookings and option to then book a tee.
 
 ![My Bookings Page Screenshot 3](static/screenshots/my-bookings-screenshot-3.png)
 
@@ -379,24 +379,24 @@ All reviews and posts will be displayed in most recent order.
 
 User will also be able to click on any review they like to then view the review in full.
 
-If the user hasnt logged in they are not able to leave a review of their own:
+If the user hasn't logged in, they are not able to leave a review of their own:
 
 ![Reviews Page Logged Out 1](static/screenshots/reviews-logout-screenshot-1.png)
 
 ![Reviews Page Logged Out 2](static/screenshots/reviews-logout-screenshot-2.png)
 
-If the user is logged in they able to leave a review of their own by clicking on the Leave A Review link at the bottom of the page:
+If the user is logged in, they able to leave a review of their own by clicking on the Leave A Review link at the bottom of the page:
 
 ![Reviews Page Logged In](static/screenshots/reviews-login-screenshot.png)
 
 **Leave A Review Page**
 
-If the User is logged in they have the option to leave their own review.
+If the User is logged in, they have the option to leave their own review.
 To do this they click on the leave review link on the reviews page, they then must fill out the Leave A Review form.
 
-On the form the title and content section must be filled out to be able to submit the form. If the user has not selected an image for their review then the sites custom image will be applied to the review.
+On the form the title and content section must be filled out to be able to submit the form. If the user has not selected an image for their review, then the sites custom image will be applied to the review.
 
-Once submitted a pop up message will confirm user has submitted a review and is awaiting approval and redirected back to reviews page.
+Once submitted a pop-up message will confirm user has submitted a review and is awaiting approval and redirected back to reviews page.
 
 ![Leave Review Page 1](static/screenshots/leave-review-screenshot-1.png)
 
@@ -404,7 +404,7 @@ Once submitted a pop up message will confirm user has submitted a review and is 
 
 **Full Review Page**
 
-If the user clicks on a review and are not logged in they are able to view the review in full, what comments have been made and how many comments there are.
+If the user clicks on a review and are not logged in, they are able to view the review in full, what comments have been made and how many comments there are.
 
 Desktop:
 
@@ -428,7 +428,7 @@ Mobile:
 
 If the user decides to comment on the review both fields must be filled out correctly on the leave a comment form.
 
-Once the user has submitted the form they will be notiified that their comment is awaiting approval.
+Once the user has submitted the form, they will be notified that their comment is awaiting approval.
 
 desktop:
 
@@ -472,7 +472,7 @@ As a User I can view the Contact Us page and be able to see contact information 
 
 **Colour Scheme**
 
-I opted for a very few choice of colours throughout the site. The same colours have been implemented across the site and are included in the buttons styles.
+I opted for a very few choices of colours throughout the site. The same colours have been implemented across the site and are included in the button's styles.
 
 This hopefully makes the site easy and clear to read / use.
 
@@ -488,7 +488,7 @@ Font awesome was used for social links and for golf ball on a tee icon in the pa
 
 - HTML5
 - CSS
-- Javascript
+- JavaScript
 - Python
 
 ### Frameworks and Tools Used
@@ -518,7 +518,7 @@ Font awesome was used for social links and for golf ball on a tee icon in the pa
 
 ## Testing
 
-I have included details of my testing during and post development in a seperate file called [TESTING.md](TESTING.md)
+I have included details of my testing during and post development in a separate file called [TESTING.md](TESTING.md)
 
 [Back to top](#royal-sam-golf-club)
 
@@ -526,23 +526,23 @@ I have included details of my testing during and post development in a seperate 
 
 **GitHub**
 
-This project was developed by using a specialized code institute template which is set up to run in codeanywhere.
+This project was developed by using a specialized code institute template which is set up to run in Codeanywhere.
 
-* Once loaded the template provided by code institute, in the top right of the file click on the green drop down menu labelled "code".
+* Once loaded the template provided by code institute, in the top right of the file click on the green drop-down menu labelled "code".
 * Then select HTTPS.
-* Next copy the url given to you.
-* Next I loaded up the codeanywhere and clicked on "new workspace" at the top of the page.
-* In the repository url, paste in the url copied from the github account.
+* Next copy the URL given to you.
+* Next, I loaded up the Codeanywhere and clicked on "new workspace" at the top of the page.
+* In the repository URL, paste in the URL copied from the GitHub account.
 * Next click on create and the bottom right of the page.
 
 **Version Control**
 
-For version control the following tteps were made:
+For version control the following steps were made:
 
-* If any changes were made to my codeanywhere project.
+* If any changes were made to my Codeanywhere project.
 * First files were made ready for commit with command - git add filename or git add . to add all files.
-* To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what changes have occured.
-* To then move the changes to GitHub use the following command - git push
+* To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what changes have occurred.
+* To then move the changes to GitHub, use the following command - git push
 
 **Deployment to Heroku**
 
@@ -573,12 +573,12 @@ For deployment to Heroku the following steps were made:
 
 ## Credits
 
-* Code Institute - Provided the template and codeanywhere so that I was able to build this project. Also, without the knowledge gained through out doing the course I would not have been able to build this project. The tutor support was also very helpful.
-* Slack - The slack community help me search for any issues I came accross and build this project.
-* Django - For being able to use django to build my project and all the documentation to help build and set up correctly.
+* Code Institute - Provided the template and Codeanywhere so that I was able to build this project. Also, without the knowledge gained through out doing the course I would not have been able to build this project. The tutor support was also very helpful.
+* Slack - The slack community help me search for any issues I came across and build this project.
+* Django - For being able to use Django to build my project and all the documentation to help build and set up correctly.
 * Allauth - For being able to use their templates.
 * Google - For use of all images in the project.
-* Youtube - For extra learning material to try and understand more about django.
-* Mentor Jubril - For helping me realise whats needed to build a good project and also for encouragement and understanding.
+* YouTube - For extra learning material to try and understand more about Django.
+* Mentor Jubril - For helping me realise what's needed to build a good project and also for encouragement and understanding.
 
 [Back to top](#royal-sam-golf-club)
