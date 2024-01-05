@@ -87,7 +87,7 @@ It was carried out this way to try ensuring that all core requirements were comp
 
 The kanban board was created using Github projects, this helped me be able to see all my user stories and be able to keep track of which ones had been done, to do or in progress.
 
-![User Stories Screenshot](static/screenshots/user-stories-screenshot.png)
+![User Stories Screenshot](docs/readme_screenshots/user-stories-screenshot.png)
 
 #### User Stories
 
@@ -279,12 +279,12 @@ The navigation menu is displayed on all pages and forms into a hamburger menu on
 
 Desktop:
 
-![Desktop Navbar Screenshot](static/screenshots/desktop-navbar.png)
+![Desktop Navbar Screenshot](docs/readme_screenshots/desktop-navbar.png)
 
 Mobile Device:
 
-![Mobile Navbar Screenshot 1](static/screenshots/mobile-navbar-1.png)
-![Mobile Navbar Screenshot 2](static/screenshots/mobile-navbar-2.png)
+![Mobile Navbar Screenshot 1](docs/readme_screenshots/mobile-navbar-1.png)
+![Mobile Navbar Screenshot 2](docs/readme_screenshots/mobile-navbar-2.png)
 
 **Footer**
 
@@ -294,39 +294,39 @@ There is also contact information in the form of email address and telephone num
 
 Desktop:
 
-![Desktop Footer Screenshot](static/screenshots/desktop-footer.png)
+![Desktop Footer Screenshot](docs/readme_screenshots/desktop-footer.png)
 
 Mobile Devices:
 
-![Mobile Footer Screenshot](static/screenshots/mobile-footer.png)
+![Mobile Footer Screenshot](docs/readme_screenshots/mobile-footer.png)
 
 **Homepage**
 
 Users will be presented by a welcoming message with a background image of the golf course on display. Book a Tee link will be displayed on the home page which depending on whether user is logged in or not will be taken to book a tee time form or option for user to register or login.
 
-![Homepage Screenshot](static/screenshots/desktop-homepage.png)
+![Homepage Screenshot](docs/readme_screenshots/desktop-homepage.png)
 
 **Register Page**
 
 As a User if I havn't already made an online account, I would like to be able to register an account using the register form from Allauth, so I can then be able to take part in all the site has to offer.
 
-![Register Screenshot 1](static/screenshots/register-screenshot-1.png)
+![Register Screenshot 1](docs/readme_screenshots/register-screenshot-1.png)
 
-![Register Screenshot 2](static/screenshots/register-screenshot-2.png)
+![Register Screenshot 2](docs/readme_screenshots/register-screenshot-2.png)
 
 **Login Page**
 
 As a User if I have already registered an account, I would like to be able to log into my account when ever I wish, whether it to be to book a tee time or leave a review. I would login by using the allauth login form.
 
-![Login Page Screenshot 1](static/screenshots/login-screenshot-1.png)
+![Login Page Screenshot 1](docs/readme_screenshots/login-screenshot-1.png)
 
-![Login Page Screenshot 2](static/screenshots/login-screenshot-2.png)
+![Login Page Screenshot 2](docs/readme_screenshots/login-screenshot-2.png)
 
 **Logout Page**
 
 As a User if I am already logged in, I would like the ability to log out of my account and would like to be asked if I'm sure in case I was logging out by mistake. This will be done by the Allauth templates.
 
-![Logout Page Screenshot](static/screenshots/logout-screenshot.png)
+![Logout Page Screenshot](docs/readme_screenshots/logout-screenshot.png)
 
 **Book A Tee Page**
 
@@ -334,11 +334,11 @@ As a User if I click on the book a tee page, what page is rendered depends on if
 
 If the user is logged out a page will be rendered offering the user chance to either login or register account, providing links to each option.
 
-![Login or Register Message Page](static/screenshots/login-or-register-screenshot.png)
+![Login or Register Message Page](docs/readme_screenshots/login-or-register-screenshot.png)
 
 If the user is logged in, the user is taken to the first part of the booking form where the user provides email address and selects the date they wish to book. Both fields must be filled out correctly. The date selected must also have available times and be the present or future date.
 
-![Book A Tee Page Screenshot](static/screenshots/book-a-tee-screenshot.png)
+![Book A Tee Page Screenshot](docs/readme_screenshots/book-a-tee-screenshot.png)
 
 Once the user has filled out the first part of the form correctly, the user will then be asked to fill out the second part of the form where they can easily select which time they would like out of the available times shown, how many players, if they are a member of the golf club and if they require a buggy.
 
@@ -350,7 +350,7 @@ All fields must be filled out before user can book their time.
 
 Once User has successfully booked, they will be redirected to the main my bookings page.
 
-![Book A Time Page Screenshot](static/screenshots/book-a-time-screenshot.png)
+![Book A Time Page Screenshot](docs/readme_screenshots/book-a-time-screenshot.png)
 
 **My Bookings Page**
 
@@ -360,13 +360,13 @@ If the user has any current bookings this will be displayed in order of their ne
 
 The User will also be able to edit or delete any of their bookings from this page.
 
-![My Bookings Page Screenshot 1](static/screenshots/my-bookings-screenshot-1.png)
+![My Bookings Page Screenshot 1](docs/readme_screenshots/my-bookings-screenshot-1.png)
 
-![My Bookings Page Screenshot 2](static/screenshots/my-bookings-screenshot-2.png)
+![My Bookings Page Screenshot 2](docs/readme_screenshots/my-bookings-screenshot-2.png)
 
 If the user has no current bookings, a message will be displayed informing them they have no bookings and option to then book a tee.
 
-![My Bookings Page Screenshot 3](static/screenshots/my-bookings-screenshot-3.png)
+![My Bookings Page Screenshot 3](docs/readme_screenshots/my-bookings-screenshot-3.png)
 
 
 **Reviews Page**
@@ -381,13 +381,13 @@ User will also be able to click on any review they like to then view the review 
 
 If the user hasn't logged in, they are not able to leave a review of their own:
 
-![Reviews Page Logged Out 1](static/screenshots/reviews-logout-screenshot-1.png)
+![Reviews Page Logged Out 1](docs/readme_screenshots/reviews-logout-screenshot-1.png)
 
-![Reviews Page Logged Out 2](static/screenshots/reviews-logout-screenshot-2.png)
+![Reviews Page Logged Out 2](docs/readme_screenshots/reviews-logout-screenshot-2.png)
 
 If the user is logged in, they able to leave a review of their own by clicking on the Leave A Review link at the bottom of the page:
 
-![Reviews Page Logged In](static/screenshots/reviews-login-screenshot.png)
+![Reviews Page Logged In](docs/readme_screenshots/reviews-login-screenshot.png)
 
 **Leave A Review Page**
 
@@ -398,9 +398,9 @@ On the form the title and content section must be filled out to be able to submi
 
 Once submitted a pop-up message will confirm user has submitted a review and is awaiting approval and redirected back to reviews page.
 
-![Leave Review Page 1](static/screenshots/leave-review-screenshot-1.png)
+![Leave Review Page 1](docs/readme_screenshots/leave-review-screenshot-1.png)
 
-![Leave Review Page 2](static/screenshots/leave-review-screenshot-2.png)
+![Leave Review Page 2](docs/readme_screenshots/leave-review-screenshot-2.png)
 
 **Full Review Page**
 
@@ -408,23 +408,23 @@ If the user clicks on a review and are not logged in, they are able to view the 
 
 Desktop:
 
-![Full Review Page Logged Out](static/screenshots/full-review-screenshot-1.png)
+![Full Review Page Logged Out](docs/readme_screenshots/full-review-screenshot-1.png)
 
 Mobile:
 
-![Full Review Page Logged Out Mobile](static/screenshots/mobile-full-review-screenshot-1.png)
+![Full Review Page Logged Out Mobile](docs/readme_screenshots/mobile-full-review-screenshot-1.png)
 
 If the user is logged in, they are also able to like the review and leave a comment in the comment form which is now available.
 
 desktop:
 
-![Full Review Page Logged In 1](static/screenshots/full-review-screenshot-2.png)
+![Full Review Page Logged In 1](docs/readme_screenshots/full-review-screenshot-2.png)
 
 Mobile:
 
-![Full Review Page Logged In 1 - 1 Mobile](static/screenshots/mobile-full-review-screenshot-4.png)
+![Full Review Page Logged In 1 - 1 Mobile](docs/readme_screenshots/mobile-full-review-screenshot-4.png)
 
-![Full Review Page Logged In 1 -2 Mobile](static/screenshots/mobile-full-review-screenshot-5.png)
+![Full Review Page Logged In 1 -2 Mobile](docs/readme_screenshots/mobile-full-review-screenshot-5.png)
 
 If the user decides to comment on the review both fields must be filled out correctly on the leave a comment form.
 
@@ -432,11 +432,11 @@ Once the user has submitted the form, they will be notified that their comment i
 
 desktop:
 
-![Full Review Page Logged In 2](static/screenshots/full-review-screenshot-3.png)
+![Full Review Page Logged In 2](docs/readme_screenshots/full-review-screenshot-3.png)
 
 Mobile:
 
-![Full Review Page Logged In 2 Mobile](static/screenshots/mobile-full-review-screenshot-3.png)
+![Full Review Page Logged In 2 Mobile](docs/readme_screenshots/mobile-full-review-screenshot-3.png)
 
 **Gallery Page**
 
@@ -446,19 +446,19 @@ Images can be uploaded and deleted by the site administrator.
 
 Desktop:
 
-![Gallery Page 1 Desktop](static/screenshots/desktop-gallery-screenshot-1.png)
+![Gallery Page 1 Desktop](docs/readme_screenshots/desktop-gallery-screenshot-1.png)
 
-![Gallery Page 2 Desktop](static/screenshots/desktop-gallery-screenshot-2.png)
+![Gallery Page 2 Desktop](docs/readme_screenshots/desktop-gallery-screenshot-2.png)
 
 Mobile:
 
-![Gallery Page 1 Mobile](static/screenshots/mobile-gallery-screenshot-1.png)
+![Gallery Page 1 Mobile](docs/readme_screenshots/mobile-gallery-screenshot-1.png)
 
-![Gallery Page 2 Mobile](static/screenshots/mobile-gallery-screenshot-2.png)
+![Gallery Page 2 Mobile](docs/readme_screenshots/mobile-gallery-screenshot-2.png)
 
-![Gallery Page 3 Mobile](static/screenshots/mobile-gallery-screenshot-3.png)
+![Gallery Page 3 Mobile](docs/readme_screenshots/mobile-gallery-screenshot-3.png)
 
-![Gallery Page 4 Mobile](static/screenshots/mobile-gallery-screenshot-4.png)
+![Gallery Page 4 Mobile](docs/readme_screenshots/mobile-gallery-screenshot-4.png)
 
 **Contact Us Page**
 
