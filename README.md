@@ -185,19 +185,19 @@ Wireframes were used to create a prototype of the project which may change durin
 
 Homepage:
 
-![Desktop Homepage Screenshot](static/screenshots/desktop-homepage-wireframe.png)
+![Desktop Homepage Screenshot](docs/wireframes/desktop-homepage-wireframe.png)
 
 Register Page:
 
-![Desktop Register Page Screenshot](static/screenshots/desktop-register-page-wireframe.png)
+![Desktop Register Page Screenshot](docs/wireframes/desktop-register-page-wireframe.png)
 
 Login Page:
 
-![Desktop Login Page](static/screenshots/desktop-login-page-wireframe.png)
+![Desktop Login Page](docs/wireframes/desktop-login-page-wireframe.png)
 
 Reviews Page:
 
-![Desktop Reviews Page](static/screenshots/desktop-reviews-page-wireframe.png)
+![Desktop Reviews Page](docs/wireframes/desktop-reviews-page-wireframe.png)
 
 </details>
 

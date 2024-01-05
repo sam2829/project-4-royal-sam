@@ -79,3 +79,19 @@ Full test table:
 | Admin delete photos from gallery. | As admin they able to delete any existing photos from the site's gallery page. | Logged in as admin and tried deleting photos from the gallery. | 
 
 [Back to top](#royal-sam-golf-club-testing)
+
+## Validators
+
+### Lighthouse
+
+<details>
+
+<summary>Desktop</summary>
+
+<br>
+
+Homepage:
+
+
+
+</details>
