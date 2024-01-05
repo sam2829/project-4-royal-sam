@@ -10,6 +10,8 @@ During the development of this project, numerous testing was carried out by myse
   - [Testing Overview](#testing-overview)
   - [Contents](#contents)
   - [Manual Testing](#manual-testing)
+  - [Validators](#validators)
+    - [Lighthouse](#lighthouse)
 
 ## Manual Testing
 
@@ -90,8 +92,165 @@ Full test table:
 
 <br>
 
-Homepage:
+Homepage (User logged out):
 
+![Home Page Logged Out](docs/testing_screenshots/lighthouse-desktop-home-logged-out.png)
+
+Homepage (User logged in):
+
+![Home Page Logged In](docs/testing_screenshots/lighthouse-desktop-home-logged-in.png)
+
+Register Page:
+
+![Register Page](docs/testing_screenshots/lighthouse-desktop-register.png)
+
+Login Page:
+
+![Login Page](docs/testing_screenshots/lighthouse-desktop-login.png)
+
+Logout Page:
+
+![Logout Page](docs/testing_screenshots/lighthouse-desktop-logout.png)
+
+Reviews Page (Logged out):
+
+![Reviews Page Logged Out](docs/testing_screenshots/lighthouse-desktop-logged-out-reviews.png)
+
+Reviews Page (logged in):
+
+![Reviews Page Logged In](docs/testing_screenshots/lighthouse-desktop-logged-in-reviews.png)
+
+Full Review Page (Logged out):
+
+![Full Review Page Logged Out](docs/testing_screenshots/lighthouse-desktop-review-logged-out.png)
+
+Full Review Page (Logged in):
+
+![Full Review Page Logged In](docs/testing_screenshots/lighthouse-desktop-review-logged-in.png)
+
+Gallery Page:
+
+![Gallery Page](docs/testing_screenshots/lighthouse-desktop-gallery.png)
+
+Contact Us Page:
+
+![Contact Us Page](docs/testing_screenshots/lighthouse-desktop-contact-us.png)
+
+Book A Tee Page (Logged out):
+
+![Book A Tee Page Logged Out](docs/testing_screenshots/lighthouse-desktop-book-a-tee-logged-out.png)
+
+Book A Tee Page (Logged in):
+
+![Book A Tee Page Logged In](docs/testing_screenshots/lighthouse-desktop-book-a-tee-logged-in.png)
+
+Book A Time Page:
+
+![Book A Time Page](docs/testing_screenshots/lighthouse-desktop-book-a-time.png)
+
+My Bookings Page:
+
+![My Bookings Page](docs/testing_screenshots/lighthouse-desktop-my-bookings.png)
+
+My Bookings Page (No bookings):
+
+![My Bookings No Bookings Page](docs/testing_screenshots/lighthouse-desktop-my-bookings-no-bookings.png)
+
+Edit Booking Page 1:
+
+![Edit Booking Page 1](docs/testing_screenshots/lighthouse-desktop-edit-booking-1.png)
+
+Edit Booking Page 2:
+
+![Edit Booking Page 2](docs/testing_screenshots/lighthouse-desktop-edit-booking-2.png)
+
+Delete Booking Page:
+
+![Delete Booking Page](docs/testing_screenshots/lighthouse-desktop-delete-booking.png)
+
+</details>
+
+<details>
+
+<summary>Mobile</summary>
+
+<br>
+
+Homepage (User logged out):
+
+![Home Page Logged Out](docs/testing_screenshots/lighthouse-mobile-home-logged-out.png)
+
+Homepage (User logged in):
+
+![Home Page Logged In](docs/testing_screenshots/lighthouse-mobile-home-logged-in.png)
+
+Register Page:
+
+![Register Page](docs/testing_screenshots/lighthouse-mobile-register.png)
+
+Login Page:
+
+![Login Page](docs/testing_screenshots/lighthouse-mobile-login.png)
+
+Logout Page:
+
+![Logout Page](docs/testing_screenshots/lighthouse-mobile-logout.png)
+
+Reviews Page (Logged out):
+
+![Reviews Page Logged Out](docs/testing_screenshots/lighthouse-mobile-logged-out-reviews.png)
+
+Reviews Page (logged in):
+
+![Reviews Page Logged In](docs/testing_screenshots/lighthouse-mobile-logged-in-reviews.png)
+
+Full Review Page (Logged out):
+
+![Full Review Page Logged Out](docs/testing_screenshots/lighthouse-mobile-review-logged-out.png)
+
+Full Review Page (Logged in):
+
+![Full Review Page Logged In](docs/testing_screenshots/lighthouse-mobile-review-logged-in.png)
+
+Gallery Page:
+
+![Gallery Page](docs/testing_screenshots/lighthouse-mobile-gallery.png)
+
+Contact Us Page:
+
+![Contact Us Page](docs/testing_screenshots/lighthouse-mobile-contact-us.png)
+
+Book A Tee Page (Logged out):
+
+![Book A Tee Page Logged Out](docs/testing_screenshots/lighthouse-mobile-book-a-tee-logged-out.png)
+
+Book A Tee Page (Logged in):
+
+![Book A Tee Page Logged In](docs/testing_screenshots/lighthouse-mobile-book-a-tee-logged-in.png)
+
+Book A Time Page:
+
+![Book A Time Page](docs/testing_screenshots/lighthouse-mobile-book-a-time.png)
+
+My Bookings Page:
+
+![My Bookings Page](docs/testing_screenshots/lighthouse-mobile-my-bookings.png)
+
+My Bookings Page (No bookings):
+
+![My Bookings No Bookings Page](docs/testing_screenshots/lighthouse-mobile-my-bookings-no-bookings.png)
+
+Edit Booking Page 1:
+
+![Edit Booking Page 1](docs/testing_screenshots/lighthouse-mobile-edit-booking-1.png)
+
+Edit Booking Page 2:
+
+![Edit Booking Page 2](docs/testing_screenshots/lighthouse-mobile-edit-booking-2.png)
+
+Delete Booking Page:
+
+![Delete Booking Page](docs/testing_screenshots/lighthouse-mobile-delete-booking.png)
 
 
 </details>
