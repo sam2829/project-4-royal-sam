@@ -198,11 +198,11 @@ Logout Page:
 
 Reviews Page (Logged out):
 
-![Reviews Page Logged Out](docs/testing_screenshots/lighthouse-mobile-logged-out-reviews.png)
+![Reviews Page Logged Out](docs/testing_screenshots/lighthouse-mobile-reviews-logged-out.png)
 
 Reviews Page (logged in):
 
-![Reviews Page Logged In](docs/testing_screenshots/lighthouse-mobile-logged-in-reviews.png)
+![Reviews Page Logged In](docs/testing_screenshots/lighthouse-mobile-reviews-logged-in.png)
 
 Full Review Page (Logged out):
 
