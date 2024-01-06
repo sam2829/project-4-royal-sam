@@ -144,9 +144,17 @@ h5 {
     text-align: -webkit-center;
 }
 
+.review-link .card-title:hover {
+    font-size: 150%;
+    transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -webkit-transition: all 0.3=50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}
+
 .card-image-container img {
     width: 100%;
-    height: 250px;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -187,14 +195,6 @@ h5 {
 .bg-full-review {
     background-color: rgba(248, 249, 250, 0.90);
 }  
-
-.review-link .card-title:hover {
-    font-size: 150%;
-    transition: all 0.50s ease-in-out;
-    -moz-transition: all 0.50s ease-in-out;
-    -webkit-transition: all 0.3=50s ease-in-out;
-    -o-transition: all 0.50s ease-in-out;
-}
 
 .review-content {
     margin-top: 3rem;

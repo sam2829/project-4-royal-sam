@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-
 <!-- Main section of reviews page to show reviews -->
 <div class="container-fluid">
     <div class="row justify-content-sm-center">
@@ -13,15 +12,16 @@
                 <!-- for loop to iterate through the posts available -->
                 {% for post in post_list %}
                 <div class="col-12 mt-5 single-review-card">
-                    <div class="card mb-3 bg-review" style="max-width: 540px; max-height: 250px;">
+                    <div class="card mb-3 bg-review" style="max-width:540px; max-height:250px;">
                         <div class="row g-0">
                             <div class="col-4">
                                 <div class="card-image-container">
                                     {% if "placeholder" in post.featured_image.url %}
-                                    <img src="{% static 'background_images/golf-2.jpg' %}" class="img-fluid rounded-start"
-                                        alt="course image">
+                                    <img src="{% static 'background_images/golf-2.jpg' %}"
+                                        class="img-fluid rounded-start" alt="course image">
                                     {% else %}
-                                    <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start" alt="review image">
+                                    <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start"
+                                        alt="review image">
                                     {% endif %}
                                 </div>
                                 <div class="image-flash">
@@ -34,9 +34,9 @@
                                         <h5 class="card-title text-primary">{{ post.title }}</h5>
                                     </a>
                                     <p class="card-text text-primary">{{ post.excerpt }}</p>
-                                    <hr/>
-                                    <p class="card-text"><small class="text-primary">{{ post.created_on}} <i class="far fa-heart"></i>
-                                    {{ post.number_of_likes }}</small></p>
+                                    <hr />
+                                    <p class="card-text"><small class="text-primary">{{ post.created_on}} <i
+                                                class="far fa-heart"></i> {{ post.number_of_likes }}</small></p>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +50,8 @@
     {% if user.is_authenticated %}
     <div class="row justify-content-sm-center">
         <div class="col-12 col-sm-8 col-md-6 col-xl-4" style="max-width: 540px;">
-            <a href="{% url 'leave_review' %}" class="nav-link fs-6 fw-bold leave-review-link text-white">Leave A Review</a>
+            <a href="{% url 'leave_review' %}" class="nav-link fs-6 fw-bold leave-review-link text-white">Leave A
+                Review</a>
         </div>
     </div>
     {% endif %}
@@ -63,7 +64,6 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link ms-3"> NEXT &raquo;</a></li>
-    
             {% endif %}
         </ul>
     </nav>
