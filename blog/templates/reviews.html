@@ -32,8 +32,8 @@
                                 <div class="card-body">
                                     <a href="{% url 'review_details' post.slug %}" class="review-link">
                                         <h5 class="card-title text-primary">{{ post.title }}</h5>
-                                        <p class="card-text">{{ post.excerpt }}</p>
                                     </a>
+                                    <p class="card-text text-primary">{{ post.excerpt }}</p>
                                     <hr/>
                                     <p class="card-text"><small class="text-primary">{{ post.created_on}} <i class="far fa-heart"></i>
                                     {{ post.number_of_likes }}</small></p>
