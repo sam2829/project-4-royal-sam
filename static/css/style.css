@@ -1,9 +1,5 @@
 /* Nav Bar*/
 
-.navbar {
-    height: 120px;
-}
-
 .navbar-brand {
     text-align: center;
     margin-left: 50px;
@@ -17,8 +13,16 @@ li.nav-item {
     font-size: 20px;
 }
 
-li.nav-item:hover {
+/*li.nav-item:hover {
     font-size: 150%;
+    color: #0d6efd;
+    transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -webkit-transition: all 0.3=50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}*/
+
+.navbar-nav .nav-item .nav-link:hover {
     color: #0d6efd;
     transition: all 0.50s ease-in-out;
     -moz-transition: all 0.50s ease-in-out;
