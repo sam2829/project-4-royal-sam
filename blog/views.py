@@ -121,6 +121,7 @@ class LeaveReview(View):
             return redirect('reviews')
         else:
 
+            messages.warning(request, 'Something went wrong, please try again.')
             return render(
                 request,
                 "leave_review.html",

@@ -72,7 +72,7 @@ h5 {
 .home-main-section {
     text-align: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 .book-tee-main {
@@ -96,13 +96,13 @@ h5 {
 
 .main-login {
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 120px;
     background-color: rgba(248, 249, 250, 0.8);
     height: 700px;
     width: 70vh;
     margin-top: 100px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 20px; 
     margin-left: 20px;
     margin-bottom: 100px;
 }
@@ -111,7 +111,7 @@ h5 {
 
 .main-signup {
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 120px;
     background-color: rgba(248, 249, 250, 0.8);
     height: auto;
     width: 60vh;
@@ -126,7 +126,7 @@ h5 {
 
 .main-logout {
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 120px;
     background-color: rgba(248, 249, 250, 0.8);
     height: 300px;
     width: 60vh;
@@ -140,7 +140,10 @@ h5 {
 
 /* main section reviews */
 
-
+.main-reviews {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
 .review-card {
     text-align: -webkit-center;
 }
@@ -190,6 +193,8 @@ h5 {
 
 .full-review-card {
     text-align: left;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .bg-full-review {
@@ -253,8 +258,8 @@ h5 {
     border-radius: 10px;
     margin-right: 20px;
     margin-left: 20px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 115px;
+    margin-bottom: 115px;
 }
 
 /* booking a tee section */
@@ -268,7 +273,7 @@ h5 {
     border-radius: 10px;
     margin-right: 20px;
     margin-left: 20px;
-    margin-top: 60px;
+    margin-top: 120px;
     margin-bottom: 60px;
 }
 
@@ -306,6 +311,11 @@ h5 {
 
 /* My bookings section */
 
+.main-my-bookings {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
 .bookings-card {
     background-color: rgba(248, 249, 250, 0.80);
 }
@@ -340,4 +350,15 @@ h5 {
 
 .google-map {
     border-radius: 5px;
+}
+
+/* Style for alert messageges */
+
+.alert-container {
+    position: fixed;
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
 }

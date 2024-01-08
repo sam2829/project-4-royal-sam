@@ -3,7 +3,7 @@
 
 {% block content %}
 <!-- Main section of reviews page to show reviews -->
-<div class="container-fluid">
+<div class="container-fluid main-reviews">
     <div class="row justify-content-sm-center">
 
         <!-- Review entries -->
@@ -49,7 +49,7 @@
     <!-- Leave review link which is only visible when user logged in -->
     {% if user.is_authenticated %}
     <div class="row justify-content-sm-center">
-        <div class="col-12 col-sm-8 col-md-6 col-xl-4" style="max-width: 540px;">
+        <div class="col-12 col-sm-8 col-md-6 col-xl-4 mb-3" style="max-width: 540px;">
             <a href="{% url 'leave_review' %}" class="nav-link fs-6 fw-bold leave-review-link text-white">Leave A
                 Review</a>
         </div>
