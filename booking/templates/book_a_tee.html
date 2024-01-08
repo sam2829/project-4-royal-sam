@@ -18,11 +18,11 @@
             {% else %}
             <h3 class="text-primary login-to-book">Please login or register an account to book.</h3>
             <div class="row mt-3 justify-content-center">
-                 <div class="sm-col-12 mb-4 login-to-book-links">
-                    <a href="{% url 'account_login' %}">Login</a>
+                 <div class="sm-col-12 mb-2 login-to-book-links">
+                    <a class="btn btn-primary btn-lg" href="{% url 'account_login' %}">Login</a>
                  </div>
-                <div class="sm-col-12 mt-4 mb-5 login-to-book-links">
-                    <a href="{% url 'account_signup' %}">Register</a>
+                <div class="sm-col-12 mt-2 mb-5 login-to-book-links">
+                    <a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}">Register</a>
                 </div>
             </div>
             {% endif %}
