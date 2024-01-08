@@ -344,3 +344,16 @@ h5 {
     justify-content: center;
     z-index: 1;
 }
+
+/* Style for error pages */
+
+.errors {
+    padding-top: 60px;
+    background-color: rgba(248, 249, 250, 0.8);
+    margin-top: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 60px;
+    height: 450px;
+}
