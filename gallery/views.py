@@ -13,4 +13,3 @@ class Gallery(TemplateView):
         images = GalleryImage.objects.all()
         return render(request, 'gallery.html', {'images': images})
 
-

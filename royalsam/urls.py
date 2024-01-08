@@ -26,3 +26,4 @@ urlpatterns = [
     path('gallery/', include('gallery.urls'), name='gallery_urls'),
     path('contact/', include('contact_us.urls'), name='contact_urls'),
 ]
+

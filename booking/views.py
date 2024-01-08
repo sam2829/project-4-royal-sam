@@ -6,7 +6,7 @@ from .forms import BookingFormDate, BookingFormTime
 from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
-from datetime import date
+from datetime import date, time
 
 
 # This class is so the user can view the book a tee form
