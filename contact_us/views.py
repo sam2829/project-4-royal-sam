@@ -9,10 +9,14 @@ from django.conf import settings
 
 class ContactUs(TemplateView):
 
-    template_name = 'contact_us.html'
+    #template_name = 'contact_us.html'
 
-    def get_context_data(self, **kwargs):
+    #def get_context_data(self, **kwargs):
 
-        context = super().get_context_data(**kwargs)
-        context['GOOGLE_API_KEY'] = settings.GOOGLE_API_KEY
-        return context
+        #context = super().get_context_data(**kwargs)
+        #context['GOOGLE_API_KEY'] = settings.GOOGLE_API_KEY
+        #return context
+
+    def my_forbidden_view(request):
+        # Simulate a 403 Forbidden error
+    raise PermissionDenied("Intentional 403 error for testing")
