@@ -43,10 +43,8 @@ class ReviewForm(forms.ModelForm):
             raise ValidationError("Field should not contain only spaces.")
         return data
 
-    # This function is to validate the excerpt field and make sure just spaces
-    # arent accepted
-    def clean_excerpt(self):
-        data = self.cleaned_data['excerpt']
-        if data.strip() == '':
-            raise ValidationError("Field should not contain only spaces.")
-        return data
+    # This function is so that the image field doesnt appear as required as a   
+    # default image is provided if image is not selected.
+    def __init__(self, *args, **kwargs):
+        super(ReviewForm, self).__init__(*args, **kwargs)
+        self.fields['featured_image'].required = False
