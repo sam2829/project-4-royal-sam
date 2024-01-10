@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<!--  Main Section of the home page-->
+<!--  Main Section of the Gallery page-->
 <main
 class="bg-image d-flex justify-content-center"
       style="
@@ -20,6 +20,7 @@ class="bg-image d-flex justify-content-center"
                 </h1>
             </div>
         </div>
+        <!-- For Loop displaying all the images -->
         <div class="row gallery justify-content-center">
             {% for image in images %}
             <div class="col-sm-10 col-md-6 col-lg-4 image">

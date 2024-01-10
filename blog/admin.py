@@ -6,6 +6,11 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
+    """
+    This Class is to decide how the Post admin page
+    lists, searches and functions.
+    """
+
     list_display = ('title', 'slug', 'status', 'created_on', 'approved')
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
@@ -21,6 +26,11 @@ class PostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+
+    """
+    This Class is to decide how the Post admin page
+    lists, searches and functions.
+    """
 
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')

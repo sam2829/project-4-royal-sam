@@ -58,7 +58,22 @@ class PostDetail(View):
             comment.post = post
             comment.save()
             messages.success(request, 'You have succesfully left a comment.')
+            return render(
+                request,
+                "review_details.html",
+                {
+                    "post": post,
+                    "comments": comments,
+                    # This commented being True allows the message to display
+                    # where the forms was
+                    "commented": True,
+                    "liked": liked,
+                    "comment_form": CommentForm(),
+                },
+            )
         else:
+            messages.warning(request, 'Something went wrong, please try again.'
+                             ' Note fields should not contain only spaces.')
             comment_form = CommentForm()
 
         return render(
@@ -67,7 +82,9 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "commented": True,
+                # Keeping this commented set to False allows the form to still
+                # be visible and not the message.
+                "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm(),
             },
@@ -121,7 +138,8 @@ class LeaveReview(View):
             return redirect('reviews')
         else:
 
-            messages.warning(request, 'Something went wrong, please try again.')
+            messages.warning(request, 'Something went wrong, please try again.'
+                             ' Note fields should not contain only spaces.')
             return render(
                 request,
                 "leave_review.html",
