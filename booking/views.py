@@ -212,7 +212,7 @@ class EditBookingDate(View):
                 messages.warning(request, 'Please select a future date.')
                 return render(
                     request,
-                    "book_a_tee.html",
+                    "edit_tee_date.html",
                     {
                         "booking_form_date": booking_form_date,
                     },
@@ -263,6 +263,14 @@ class EditBookingTime(View):
                     )) > datetime.combine(timezone.now().date(), current_time)
                 )
             ]
+            # If there is no times available for for selected date user will be
+            # informed and redirected back to book a date form
+
+            if not available_times:
+                messages.warning(
+                    request, 'No tee times available for the selected date. Please choose another date.')
+                # Redirect to the edit date form with the correct item_id
+                return HttpResponseRedirect(reverse('edit_tee_date', kwargs={'item_id': item_id}))
         else:
             available_times = [
                 time[0] for time in AVAILABLE_TIMES if (
