@@ -4,6 +4,8 @@
 
 Royal Sam Golf Club is a site designed for a specific golf club so that the user is able to see about the golf club and book tee times to play. The user will be able to register or login, be able to search and book available tee times, be able to view, edit and delete any of the user's bookings. The user will also be able to leave reviews, comment and like on other reviews and also be able to view the gallery and contact information.
 
+![Am I Responsive Screenshot](docs/readme_screenshots/am-i-responsive.png)
+
 Here is a live version of my project: [Royal Sam Golf Club](https://royal-sam-02fa0ed9cfe2.herokuapp.com/)
 
 ## Project Goals
