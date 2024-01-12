@@ -6,6 +6,9 @@ from django.core.exceptions import ValidationError
 # and which fields I want to be shown
 
 class CommentForm(forms.ModelForm):
+    """
+    This class is for the comment form.
+    """
     
     class Meta:
         model = Comment
@@ -22,6 +25,9 @@ class CommentForm(forms.ModelForm):
 # This Class is for the Post / review form so that a user can leave a review
 
 class ReviewForm(forms.ModelForm):
+    """
+    This class is for the leave a review form.
+    """
 
     class Meta:
         model = Post

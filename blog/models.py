@@ -8,6 +8,10 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """
+    This model is for all the fields needed for the user or admin to leave 
+    a review / post.
+    """
 
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -39,6 +43,9 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    """
+    This class is for all the fields needed to comment on reviews / posts.
+    """
 
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')

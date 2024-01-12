@@ -3,14 +3,13 @@
 <!-- Main section of my_bookings page to show user bookings -->
 <div class="container-fluid main-my-bookings">
   <div class="row justify-content-sm-center">
-    <!-- Review entries -->
     <div class="col-12 col-sm-8 col-md-6 col-xl-4">
-      <div class="row review-card">
+      <div class="row my-bookings-card">
         <!-- If statement for if there are any bookings -->
         {% if booking_list %}
         <!-- for loop to iterate through the user bookings -->
         {% for booking in booking_list %}
-        <div class="col-12 mt-5 single-review-card">
+        <div class="col-12 mt-5">
           <div class="card mb-3 pt-3 pb-3 text-primary bookings-card" style="max-width: 540px; max-height: auto">
             <div class="row justify-content-center">
                 <div class="col-10 text-primary mb-3">
@@ -71,7 +70,7 @@
         {% endfor %}
         <!-- Message if there are no bookings -->
         {% else %}
-        <div class="col-12 mt-5 single-review-card">
+        <div class="col-12 mt-5">
             <div class="card mb-3 pt-3 pb-3 text-primary bookings-card" style="max-width: 540px; max-height: auto">
                 <div class="row justify-content-center">
                     <div class="col-10 text-primary mb-3">

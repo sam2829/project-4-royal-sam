@@ -7,6 +7,9 @@ from .models import GalleryImage
 # This class it to render the gallery page
 
 class Gallery(TemplateView):
+    """
+    This class is to render the gallery page
+    """
 
     def get(self, request, *args, **kwargs):
 

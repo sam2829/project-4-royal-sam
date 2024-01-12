@@ -7,6 +7,9 @@ from cloudinary.models import CloudinaryField
 
 
 class GalleryImage(models.Model):
+    """
+    This model is to store images for the gallery.
+    """
 
     image = CloudinaryField('image')
     caption = models.CharField(max_length=100)

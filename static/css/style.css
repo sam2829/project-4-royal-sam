@@ -291,6 +291,10 @@ h5 {
 
 /* My bookings section */
 
+.my-bookings-card {
+    text-align: -webkit-center;
+}
+
 .main-my-bookings {
     margin-top: 80px;
     margin-bottom: 80px;

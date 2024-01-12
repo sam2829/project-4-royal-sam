@@ -9,6 +9,9 @@ from django.contrib import messages
 
 
 class PostList(generic.ListView):
+    """
+    This class is to display the list of reviews / posts.
+    """
 
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -19,6 +22,9 @@ class PostList(generic.ListView):
 # This class is to create a view so the user can see the entire post / review when clicked
 
 class PostDetail(View):
+    """
+    This class is so the user can view a certain review / post in full.
+    """
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -94,6 +100,9 @@ class PostDetail(View):
 
 
 class PostLike(View):
+    """
+    This class is so that the user can like a review / post.
+    """
 
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
@@ -110,6 +119,9 @@ class PostLike(View):
 
 
 class LeaveReview(View):
+    """
+    This class is so that the user can leave a review.
+    """
 
     def get(self, request):
 

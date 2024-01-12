@@ -9,10 +9,12 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from datetime import date, time
 
 
-# This class is so the user can view the book a tee form
-
+# This class is so the user can view the book a tee date form
 
 class BookATee(View):
+    """
+    This class is so the user can view the booking date form.
+    """
 
     # Booking date form appears, user must select date and email
     def get(self, request, *args, **kwargs):
@@ -64,10 +66,14 @@ class BookATee(View):
 
 # this is so the user can view the booking time form
 
-
 class BookATime(View):
+    """
+    This class is so the user can view the booking time form.
+    """
 
-    # Booking time form appears, user must select date and email
+
+    # Booking time form appears, user must select from available times on show,
+    # number of players, buddy and if they are a member
     def get(self, request, *args, **kwargs):
 
         selected_date_str = request.session.get('date')
@@ -119,6 +125,7 @@ class BookATime(View):
 
         selected_date_str = request.session.get('date')
 
+        # Check if date selected and if so convert date.
         if selected_date_str:
             selected_date = datetime.strptime(
                 selected_date_str, '%Y-%m-%d').date()
@@ -150,6 +157,7 @@ class BookATime(View):
 
         else:
 
+            # If form isnt valid, the booking form is rendered again.
             return render(
                 request,
                 "book_a_time.html",
@@ -162,6 +170,9 @@ class BookATime(View):
 
 
 class MyBookings(LoginRequiredMixin, generic.ListView):
+    """
+    This class is so the user can view all their bookings.
+    """
 
     model = Booking
     template_name = 'my_bookings.html'
@@ -186,6 +197,9 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
 # This class is for the user to edit a booking date
 
 class EditBookingDate(View):
+    """
+    This class is so the user is able to edit the booking date.
+    """
 
     # Gets the the form to edit date and displays the original data in form
     def get(self, request, item_id, *args, **kwargs):
@@ -241,6 +255,9 @@ class EditBookingDate(View):
 
 
 class EditBookingTime(View):
+    """
+    This class is so the user can edit the booking time.
+    """
 
     # Booking time form appears, user must select date and email
     def get(self, request, item_id, *args, **kwargs):
@@ -297,6 +314,7 @@ class EditBookingTime(View):
         selected_date_str = request.session.get('date')
         booking = get_object_or_404(Booking, id=item_id)
 
+        # Check if date selected and if so convert date.
         if selected_date_str:
             selected_date = datetime.strptime(
                 selected_date_str, '%Y-%m-%d').date()
@@ -344,6 +362,9 @@ class EditBookingTime(View):
 # This class is for the user to confirm deletion a booking
 
 class ConfirmDelete(View):
+    """
+    This class is so the user is asked to confirm deletion of a booking.
+    """
 
     def get(self, request, item_id):
 
@@ -353,6 +374,9 @@ class ConfirmDelete(View):
 # This class is for the user to delete a booking
 
 class DeleteBooking(View):
+    """
+    This class is so that the user can delete their booking.
+    """
 
     def get(self, request, item_id):
 

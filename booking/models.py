@@ -28,6 +28,9 @@ NUMBER_OF_PLAYERS = (
 
 
 class Booking(models.Model):
+    """
+    This model is for the user to create a booking.
+    """
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     email = models.EmailField()
