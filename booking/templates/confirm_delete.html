@@ -28,29 +28,5 @@
       </div>
     </div>
   </div>
-
-  <!-- This is code used for page pagination -->
-  {% if is_paginated %}
-  <nav aria-label="Page navigation" class="mb-3">
-    <ul class="pagination justify-content-center">
-      {% if page_obj.has_previous %}
-      <li>
-        <a
-          href="?page={{ page_obj.previous_page_number }}"
-          class="page-link me-3"
-          >&laquo; PREV
-        </a>
-      </li>
-      {% endif %} {% if page_obj.has_next %}
-      <li>
-        <a href="?page={{ page_obj.next_page_number }}" class="page-link ms-3">
-          NEXT &raquo;</a
-        >
-      </li>
-
-      {% endif %}
-    </ul>
-  </nav>
-  {% endif %}
 </div>
 {% endblock %}
