@@ -34,7 +34,8 @@ class BookATee(View):
             # Check if date selected hasnt already passed
             selected_date = booking_form_date.cleaned_data['date']
             if selected_date < date.today():
-                messages.warning(request, 'Please select a future date.')
+                messages.warning(request, 'Please select present or a '
+                                 'future date.')
                 return render(
                     request,
                     "book_a_tee.html",
@@ -209,7 +210,8 @@ class EditBookingDate(View):
             # Check if date selected hasnt already passed
             selected_date = booking_form_date.cleaned_data['date']
             if selected_date < date.today():
-                messages.warning(request, 'Please select a future date.')
+                messages.warning(request, 'Please select present or a '
+                                 'future date.')
                 return render(
                     request,
                     "edit_tee_date.html",
