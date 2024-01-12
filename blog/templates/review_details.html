@@ -12,12 +12,14 @@
                 <div class="row g-0">
                     <div class="col-4">
                         <!-- Review Image -->
-                        {% if "placeholder" in post.featured_image.url %}
-                        <img src="{% static 'background_images/golf-2.jpg' %}" 
-                        class="img-fluid rounded-start" alt="review image">
-                        {% else %}
-                        <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start" alt="review image">
-                        {% endif %}
+                        <div class="full-review-img-container">
+                            {% if "placeholder" in post.featured_image.url %}
+                            <img src="{% static 'background_images/golf-2.jpg' %}" 
+                            class="img-fluid rounded-start" alt="review image">
+                            {% else %}
+                            <img src="{{ post.featured_image.url }}" class="img-fluid rounded-start" alt="review image">
+                            {% endif %}
+                        </div>
                     </div>
                     <!--  Review Content -->
                     <div class="col-8">
