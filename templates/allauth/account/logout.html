@@ -1,41 +1,32 @@
-{% extends "base.html" %}
-{% load allauth i18n %}
-{% block head_title %}
-    {% trans "Sign Out" %}
-{% endblock head_title %}
-{% block content %}
+{% extends "base.html" %} {% load allauth i18n %} {% block head_title %} 
+{% trans "Sign Out" %} {% endblock head_title %} {% block content %}
 <div class="container main-logout">
-    <div class="row justify-content-center">
-        <div class="col col-md-6 text-primary">
-    {% element h1 %}
-        {% trans "Logout" %}
-    {% endelement %}
-        </div>
+  <div class="row justify-content-center">
+    <div class="col col-md-6 text-primary">
+      {% element h1 %} {% trans "Logout" %} {% endelement %}
     </div>
-    <div class="row justify-content-center">
-        <div class="col col-md-6 text-dark">
-            <p>{% trans 'Are you sure you want to logout?' %}</p>
-        </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col col-md-6 text-dark">
+      <p>{% trans 'Are you sure you want to logout?' %}</p>
     </div>
-    <div class="row justify-content-center">
-        <div class="col col-md-6 text-white">
-            {% url 'account_logout' as action_url %}
-            {% element form method="post" action=action_url no_visible_fields=True %}
-                {% slot body %}
-                    {% csrf_token %}
-                    {% if redirect_field_value %}
-                        <input type="hidden"
-                            name="{{ redirect_field_name }}"
-                            value="{{ redirect_field_value }}" />
-                    {% endif %}
-                {% endslot %}
-                {% slot actions %}
-                    <button class="btn btn-primary btn-lg mb-3" type="submit">
-                        {% trans 'Logout' %}
-                    </button>
-                {% endslot %}
-            {% endelement %}
-        </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col col-md-6 text-white">
+      {% url 'account_logout' as action_url %} 
+      {% element form method="post" action=action_url no_visible_fields=True %} 
+      {% slot body %} {% csrf_token %} {% if redirect_field_value %}
+      <input
+        type="hidden"
+        name="{{ redirect_field_name }}"
+        value="{{ redirect_field_value }}"
+      />
+      {% endif %} {% endslot %} {% slot actions %}
+      <button class="btn btn-primary btn-lg mb-3" type="submit">
+        {% trans 'Logout' %}
+      </button>
+      {% endslot %} {% endelement %}
     </div>
+  </div>
 </div>
 {% endblock content %}

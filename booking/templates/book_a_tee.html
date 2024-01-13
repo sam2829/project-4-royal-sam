@@ -1,34 +1,39 @@
-{% extends "base.html" %}
-{% load static %}
-{% load crispy_forms_tags %}
+{% extends "base.html" %} {% load static %} {% load crispy_forms_tags %} 
 {% block content %}
 
 <!-- Book a tee form -->
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-10 booking-form">
-            {% if user.is_authenticated %}
-            <h3 class="text-primary">Book A Tee!</h3>
-            <p>Booking under: {{ user.username }}</p>
-            <form method="POST" style="marging-top: 1.3rem;">
-                {{ booking_form_date | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">Next</button>
-            </form>
-            <!-- If user isn't logged in, links to register or login -->
-            {% else %}
-            <h3 class="text-primary login-to-book">Please login or register an account to book.</h3>
-            <div class="row mt-3 justify-content-center">
-                 <div class="sm-col-12 mb-2 login-to-book-links">
-                    <a class="btn btn-primary btn-lg" href="{% url 'account_login' %}">Login</a>
-                 </div>
-                <div class="sm-col-12 mt-2 mb-5 login-to-book-links">
-                    <a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}">Register</a>
-                </div>
-            </div>
-            {% endif %}
+  <div class="row justify-content-center">
+    <div class="col-10 booking-form">
+      {% if user.is_authenticated %}
+      <h3 class="text-primary">Book A Tee!</h3>
+      <p>Booking under: {{ user.username }}</p>
+      <form method="POST" style="marging-top: 1.3rem">
+        {{ booking_form_date | crispy }} {% csrf_token %}
+        <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">
+          Next
+        </button>
+      </form>
+      <!-- If user isn't logged in, links to register or login -->
+      {% else %}
+      <h3 class="text-primary login-to-book">
+        Please login or register an account to book.
+      </h3>
+      <div class="row mt-3 justify-content-center">
+        <div class="sm-col-12 mb-2 login-to-book-links">
+          <a class="btn btn-primary btn-lg" href="{% url 'account_login' %}"
+            >Login</a
+          >
         </div>
+        <div class="sm-col-12 mt-2 mb-5 login-to-book-links">
+          <a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}"
+            >Register</a
+          >
+        </div>
+      </div>
+      {% endif %}
     </div>
+  </div>
 </div>
 
 {% endblock %}

@@ -2,34 +2,37 @@
 
 <!--  Main Section of the Gallery page-->
 <main
-class="bg-image d-flex justify-content-center"
-      style="
-        background-image: none;
-        background-color: black;
-        min-height: 100vh;
-        background-repeat: no-repeat;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-      ">
-    <div class="container gallery-main-section">
-        <div class="row">
-            <div class="column col-sm-12">
-                <h1 class="text-white fw-bold">
-                    Gallery
-                </h1>
-            </div>
-        </div>
-        <!-- For Loop displaying all the images -->
-        <div class="row gallery justify-content-center">
-            {% for image in images %}
-            <div class="col-sm-10 col-md-6 col-lg-4 image">
-                <div class="image-container mb-3 mt-3">
-                    <img src="{{ image.image.url }}" alt="{{ image.caption }}" class="img-fluid">
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+  class="bg-image d-flex justify-content-center"
+  style="
+    background-image: none;
+    background-color: black;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="container gallery-main-section">
+    <div class="row">
+      <div class="column col-sm-12">
+        <h1 class="text-white fw-bold">Gallery</h1>
+      </div>
     </div>
+    <!-- For Loop displaying all the images -->
+    <div class="row gallery justify-content-center">
+      {% for image in images %}
+      <div class="col-sm-10 col-md-6 col-lg-4 image">
+        <div class="image-container mb-3 mt-3">
+          <img
+            src="{{ image.image.url }}"
+            alt="{{ image.caption }}"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </main>
 {% endblock %}

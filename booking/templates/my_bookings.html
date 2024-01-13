@@ -10,60 +10,66 @@
         <!-- for loop to iterate through the user bookings -->
         {% for booking in booking_list %}
         <div class="col-12 mt-5">
-          <div class="card mb-3 pt-3 pb-3 text-primary bookings-card" style="max-width: 540px; max-height: auto">
+          <div
+            class="card mb-3 pt-3 pb-3 text-primary bookings-card"
+            style="max-width: 540px; max-height: auto"
+          >
             <div class="row justify-content-center">
-                <div class="col-10 text-primary mb-3">
-                    <h3>Your Booking:</h3>
-                </div>
+              <div class="col-10 text-primary mb-3">
+                <h3>Your Booking:</h3>
+              </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-sm-10 col-md-5">
-                    <p><strong>Name: </strong> {{ booking.user }}</p>
-                </div>
-                <div class="col-sm-10 col-md-5">
-                    <p><strong>Email: </strong> {{ booking.email }}</p>
-                </div>
+              <div class="col-sm-10 col-md-5">
+                <p><strong>Name: </strong> {{ booking.user }}</p>
+              </div>
+              <div class="col-sm-10 col-md-5">
+                <p><strong>Email: </strong> {{ booking.email }}</p>
+              </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-sm-10 col-md-5">
-                    <p><strong>Date: </strong> {{ booking.date }}</p>
-                </div>
-                <div class="col-sm-10 col-md-5">
-                    <p><strong>Time: </strong> {{ booking.time }}</p>
-                </div>
+              <div class="col-sm-10 col-md-5">
+                <p><strong>Date: </strong> {{ booking.date }}</p>
+              </div>
+              <div class="col-sm-10 col-md-5">
+                <p><strong>Time: </strong> {{ booking.time }}</p>
+              </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-sm-10 col-md-5">
-                    <p><strong>Number of players: </strong> {{ booking.number_of_players }}</p>
-                </div>
-                <div class="col-sm-10 col-md-5">
-                    {% if booking.member %}
-                    <p><strong>Member: </strong>Yes</p>
-                    {% else %}
-                    <p><strong>Member: </strong>No</p>
-                    {% endif %}
-                </div>
+              <div class="col-sm-10 col-md-5">
+                <p>
+                  <strong>Number of players: </strong> 
+                  {{ booking.number_of_players }}
+                </p>
+              </div>
+              <div class="col-sm-10 col-md-5">
+                {% if booking.member %}
+                <p><strong>Member: </strong>Yes</p>
+                {% else %}
+                <p><strong>Member: </strong>No</p>
+                {% endif %}
+              </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10">
-                    {% if booking.buggy %}
-                    <p><strong>Buggy required: </strong> Yes</p>
-                    {% else %}
-                    <p><strong>Buggy required: </strong> No</p>
-                    {% endif %}
-                </div>
+              <div class="col-10">
+                {% if booking.buggy %}
+                <p><strong>Buggy required: </strong> Yes</p>
+                {% else %}
+                <p><strong>Buggy required: </strong> No</p>
+                {% endif %}
+              </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-5">
-                    <a href="{% url 'edit_tee_date' item_id=booking.id %}">
-                        <button class="btn btn-primary btn-md">Edit</button>
-                    </a>
-                </div>
-                <div class="col-5">
-                    <a href="{% url 'confirm_delete' item_id=booking.id %}">
-                        <button class="btn btn-danger btn-md">Delete</button>
-                    </a>
-                </div>
+              <div class="col-5">
+                <a href="{% url 'edit_tee_date' item_id=booking.id %}">
+                  <button class="btn btn-primary btn-md">Edit</button>
+                </a>
+              </div>
+              <div class="col-5">
+                <a href="{% url 'confirm_delete' item_id=booking.id %}">
+                  <button class="btn btn-danger btn-md">Delete</button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -71,22 +77,25 @@
         <!-- Message if there are no bookings -->
         {% else %}
         <div class="col-12 mt-5">
-            <div class="card mb-3 pt-3 pb-3 text-primary bookings-card" style="max-width: 540px; max-height: auto">
-                <div class="row justify-content-center">
-                    <div class="col-10 text-primary mb-3">
-                        <h3>You Have No Bookings</h3>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-10 mb-3">
-                        <a href="{% url 'book_a_tee' %}">
-                            <button class="btn btn-primary btn-lg">Book A TEE!</button>
-                        </a>
-                    </div>
-                </div>
+          <div
+            class="card mb-3 pt-3 pb-3 text-primary bookings-card"
+            style="max-width: 540px; max-height: auto"
+          >
+            <div class="row justify-content-center">
+              <div class="col-10 text-primary mb-3">
+                <h3>You Have No Bookings</h3>
+              </div>
             </div>
-        </div> 
-        {% endif %}          
+            <div class="row justify-content-center">
+              <div class="col-10 mb-3">
+                <a href="{% url 'book_a_tee' %}">
+                  <button class="btn btn-primary btn-lg">Book A TEE!</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>

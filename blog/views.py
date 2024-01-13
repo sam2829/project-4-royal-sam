@@ -19,7 +19,8 @@ class PostList(generic.ListView):
     paginate_by = 4
 
 
-# This class is to create a view so the user can see the entire post / review when clicked
+# This class is to create a view so the user can see the entire post / review
+# when clicked
 
 class PostDetail(View):
     """
@@ -145,8 +146,8 @@ class LeaveReview(View):
                 review.featured_image = request.FILES['featured_image']
 
             review.save()
-            messages.success(request, 'You have succesffully left a review and '
-                             'is awaiting approval.')
+            messages.success(request, 'You have succesffully left a review and'
+                             ' is awaiting approval.')
             return redirect('reviews')
         else:
 

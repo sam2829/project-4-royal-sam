@@ -45,7 +45,7 @@ class BookATee(View):
                         "booking_form_date": booking_form_date,
                     },
                 )
-            
+
             booking_date = booking_form_date.save(commit=False)
             booking_date.user = request.user
             selected_date = booking_form_date.cleaned_data['date']
@@ -54,7 +54,7 @@ class BookATee(View):
             booking_email = request.POST.get('email')
             request.session['booking_email'] = booking_email
 
-            return redirect('book_a_time')  
+            return redirect('book_a_time')
         else:
             return render(
                 request,
@@ -66,11 +66,11 @@ class BookATee(View):
 
 # this is so the user can view the booking time form
 
+
 class BookATime(View):
     """
     This class is so the user can view the booking time form.
     """
-
 
     # Booking time form appears, user must select from available times on show,
     # number of players, buddy and if they are a member
@@ -95,7 +95,7 @@ class BookATime(View):
                 )
             ]
 
-            # If there is no times available for for selected date user will be 
+            # If there is no times available for for selected date user will be
             # informed and redirected back to book a date form
 
             if not available_times:
@@ -195,6 +195,7 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
         return bookings
 
 # This class is for the user to edit a booking date
+
 
 class EditBookingDate(View):
     """
@@ -373,6 +374,7 @@ class ConfirmDelete(View):
 
 # This class is for the user to delete a booking
 
+
 class DeleteBooking(View):
     """
     This class is so that the user can delete their booking.
@@ -383,4 +385,3 @@ class DeleteBooking(View):
         booking = get_object_or_404(Booking, id=item_id)
         booking.delete()
         return redirect('my_bookings')
-        
