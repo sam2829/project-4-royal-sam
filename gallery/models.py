@@ -5,7 +5,6 @@ from cloudinary.models import CloudinaryField
 
 # This class is for the necessary fields for gallery photos
 
-
 class GalleryImage(models.Model):
     """
     This model is to store images for the gallery.
