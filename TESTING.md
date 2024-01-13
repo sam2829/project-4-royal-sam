@@ -291,3 +291,17 @@ All results are in the table below:
 | tests.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| `blog` |
+| admin.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| apps.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| models.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| tests.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| `booking` |
+| admin.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| apps.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| models.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| tests.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |

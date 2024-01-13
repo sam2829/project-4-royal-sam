@@ -1,15 +1,15 @@
 from .models import *
 from django import forms
 
+
 # This class is for the booking date form to book a tee date
 # and which fields I want to be shown
-
 
 class BookingFormDate(forms.ModelForm):
     """
     This class is for the booking date form.
     """
-   
+
     class Meta:
         model = Booking
         fields = ('email', 'date',)

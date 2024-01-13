@@ -9,7 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Post(models.Model):
     """
-    This model is for all the fields needed for the user or admin to leave 
+    This model is for all the fields needed for the user or admin to leave
     a review / post.
     """
 

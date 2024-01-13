@@ -5,8 +5,8 @@ from .models import Post, Comment
 from .forms import CommentForm, ReviewForm
 from django.contrib import messages
 
-# This class is to create a view to display posts on the reviews page
 
+# This class is to create a view to display posts on the reviews page
 
 class PostList(generic.ListView):
     """

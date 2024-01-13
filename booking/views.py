@@ -87,11 +87,20 @@ class BookATime(View):
             # Filter out times that are in the past
             current_time = timezone.now().time()
             available_times = [
-                time[0] for time in AVAILABLE_TIMES
-                if time[0] not in existing_times and (
-                    selected_date != timezone.now().date() or
-                    datetime.combine(selected_date, datetime.strptime(time[0], '%H:%M').time(
-                    )) > datetime.combine(timezone.now().date(), current_time)
+                time[0]
+                for time in AVAILABLE_TIMES
+                if (
+                    time[0] not in existing_times
+                    and (
+                        selected_date != timezone.now().date()
+                        or datetime.combine(
+                            selected_date,
+                            datetime.strptime(time[0], '%H:%M').time()
+                        ) > datetime.combine(
+                            timezone.now().date(),
+                            current_time
+                        )
+                    )
                 )
             ]
 
@@ -100,14 +109,20 @@ class BookATime(View):
 
             if not available_times:
                 messages.warning(
-                    request, 'No tee times available for the selected date. Please choose another date.')
+                    request, 'No tee times available for the selected date. '
+                             'Please choose another date.')
                 return HttpResponseRedirect(reverse('book_a_tee'))
         else:
             available_times = [
                 time[0] for time in AVAILABLE_TIMES if (
                     selected_date != timezone.now().date() or
-                    datetime.combine(selected_date, time[0]) > datetime.combine(
-                        timezone.now().date(), current_time)
+                    datetime.combine(
+                        selected_date,
+                        time[0]
+                    ) > datetime.combine(
+                        timezone.now().date(),
+                        current_time
+                    )
                 )
             ]
         messages.info(request, f'You have selected the date: {selected_date}')
@@ -115,7 +130,9 @@ class BookATime(View):
             request,
             "book_a_time.html",
             {
-                "booking_form_time": BookingFormTime(available_times=available_times),
+                "booking_form_time": BookingFormTime(
+                    available_times=available_times
+                ),
             },
         )
 
@@ -129,10 +146,15 @@ class BookATime(View):
         if selected_date_str:
             selected_date = datetime.strptime(
                 selected_date_str, '%Y-%m-%d').date()
+
             existing_times = Booking.objects.filter(
                 date=selected_date).values_list('time', flat=True)
-            available_times = [time[0]
-                               for time in AVAILABLE_TIMES if time[0] not in existing_times]
+
+            available_times = [
+                time[0]
+                for time in AVAILABLE_TIMES
+                if time[0] not in existing_times
+            ]
         else:
             available_times = [time[0] for time in AVAILABLE_TIMES]
 
@@ -150,9 +172,12 @@ class BookATime(View):
 
             booking_time.save()
 
-            messages.success(request, f' You have successfully booked your tee '
-                             f'time for: {booking_time.user}, {selected_date} '
-                             f'at {booking_time.time} for {booking_time.number_of_players}.')
+            messages.success(
+                request,
+                f' You have successfully booked your tee '
+                f'time for: {booking_time.user}, {selected_date} '
+                f'at {booking_time.time} for {booking_time.number_of_players}.'
+            )
             return redirect('my_bookings')
 
         else:
@@ -162,7 +187,9 @@ class BookATime(View):
                 request,
                 "book_a_time.html",
                 {
-                    "booking_form_time": BookingFormTime(available_times=available_times),
+                    "booking_form_time": BookingFormTime(
+                        available_times=available_times
+                    ),
                 },
             )
 
@@ -276,11 +303,20 @@ class EditBookingTime(View):
             # Filter out times that are in the past
             current_time = timezone.now().time()
             available_times = [
-                time[0] for time in AVAILABLE_TIMES
-                if time[0] not in existing_times and (
-                    selected_date != timezone.now().date() or
-                    datetime.combine(selected_date, datetime.strptime(time[0], '%H:%M').time(
-                    )) > datetime.combine(timezone.now().date(), current_time)
+                time[0]
+                for time in AVAILABLE_TIMES
+                if (
+                    time[0] not in existing_times
+                    and (
+                        selected_date != timezone.now().date()
+                        or datetime.combine(
+                            selected_date,
+                            datetime.strptime(time[0], '%H:%M').time()
+                        ) > datetime.combine(
+                            timezone.now().date(),
+                            current_time
+                        )
+                    )
                 )
             ]
             # If there is no times available for for selected date user will be
@@ -288,15 +324,23 @@ class EditBookingTime(View):
 
             if not available_times:
                 messages.warning(
-                    request, 'No tee times available for the selected date. Please choose another date.')
+                    request, 'No tee times available for the selected date. '
+                             'Please choose another date.')
                 # Redirect to the edit date form with the correct item_id
-                return HttpResponseRedirect(reverse('edit_tee_date', kwargs={'item_id': item_id}))
+                return HttpResponseRedirect(
+                    reverse('edit_tee_date', kwargs={'item_id': item_id})
+                )
         else:
             available_times = [
                 time[0] for time in AVAILABLE_TIMES if (
                     selected_date != timezone.now().date() or
-                    datetime.combine(selected_date, time[0]) > datetime.combine(
-                        timezone.now().date(), current_time)
+                    datetime.combine(
+                        selected_date,
+                        time[0]
+                    ) > datetime.combine(
+                        timezone.now().date(),
+                        current_time
+                    )
                 )
             ]
         messages.info(request, f'You have selected the date: {selected_date}')
@@ -304,7 +348,9 @@ class EditBookingTime(View):
             request,
             "edit_tee_time.html",
             {
-                "booking_form_time": BookingFormTime(available_times=available_times),
+                "booking_form_time": BookingFormTime(
+                    available_times=available_times
+                ),
             },
         )
 
@@ -319,10 +365,15 @@ class EditBookingTime(View):
         if selected_date_str:
             selected_date = datetime.strptime(
                 selected_date_str, '%Y-%m-%d').date()
+
             existing_times = Booking.objects.filter(
                 date=selected_date).values_list('time', flat=True)
-            available_times = [time[0]
-                               for time in AVAILABLE_TIMES if time[0] not in existing_times]
+
+            available_times = [
+                time[0]
+                for time in AVAILABLE_TIMES
+                if time[0] not in existing_times
+            ]
         else:
             current_time = timezone.now().time()
             available_times = [time[0] for time in AVAILABLE_TIMES if (
@@ -332,7 +383,10 @@ class EditBookingTime(View):
             )]
 
         booking_form_time = BookingFormTime(
-            data=request.POST, available_times=available_times, instance=booking)
+            data=request.POST,
+            available_times=available_times,
+            instance=booking
+        )
 
         if booking_form_time.is_valid():
             booking_time = booking_form_time.save(commit=False)
@@ -345,9 +399,12 @@ class EditBookingTime(View):
 
             booking_time.save()
 
-            messages.success(request, f' You have successfully booked your tee '
-                             f'time for: {booking_time.user}, {selected_date} '
-                             f'at {booking_time.time} for {booking_time.number_of_players}.')
+            messages.success(
+                request,
+                f' You have successfully booked your tee '
+                f'time for: {booking_time.user}, {selected_date} '
+                f'at {booking_time.time} for {booking_time.number_of_players}.'
+            )
             return redirect('my_bookings')
 
         else:
