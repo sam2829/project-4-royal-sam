@@ -12,6 +12,7 @@ During the development of this project, numerous testing was carried out by myse
   - [Manual Testing](#manual-testing)
   - [Validators](#validators)
     - [Lighthouse](#lighthouse)
+    - [CI Python Linter](#ci-python-linter)
 
 ## Manual Testing
 
@@ -256,3 +257,18 @@ Delete Booking Page:
 
 
 </details>
+
+### CI Python Linter
+
+The CI Python Linter was used to validate the python code used throughout the project.
+All results are in the table below:
+
+| Files | Expected Result | Result | Pass / Fail |
+| --- | --- | --- | --- |
+| `royalsam` |
+| asgi.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| settings.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| wsgi.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+| ` home` |
+|
