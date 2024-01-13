@@ -13,6 +13,7 @@ During the development of this project, numerous testing was carried out by myse
   - [Validators](#validators)
     - [Lighthouse](#lighthouse)
     - [CI Python Linter](#ci-python-linter)
+    - [W3C CSS Validator](#w3c-css-validator)
 
 ## Manual Testing
 
@@ -305,3 +306,13 @@ All results are in the table below:
 | tests.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | views.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
+
+[Back to top](#royal-sam-golf-club-testing)
+
+### W3C CSS Validator
+
+W3C CSS Validator was use to validate the site's CSS code.
+
+![W3C CSS Validator Screenshot](docs/testing_screenshots/css-validate-screenshot.png)
+
+[Back to top](#royal-sam-golf-club-testing)
