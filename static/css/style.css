@@ -16,9 +16,6 @@ li.nav-item {
 .navbar-nav .nav-item .nav-link:hover {
     color: #0d6efd;
     transition: all 0.50s ease-in-out;
-    -moz-transition: all 0.50s ease-in-out;
-    -webkit-transition: all 0.3=50s ease-in-out;
-    -o-transition: all 0.50s ease-in-out;
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -53,9 +50,6 @@ h5 {
 .social-network-items:hover {
     font-size: 200%;
     transition: all 0.50s ease-in-out;
-    -moz-transition: all 0.50s ease-in-out;
-    -webkit-transition: all 0.3=50s ease-in-out;
-    -o-transition: all 0.50s ease-in-out;
 }
 
 /* main section home page */
@@ -77,9 +71,6 @@ h5 {
 
 .book-tee-main:hover {
     transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
     background-color: rgba(13, 110, 253, 1);
 }
 
@@ -135,16 +126,10 @@ h5 {
     margin-top: 80px;
     margin-bottom: 80px;
 }
-.review-card {
-    text-align: -webkit-center;
-}
 
 .review-link .card-title:hover {
     font-size: 150%;
     transition: all 0.50s ease-in-out;
-    -moz-transition: all 0.50s ease-in-out;
-    -webkit-transition: all 0.3=50s ease-in-out;
-    -o-transition: all 0.50s ease-in-out;
 }
 
 .card-image-container img {
@@ -174,9 +159,6 @@ h5 {
 
 .leave-review-link:hover {
     transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
     background-color: rgba(13, 110, 253, 1);
 }
 
@@ -234,9 +216,6 @@ h5 {
 
 .leave-comment-link:hover {
     transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
     background-color: rgba(13, 110, 253, 1);
 }
 
@@ -290,10 +269,6 @@ h5 {
 }
 
 /* My bookings section */
-
-.my-bookings-card {
-    text-align: -webkit-center;
-}
 
 .main-my-bookings {
     margin-top: 80px;
