@@ -7,14 +7,16 @@
     <div class="col-10 booking-form">
       <h3 class="text-primary">Change Tee Time!</h3>
       <p>Booking under: {{ user.username }}</p>
-      <form method="POST" style="marging-top: 1.3rem">
+      <form method="POST" style="margin-top: 1.3rem">
         {{ booking_form_time | crispy }} {% csrf_token %}
         <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">
           Update
         </button>
-        <a href="{% url 'my_bookings' %}">
-          <button type="button" class="btn btn-danger">Cancel</button>
-        </a>
+        <button type="button" class="btn btn-danger">
+          <a href="{% url 'my_bookings' %}" class="my-bookings-buttons">
+            Cancel
+          </a>
+        </button>
       </form>
     </div>
   </div>
