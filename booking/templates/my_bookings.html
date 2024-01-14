@@ -12,7 +12,7 @@
         <div class="col-12 mt-5">
           <div
             class="card mb-3 pt-3 pb-3 text-primary bookings-card"
-            style="max-width: auto; max-height: auto"
+            style="width: auto; height: auto"
           >
             <div class="row justify-content-center">
               <div class="col-10 text-primary mb-3">
@@ -38,7 +38,7 @@
             <div class="row justify-content-center">
               <div class="col-sm-10 col-md-5">
                 <p>
-                  <strong>Number of players: </strong> 
+                  <strong>Number of players: </strong>
                   {{ booking.number_of_players }}
                 </p>
               </div>
@@ -61,14 +61,24 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-5">
-                <a href="{% url 'edit_tee_date' item_id=booking.id %}">
-                  <button class="btn btn-primary btn-md">Edit</button>
-                </a>
+                <button class="btn btn-primary btn-md">
+                  <a
+                    href="{% url 'edit_tee_date' item_id=booking.id %}"
+                    class="my-bookings-buttons"
+                  >
+                    Edit
+                  </a>
+                </button>
               </div>
               <div class="col-5">
-                <a href="{% url 'confirm_delete' item_id=booking.id %}">
-                  <button class="btn btn-danger btn-md">Delete</button>
-                </a>
+                <button class="btn btn-danger btn-md">
+                  <a
+                    href="{% url 'confirm_delete' item_id=booking.id %}"
+                    class="my-bookings-buttons"
+                  >
+                    Delete
+                  </a>
+                </button>
               </div>
             </div>
           </div>

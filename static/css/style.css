@@ -84,7 +84,7 @@ h5 {
     width: 70vh;
     margin-top: 100px;
     border-radius: 10px;
-    margin-right: 20px; 
+    margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 100px;
 }
@@ -179,7 +179,7 @@ h5 {
 
 .bg-full-review {
     background-color: rgba(248, 249, 250, 0.90);
-}  
+}
 
 .review-content {
     margin-top: 3rem;
@@ -277,6 +277,11 @@ h5 {
 
 .bookings-card {
     background-color: rgba(248, 249, 250, 0.80);
+}
+
+.my-bookings-buttons {
+    color: white;
+    text-decoration: none;
 }
 
 /* Delete booking confirm */
