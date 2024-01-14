@@ -441,4 +441,8 @@ class DeleteBooking(View):
 
         booking = get_object_or_404(Booking, id=item_id)
         booking.delete()
+        messages.success(
+            request,
+            f' You have successfully deleted your booking.'
+        )
         return redirect('my_bookings')
