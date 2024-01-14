@@ -329,4 +329,28 @@ Browser test table:
 
 | Browser Tested | Actual Result | Pass / Fail |
 | --- | --- | --- |
-| Chrome |
+| Chrome | As Expected | tbc |
+| Firefox | As Expected | tbc |
+| Edge | As Expected | tbc |
+
+Devices tested and devices using google tools:
+
+| Device Tested | Acutal Result | Pass / Fail |
+| Acer Laptop | As Expected | Pass |
+| Samsung 22 inch Screen| As Expected | Pass |
+| i Phone SE | As Expected | Pass |
+| i Phone XR | As Expected | Pass |
+| i Phone 12 Pro | As Expected | Pass |
+| i Phone 14 Pro Max | As Expected | Pass |
+| Pixel 7 | As Expected | Pass |
+| Samsung Galaxy S8 | As Expected | Pass |
+| Samsung S20 Ultra | As Expected | Pass |
+| iPad Mini | As Expected | Pass |
+| iPad Air | As Expected | Pass |
+| iPad Pro | As Expected | Pass |
+| Surface Pro 7 | As Expected | Pass |
+| Surface Duo | As Expected | Pass |
+| Galaxy Fold | As Expected | Pass |
+| Samsung Galaxy A51/71 | As Expected | Pass |
+| Nest Hub | As Expected | Pass |
+| Nest Hub Max | As Expected | Pass |

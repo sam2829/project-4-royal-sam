@@ -8,7 +8,7 @@
     <div class="col-12 col-lg-10 mt-5 mb-5">
       <div class="card mb-3 pb3 bg-full-review">
         <div class="row g-0">
-          <div class="col-4">
+          <div class="col-sm-12 col-lg-4">
             <!-- Review Image -->
             <div class="full-review-img-container">
               {% if "placeholder" in post.featured_image.url %}
@@ -27,7 +27,7 @@
             </div>
           </div>
           <!--  Review Content -->
-          <div class="col-8">
+          <div class="col-sm-12 col-lg-8">
             <div class="card-body me-5">
               <a href="{% url 'review_details' post.slug %}">
                 <h1 class="card-title text-primary">{{ post.title }}</h1>
@@ -95,7 +95,7 @@
         </div>
         <!-- Comments section -->
         <div class="row mt-5">
-          <div class="col-md-8 mb-3">
+          <div class="col-lg-7 mb-3 mt-5">
             <h3 class="ms-5 text-primary">Comments:</h3>
             <!-- for loop to iterate through the comments made -->
             {% for comment in comments %}
@@ -111,7 +111,7 @@
             </div>
             {% endfor %}
           </div>
-          <div class="col-md-4 ps-5 pe-5">
+          <div class="col-lg-5 ps-5 pe-5 mt-5">
             <!-- Let user know that there comment is awaiting approval -->
             {% if commented %}
             <div class="alert alert-success" role="alert">

@@ -123,8 +123,8 @@ h5 {
 /* main section reviews */
 
 .main-reviews {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 .review-link .card-title:hover {
@@ -166,8 +166,8 @@ h5 {
 
 .full-review-card {
     text-align: left;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .full-review-img-container img {
@@ -250,7 +250,7 @@ h5 {
     border-radius: 10px;
     margin-right: 20px;
     margin-left: 20px;
-    margin-top: 120px;
+    margin-top: 130px;
     margin-bottom: 60px;
 }
 
@@ -271,8 +271,8 @@ h5 {
 /* My bookings section */
 
 .main-my-bookings {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 .bookings-card {
@@ -316,7 +316,7 @@ h5 {
 
 .alert-container {
     position: fixed;
-    margin-top: 15px;
+    margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
