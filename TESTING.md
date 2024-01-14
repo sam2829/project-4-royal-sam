@@ -14,6 +14,8 @@ During the development of this project, numerous testing was carried out by myse
     - [Lighthouse](#lighthouse)
     - [CI Python Linter](#ci-python-linter)
     - [W3C CSS Validator](#w3c-css-validator)
+    - [W3C Markup Validator](#w3c-markup-validator)
+  - [Responsiveness](#responsiveness)
 
 ## Manual Testing
 
@@ -316,3 +318,15 @@ W3C CSS Validator was use to validate the site's CSS code.
 ![W3C CSS Validator Screenshot](docs/testing_screenshots/css-validate-screenshot.png)
 
 [Back to top](#royal-sam-golf-club-testing)
+
+### W3C Markup Validator
+
+## Responsiveness
+
+All pages were tested to ensure responsiveness on screen sizes from 320px and upwards. The site was also tested on multiple browsers and devices.
+
+Browser test table:
+
+| Browser Tested | Actual Result | Pass / Fail |
+| --- | --- | --- |
+| Chrome |
