@@ -46,13 +46,14 @@
               <div class="row">
                 <div class="col-3">
                   <!-- user can like a post if logged in -->
-                  <strong>
-                    {% if user.is_authenticated %}
-                    <form
-                      action="{% url 'review_like' post.slug %}"
-                      method="POST"
-                    >
-                      {% csrf_token %} {% if liked %}
+                  {% if user.is_authenticated %}
+                  <form
+                    action="{% url 'review_like' post.slug %}"
+                    method="POST"
+                  >
+                    {% csrf_token %}
+                    <strong>
+                      {% if liked %}
                       <button
                         class="btn-like text-primary"
                         type="submit"
@@ -71,15 +72,15 @@
                         <i class="far fa-heart"></i>
                       </button>
                       {% endif %}
-                    </form>
-                    {% else %}
-                    <!-- Number of likes -->
-                    <strong class="text-primary"
-                      ><i class="far fa-heart pe-2"></i>
-                      {{ post.number_of_likes }}
                     </strong>
-                    {% endif %}
+                  </form>
+                  {% else %}
+                  <!-- Number of likes -->
+                  <strong class="text-primary">
+                    <i class="far fa-heart pe-2"></i>
+                    {{ post.number_of_likes }}
                   </strong>
+                  {% endif %}
                   <!-- Number of comments -->
                 </div>
                 <div class="col-3">
@@ -122,7 +123,7 @@
             {% if user.is_authenticated %}
             <h3 class="text-primary">Leave a comment</h3>
             <p>Commenting as: {{ user.username }}</p>
-            <form method="POST" style="marging-top: 1.3rem">
+            <form method="POST" style="margin-top: 1.3rem">
               {{ comment_form | crispy }} {% csrf_token %}
               <button type="submit" class="btn btn-primary btn-md mt-3 mb-3">
                 Leave Comment
