@@ -16,13 +16,13 @@
                 src="{% static 'background_images/golf-2.jpg' %}"
                 class="img-fluid rounded-start"
                 alt="review image"
-              />
+              >
               {% else %}
               <img
                 src="{{ post.featured_image.url }}"
                 class="img-fluid rounded-start"
                 alt="review image"
-              />
+              >
               {% endif %}
             </div>
           </div>
@@ -36,13 +36,13 @@
                   <span class="review-creator-info">{{ post.created_on }}</span>
                 </p>
               </a>
-              <hr />
+              <hr>
               <div class="review-content">
                 <p class="card-text">
                   <i class="font-weight-bold"> {{ post.content | safe }}</i>
                 </p>
               </div>
-              <hr />
+              <hr>
               <div class="row">
                 <div class="col-3">
                   <!-- user can like a post if logged in -->
@@ -106,9 +106,9 @@
                 <span class="comment-date">{{ comment.created_on }}</span>
               </p>
               <div class="comments">
-                <i>{{ comment.body | linebreaks }}</i>
+                {{ comment.body | linebreaks }}
               </div>
-              <hr />
+              <hr>
             </div>
             {% endfor %}
           </div>

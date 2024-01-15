@@ -197,11 +197,13 @@ h5 {
 .comments {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    font-style: italic;
 }
 
 .comment-author {
     font-weight: 700;
 }
+
 
 .leave-comment-link {
     padding: 6px;
@@ -277,11 +279,6 @@ h5 {
 
 .bookings-card {
     background-color: rgba(248, 249, 250, 0.80);
-}
-
-.my-bookings-buttons {
-    color: white;
-    text-decoration: none;
 }
 
 /* Delete booking confirm */

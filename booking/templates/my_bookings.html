@@ -61,24 +61,20 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-5">
-                <button class="btn btn-primary btn-md">
-                  <a
-                    href="{% url 'edit_tee_date' item_id=booking.id %}"
-                    class="my-bookings-buttons"
-                  >
-                    Edit
-                  </a>
-                </button>
+                <a
+                  href="{% url 'edit_tee_date' item_id=booking.id %}"
+                  class="btn btn-primary btn-md"
+                >
+                  Edit
+                </a>
               </div>
               <div class="col-5">
-                <button class="btn btn-danger btn-md">
-                  <a
-                    href="{% url 'confirm_delete' item_id=booking.id %}"
-                    class="my-bookings-buttons"
-                  >
-                    Delete
-                  </a>
-                </button>
+                <a
+                  href="{% url 'confirm_delete' item_id=booking.id %}"
+                  class="btn btn-danger btn-md"
+                >
+                  Delete
+                </a>
               </div>
             </div>
           </div>
@@ -89,7 +85,7 @@
         <div class="col-12 mt-5">
           <div
             class="card mb-3 pt-3 pb-3 text-primary bookings-card"
-            style="max-width: 540px; max-height: auto"
+            style="max-width: 540px; height: auto"
           >
             <div class="row justify-content-center">
               <div class="col-10 text-primary mb-3">
@@ -98,9 +94,9 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-10 mb-3">
-                <a href="{% url 'book_a_tee' %}">
-                  <button class="btn btn-primary btn-lg">Book A TEE!</button>
-                </a>
+                <a href="{% url 'book_a_tee' %}" class="btn btn-primary btn-lg"
+                  >Book A Tee!</a
+                >
               </div>
             </div>
           </div>
