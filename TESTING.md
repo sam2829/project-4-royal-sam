@@ -327,6 +327,8 @@ Due to Django templating language code used in the HTML files, these files could
 
 ![W3C Markup Validator Screenshot](docs/testing_screenshots/HTML-validator-screenshot.png)
 
+[Back to top](#royal-sam-golf-club-testing)
+
 ## Responsiveness
 
 All pages were tested to ensure responsiveness on screen sizes from 320px and upwards. The site was also tested on multiple browsers and devices.

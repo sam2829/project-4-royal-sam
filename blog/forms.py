@@ -33,7 +33,7 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'content', 'featured_image', 'excerpt',)
+        fields = ('title', 'content', 'featured_image',)
 
     # This function is to validate the title field and make sure just spaces
     # arent accepted
