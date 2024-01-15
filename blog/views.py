@@ -50,7 +50,7 @@ class PostDetail(View):
     # This is the view to post our comment form
 
     def post(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects.filter(approved=True)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
