@@ -321,6 +321,12 @@ W3C CSS Validator was use to validate the site's CSS code.
 
 ### W3C Markup Validator
 
+All pages were checked using the W3C Markup Validator. Initially I came across a few errors to do with closing tags not needed on elements and using max-width and max-height set to auto. All these were corrected and all pages passed validation.
+
+Due to Django templating language code used in the HTML files, these files could not be copied and pasted directly into the validator. To test the validation on the files I opened the page I wished to validate, right click on the page and select view page source. I then copied and pasted the raw code into the validator as this will be only the HTML rendered code. On pages where they would be displayed different depending on whether user is logged in or logged out, I tested these pages whilst logged in and logged out.
+
+![W3C Markup Validator Screenshot](docs/testing_screenshots/HTML-validator-screenshot.png)
+
 ## Responsiveness
 
 All pages were tested to ensure responsiveness on screen sizes from 320px and upwards. The site was also tested on multiple browsers and devices.
@@ -336,6 +342,7 @@ Browser test table:
 Devices tested and devices using google tools:
 
 | Device Tested | Acutal Result | Pass / Fail |
+|--- | --- | ---|
 | Acer Laptop | As Expected | Pass |
 | Samsung 22 inch Screen| As Expected | Pass |
 | i Phone SE | As Expected | Pass |
