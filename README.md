@@ -151,10 +151,6 @@ View Gallery:
 
 - As a user I can view the course gallery so that I can see how good the golf course is.
 
-Create Drafts:
-
-- As a site admin I can create draft posts so that I can finish writing the content later.
-
 Comment On a Post / Review:
 
 - As a site user I can leave comments on a post / review so that I can be involved in the conversation.
@@ -400,9 +396,7 @@ On the form the title and content section must be filled out to be able to submi
 
 Once submitted a pop-up message will confirm user has submitted a review and is awaiting approval and redirected back to reviews page.
 
-![Leave Review Page 1](docs/readme_screenshots/leave-review-screenshot-1.png)
-
-![Leave Review Page 2](docs/readme_screenshots/leave-review-screenshot-2.png)
+![Leave Review Page 1](docs/readme_screenshots/leave-review-screenshot.png)
 
 **Full Review Page**
 
