@@ -462,6 +462,22 @@ Mobile:
 
 As a User I can view the Contact Us page and be able to see contact information as a telephone number and email address, I can also click on social links to follow the golf club and also able to view the location of the golf club from google maps.
 
+**Error Page 404**
+
+I implemented and styled a 404 error page that can alert users when they have accessed a page that doesn't exist or a broken link.
+
+The error 404 page will allow the user to easily navigate back to the home page of the site.
+
+![Error Page 404 Screenshot](docs/readme_screenshots/error-404-screenshot.png)
+
+**Error Page 500**
+
+I implememnted and styled a 500 error page that can alert users when an internal server error has occured.
+
+The error 500 page will allow the user to easily navigate back to the home page of the site.
+
+![Error Page 500 Screenshot](docs/readme_screenshots/error-500-screenshot.png)
+
 [Back to top](#royal-sam-golf-club)
 
 ### The Surface Plane
