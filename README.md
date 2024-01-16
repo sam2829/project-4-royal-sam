@@ -207,19 +207,11 @@ Reviews Page:
 
 Homepage:
 
-
-
 Register Page:
-
-
 
 Login Page:
 
-
-
 Reviews Page:
-
-
 
 </details>
 
@@ -253,7 +245,7 @@ Environment variables were stored in an env.py file for local development for se
 
 As a User I would like to view the site on all my different devices so I can view site wherever I am.
 
-**Navbar**
+***Navbar***
 
 As a user I want to see a clear way of navigating around the site so that I can easily find the relative information I am looking for.
 
@@ -284,7 +276,7 @@ Mobile Device:
 ![Mobile Navbar Screenshot 1](docs/readme_screenshots/mobile-navbar-1.png)
 ![Mobile Navbar Screenshot 2](docs/readme_screenshots/mobile-navbar-2.png)
 
-**Footer**
+***Footer***
 
 The footer is placed at the bottom of ever page. The social media links are displayed with icons provided by Font Awesome. This is where the user can click on one of the social media links and reach out for news and updates, these icons will also open up in new tabs as they will lead the user away from the site.
 
@@ -298,13 +290,13 @@ Mobile Devices:
 
 ![Mobile Footer Screenshot](docs/readme_screenshots/mobile-footer.png)
 
-**Homepage**
+***Homepage***
 
 Users will be presented by a welcoming message with a background image of the golf course on display. Book a Tee link will be displayed on the home page which depending on whether user is logged in or not will be taken to book a tee time form or option for user to register or login.
 
 ![Homepage Screenshot](docs/readme_screenshots/desktop-homepage.png)
 
-**Register Page**
+***Register Page***
 
 As a User if I havn't already made an online account, I would like to be able to register an account using the register form from Allauth, so I can then be able to take part in all the site has to offer.
 
@@ -312,7 +304,7 @@ As a User if I havn't already made an online account, I would like to be able to
 
 ![Register Screenshot 2](docs/readme_screenshots/register-screenshot-2.png)
 
-**Login Page**
+***Login Page***
 
 As a User if I have already registered an account, I would like to be able to log into my account when ever I wish, whether it to be to book a tee time or leave a review. I would login by using the allauth login form.
 
@@ -320,13 +312,13 @@ As a User if I have already registered an account, I would like to be able to lo
 
 ![Login Page Screenshot 2](docs/readme_screenshots/login-screenshot-2.png)
 
-**Logout Page**
+***Logout Page***
 
 As a User if I am already logged in, I would like the ability to log out of my account and would like to be asked if I'm sure in case I was logging out by mistake. This will be done by the Allauth templates.
 
 ![Logout Page Screenshot](docs/readme_screenshots/logout-screenshot.png)
 
-**Book A Tee Page**
+***Book A Tee Page***
 
 As a User if I click on the book a tee page, what page is rendered depends on if the user is logged in or logged out.
 
@@ -350,7 +342,7 @@ Once User has successfully booked, they will be redirected to the main my bookin
 
 ![Book A Time Page Screenshot](docs/readme_screenshots/book-a-time-screenshot.png)
 
-**My Bookings Page**
+***My Bookings Page***
 
 As a User the my bookings page is only available once the user has logged in.
 
@@ -366,8 +358,7 @@ If the user has no current bookings, a message will be displayed informing them 
 
 ![My Bookings Page Screenshot 3](docs/readme_screenshots/my-bookings-screenshot-3.png)
 
-
-**Reviews Page**
+***Reviews Page***
 
 As a User you can go onto the reviews page and be able to see all reviews left about the golf club and also be able to see any posts the golf club may have made.
 
@@ -387,7 +378,7 @@ If the user is logged in, they able to leave a review of their own by clicking o
 
 ![Reviews Page Logged In](docs/readme_screenshots/reviews-login-screenshot.png)
 
-**Leave A Review Page**
+***Leave A Review Page***
 
 If the User is logged in, they have the option to leave their own review.
 To do this they click on the leave review link on the reviews page, they then must fill out the Leave A Review form.
@@ -398,7 +389,7 @@ Once submitted a pop-up message will confirm user has submitted a review and is 
 
 ![Leave Review Page 1](docs/readme_screenshots/leave-review-screenshot.png)
 
-**Full Review Page**
+***Full Review Page***
 
 If the user clicks on a review and are not logged in, they are able to view the review in full, what comments have been made and how many comments there are.
 
@@ -436,7 +427,7 @@ Mobile:
 
 ![Full Review Page Logged In 2 Mobile](docs/readme_screenshots/mobile-full-review-screenshot-3.png)
 
-**Gallery Page**
+***Gallery Page***
 
 As a user I can go onto the gallery page and view photos of the golf course.
 
@@ -458,7 +449,7 @@ Mobile:
 
 ![Gallery Page 4 Mobile](docs/readme_screenshots/mobile-gallery-screenshot-4.png)
 
-**Contact Us Page**
+***Contact Us Page***
 
 As a User I can view the Contact Us page and be able to see contact information as a telephone number and email address, I can also click on social links to follow the golf club and also able to view the location of the golf club from google maps.
 
@@ -472,7 +463,7 @@ Mobile:
 
 ![Contact Us Page Screenshot 2](docs/readme_screenshots/mobile-contact-us-page-screenshot-2.png)
 
-**Error Page 404**
+***Error Page 404***
 
 I implemented and styled a 404 error page that can alert users when they have accessed a page that doesn't exist or a broken link.
 
@@ -480,7 +471,7 @@ The error 404 page will allow the user to easily navigate back to the home page 
 
 ![Error Page 404 Screenshot](docs/readme_screenshots/error-404-screenshot.png)
 
-**Error Page 500**
+***Error Page 500***
 
 I implememnted and styled a 500 error page that can alert users when an internal server error has occured.
 
@@ -494,13 +485,13 @@ The error 500 page will allow the user to easily navigate back to the home page 
 
 #### Design
 
-**Colour Scheme**
+***Colour Scheme***
 
 I opted for a very few choices of colours throughout the site. The same colours have been implemented across the site and are included in the button's styles.
 
 This hopefully makes the site easy and clear to read / use.
 
-**Imagery**
+***Imagery***
 
 Background images and gallery page images were taken from google images.
 
@@ -548,27 +539,27 @@ I have included details of my testing during and post development in a separate 
 
 ## Deployment
 
-**GitHub**
+***GitHub***
 
 This project was developed by using a specialized code institute template which is set up to run in Codeanywhere.
 
-* Once loaded the template provided by code institute, in the top right of the file click on the green drop-down menu labelled "code".
-* Then select HTTPS.
-* Next copy the URL given to you.
-* Next, I loaded up the Codeanywhere and clicked on "new workspace" at the top of the page.
-* In the repository URL, paste in the URL copied from the GitHub account.
-* Next click on create and the bottom right of the page.
+- Once loaded the template provided by code institute, in the top right of the file click on the green drop-down menu labelled "code".
+- Then select HTTPS.
+- Next copy the URL given to you.
+- Next, I loaded up the Codeanywhere and clicked on "new workspace" at the top of the page.
+- In the repository URL, paste in the URL copied from the GitHub account.
+- Next click on create and the bottom right of the page.
 
-**Version Control**
+***Version Control***
 
 For version control the following steps were made:
 
-* If any changes were made to my Codeanywhere project.
-* First files were made ready for commit with command - git add filename or git add . to add all files.
-* To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what changes have occurred.
-* To then move the changes to GitHub, use the following command - git push
+- If any changes were made to my Codeanywhere project.
+- First files were made ready for commit with command - git add filename or git add . to add all files.
+- To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what hanges have occurred.
+- To then move the changes to GitHub, use the following command - git push
 
-**Deployment to Heroku**
+***Deployment to Heroku***
 
 For deployment to Heroku the following steps were made:
 
@@ -597,12 +588,12 @@ For deployment to Heroku the following steps were made:
 
 ## Credits
 
-* Code Institute - Provided the template and Codeanywhere so that I was able to build this project. Also, without the knowledge gained through out doing the course I would not have been able to build this project. The tutor support was also very helpful.
-* Slack - The slack community help me search for any issues I came across and build this project.
-* Django - For being able to use Django to build my project and all the documentation to help build and set up correctly.
-* Allauth - For being able to use their templates.
-* Google - For use of all images in the project.
-* YouTube - For extra learning material to try and understand more about Django.
-* Mentor Jubril - For helping me realise what's needed to build a good project and also for encouragement and understanding.
+- Code Institute - Provided the template and Codeanywhere so that I was able to build this project. Also, without the knowledge gained through out doing the course I would not have been able to build this project. The tutor support was also very helpful.
+- Slack - The slack community help me search for any issues I came across and build this project.
+- Django - For being able to use Django to build my project and all the documentation to help build and set up correctly.
+- Allauth - For being able to use their templates.
+- Google - For use of all images in the project.
+- YouTube - For extra learning material to try and understand more about Django.
+- Mentor Jubril - For helping me realise what's needed to build a good project and also for encouragement and understanding.
 
 [Back to top](#royal-sam-golf-club)

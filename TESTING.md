@@ -86,7 +86,7 @@ Full test table:
 | Admin create and amend booking. | As admin they are able to create a new or amend an existing booking. | Logged in as admin and tried to create a new booking and edit an existing booking. | I was able to create a new booking and able to edit an existing one. | Pass |
 | Admin delete booking. | As admin they are able to delete a booking. | Logged in as admin and deleted a booking. | I was successfully able to delete a booking. | Pass |
 | Admin add to photo gallery. | As admin they are able to upload new photos onto the site's gallery page. | Logged in as admin and tried uploading new photos to the gallery page. | Photos were successfully added to the gallery page. | Pass |
-| Admin delete photos from gallery. | As admin they able to delete any existing photos from the site's gallery page. | Logged in as admin and tried deleting photos from the gallery. | 
+| Admin delete photos from gallery. | As admin they able to delete any existing photos from the site's gallery page. | Logged in as admin and tried deleting photos from the gallery. |
 
 [Back to top](#royal-sam-golf-club-testing)
 
@@ -260,7 +260,6 @@ Delete Booking Page:
 
 ![Delete Booking Page](docs/testing_screenshots/lighthouse-mobile-delete-booking.png)
 
-
 </details>
 
 ### CI Python Linter
@@ -275,7 +274,7 @@ All results are in the table below:
 | settings.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | urls.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | wsgi.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
-| ` home` |
+| `home` |
 | admin.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | apps.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
 | models.py | CI Python Linter to show no errors. | CI Python Linter returned no errors. | Pass |
