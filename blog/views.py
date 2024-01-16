@@ -142,7 +142,6 @@ class LeaveReview(View):
             review.email = request.user.email
             review.name = request.user.username
             review.author = request.user
-            #review.slug = review_form.cleaned_data['title'].replace(' ', '-')
             review.slug = slugify(review_form.cleaned_data['title'])
 
             if 'featured_image' in request.FILES:
