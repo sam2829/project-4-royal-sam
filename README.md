@@ -462,6 +462,16 @@ Mobile:
 
 As a User I can view the Contact Us page and be able to see contact information as a telephone number and email address, I can also click on social links to follow the golf club and also able to view the location of the golf club from google maps.
 
+Desktop:
+
+![Contact Us Page Screenshot](docs/readme_screenshots/desktop-contact-us-screenshot.png)
+
+Mobile:
+
+![Contact Us Page Screenshot 1](docs/readme_screenshots/mobile-contact-us-page-screenshot-1.png)
+
+![Contact Us Page Screenshot 2](docs/readme_screenshots/mobile-contact-us-page-screenshot-2.png)
+
 **Error Page 404**
 
 I implemented and styled a 404 error page that can alert users when they have accessed a page that doesn't exist or a broken link.
