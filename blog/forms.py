@@ -19,7 +19,7 @@ class CommentForm(forms.ModelForm):
     # arent accepted and that maximum characters isn't exceeded
     def clean_body(self):
         data = self.cleaned_data['body']
-        max_length = self.fields['content'].max_length
+        max_length = self.fields['body'].max_length
         if data.strip() == '':
             raise ValidationError("Field should not contain only spaces.")
         if len(data) > max_length:
@@ -43,7 +43,7 @@ class ReviewForm(forms.ModelForm):
     # arent accepted and that maximum characters isn't exceeded
     def clean_title(self):
         data = self.cleaned_data['title']
-        max_length = self.fields['content'].max_length
+        max_length = self.fields['title'].max_length
         if data.strip() == '':
             raise ValidationError("Field should not contain only spaces.")
         if len(data) > max_length:

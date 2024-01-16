@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, ReviewForm
 from django.contrib import messages
+from django.utils.text import slugify
 
 
 # This class is to create a view to display posts on the reviews page
@@ -79,8 +80,9 @@ class PostDetail(View):
                 },
             )
         else:
-            messages.warning(request, 'Something went wrong, please try again.'
-                             ' Note fields should not contain only spaces.')
+            messages.warning(request, 'Something went wrong, please check'
+                             ' form for errors. Note fields should not'
+                             ' contain only spaces.')
             comment_form = CommentForm()
 
         return render(
@@ -140,7 +142,8 @@ class LeaveReview(View):
             review.email = request.user.email
             review.name = request.user.username
             review.author = request.user
-            review.slug = review_form.cleaned_data['title'].replace(' ', '-')
+            #review.slug = review_form.cleaned_data['title'].replace(' ', '-')
+            review.slug = slugify(review_form.cleaned_data['title'])
 
             if 'featured_image' in request.FILES:
                 review.featured_image = request.FILES['featured_image']
