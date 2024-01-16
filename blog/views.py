@@ -151,8 +151,9 @@ class LeaveReview(View):
             return redirect('reviews')
         else:
 
-            messages.warning(request, 'Something went wrong, please try again.'
-                             ' Note fields should not contain only spaces.')
+            messages.warning(request, 'Something went wrong, please check'
+                             ' form for errors. Note fields should not'
+                             ' contain only spaces.')
             return render(
                 request,
                 "leave_review.html",
