@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
+from django.utils.html import format_html
 
 
 @admin.register(Post)
@@ -32,7 +33,13 @@ class CommentAdmin(admin.ModelAdmin):
     lists, searches and functions.
     """
 
-    list_display = ('name', 'body', 'post', 'created_on', 'approved')
+    list_display = (
+        'name',
+        'get_short_body',
+        'get_short_post',
+        'created_on',
+        'approved'
+    )
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
     actions = ['approve_comments']
@@ -41,3 +48,22 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+    # This method returns a shortened version of the comment body
+    # for the list view
+    def get_short_body(self, obj):
+        return format_html(
+            f'{obj.body[:100]}...'
+        ) if len(obj.body) > 100 else obj.body
+
+    get_short_body.short_description = 'Comment Body'
+
+    # This method returns a shortened version of the comment post
+    # for the list view
+    def get_short_post(self, obj):
+        post_text = str(obj.post) if obj.post else ''
+        return format_html(
+            f'{post_text[:100]}...'
+        ) if len(post_text) > 100 else post_text
+
+    get_short_post.short_description = 'Comment Post'
