@@ -410,6 +410,8 @@ Mobile:
 
 ![Full Review Page Logged Out Mobile](docs/readme_screenshots/mobile-full-review-screenshot-1.png)
 
+![Full Review Page Logged Out Mobile](docs/readme_screenshots/mobile-full-review-screenshot-2.png)
+
 If the user is logged in, they are also able to like the review and leave a comment in the comment form which is now available.
 
 desktop:
