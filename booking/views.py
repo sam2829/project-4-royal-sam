@@ -236,9 +236,7 @@ class EditBookingDate(LoginRequiredMixin, View):
         # Check if user trying to access is the owner of the booking
         if request.user != booking.user:
             # Return unauthorized access (403 Forbidden)
-            return HttpResponseForbidden(
-                "You do not have permission to access this booking."
-                )
+            return HttpResponseForbidden()
 
         booking_form_date = BookingFormDate(instance=booking)
         return render(
