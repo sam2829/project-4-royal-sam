@@ -444,7 +444,7 @@ class ConfirmDelete(LoginRequiredMixin, View):
 
         booking = get_object_or_404(Booking, id=item_id)
 
-         # Check if user trying to access is the owner of the booking
+        # Check if user trying to access is the owner of the booking
         if request.user != booking.user:
             # Return unauthorized access (403 Forbidden)
             return HttpResponseForbidden(
@@ -465,13 +465,13 @@ class DeleteBooking(LoginRequiredMixin, View):
 
         booking = get_object_or_404(Booking, id=item_id)
 
-         # Check if user trying to access is the owner of the booking
+        # Check if user trying to access is the owner of the booking
         if request.user != booking.user:
             # Return unauthorized access (403 Forbidden)
             return HttpResponseForbidden(
                 "You do not have permission to access this booking."
             )
-            
+
         booking.delete()
         messages.success(
             request,
