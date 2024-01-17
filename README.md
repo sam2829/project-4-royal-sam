@@ -467,6 +467,18 @@ The error 404 page will allow the user to easily navigate back to the home page 
 
 ![Error Page 404 Screenshot](docs/readme_screenshots/error-404-screenshot.png)
 
+***Error Pages 403 & 403_csrf***
+
+I implemented and styled a 403 and 403_csrf error pages to redirect unauthorised users so that I can secure my views.
+
+The user will be directed to the 403 error page if they alter the URL's and attempt to edit or delete pages that are restricted. The 403_csrf page is to provide feedback to the user when there is an issue with csrf verification.
+
+Both error pages will allow the user to easily navigate back to the home page.
+
+![Error Page 403 Screenshot](docs/readme_screenshots/error-403-screenshot.png)
+
+![Error Page 403_csrf Screenshot](docs/readme_screenshots/error-403_csrf-screenshot.png)
+
 ***Error Page 500***
 
 I implememnted and styled a 500 error page that can alert users when an internal server error has occured.
