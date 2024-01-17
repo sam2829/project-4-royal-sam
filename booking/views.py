@@ -236,7 +236,7 @@ class EditBookingDate(LoginRequiredMixin, View):
         # Check if user trying to access is the owner of the booking
         if request.user != booking.user:
             # Return unauthorized access (403 Forbidden)
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(render(request, '403.html'))
 
         booking_form_date = BookingFormDate(instance=booking)
         return render(
@@ -302,9 +302,7 @@ class EditBookingTime(LoginRequiredMixin, View):
         # Check if user trying to access is the owner of the booking
         if request.user != booking.user:
             # Return unauthorized access (403 Forbidden)
-            return HttpResponseForbidden(
-                "You do not have permission to access this booking."
-            )
+            return HttpResponseForbidden(render(request, '403.html'))
 
         booking_form_time = BookingFormTime(instance=booking)
 
@@ -445,9 +443,7 @@ class ConfirmDelete(LoginRequiredMixin, View):
         # Check if user trying to access is the owner of the booking
         if request.user != booking.user:
             # Return unauthorized access (403 Forbidden)
-            return HttpResponseForbidden(
-                "You do not have permission to access this booking."
-            )
+            return HttpResponseForbidden(render(request, '403.html'))
 
         return render(request, 'confirm_delete.html', {'booking': booking})
 
@@ -466,9 +462,7 @@ class DeleteBooking(LoginRequiredMixin, View):
         # Check if user trying to access is the owner of the booking
         if request.user != booking.user:
             # Return unauthorized access (403 Forbidden)
-            return HttpResponseForbidden(
-                "You do not have permission to access this booking."
-            )
+            return HttpResponseForbidden(render(request, '403.html'))
 
         booking.delete()
         messages.success(
