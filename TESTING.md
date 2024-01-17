@@ -16,6 +16,7 @@ During the development of this project, numerous testing was carried out by myse
     - [W3C CSS Validator](#w3c-css-validator)
     - [W3C Markup Validator](#w3c-markup-validator)
   - [Responsiveness](#responsiveness)
+  - [Bugs \& Fixes](#bugs--fixes)
 
 ## Manual Testing
 
@@ -359,3 +360,15 @@ Devices tested and devices using google tools:
 | Samsung Galaxy A51/71 | As Expected | Pass |
 | Nest Hub | As Expected | Pass |
 | Nest Hub Max | As Expected | Pass |
+
+[Back to top](#royal-sam-golf-club-testing)
+
+## Bugs & Fixes
+
+| Bug | Issue | Resolution |
+| --- | --- | --- |
+| Certain times werent being removed from my bookings. | When a user was on my bookings page, certain times werent being removed after the time had passed on that date. | After trying many things and then speaking to the tutor support we thought it could be that the list of available times that didnt't display four digits, for example they were "7:30", werent being converted properly all the time so we changed the times to then read for example "07:30". This then seemed to have resolved the issue. |
+| Special cases in review title. | When a user left a review and the title contained any special cases, for example a "!" used in "Amazing!". The reviews page would not be displayed due to the slug not being able to contain special cases. | Through researching this I found that using a slugify function instead, this would automatically clear any special cases and create a slug suitablefor the url. |
+| Admin comments pagehard to read. | When visitng the comments page as admin, I found it was displaying to much of the comment and post / review title which was making it difficult to read. | Through research I found that I was able to restrict the amount of the comment and title I wanted to be displayed. I did this using "get_short" function, which seemed to resolve the issue. |
+
+[Back to top](#royal-sam-golf-club-testing)

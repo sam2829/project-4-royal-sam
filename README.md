@@ -527,6 +527,12 @@ Font awesome was used for social links and for golf ball on a tee icon in the pa
 
 ### Libraries Used
 
+- Django - A python package for the Django framework.
+- Django Allauth - An integrated set of Django applications used for user authentication, registration and account management.
+- Django Crispy Forms - A Django package that helps control the rendering behaviour of Django forms.
+- Django Summernote - Used to style and presentation of the site admin page.
+- Cloudinary - Used to store static files away from the application.
+
 [Back to top](#royal-sam-golf-club)
 
 ## Testing
@@ -591,7 +597,9 @@ For deployment to Heroku the following steps were made:
 - Django - For being able to use Django to build my project and all the documentation to help build and set up correctly.
 - Allauth - For being able to use their templates.
 - Google - For use of all images in the project.
-- YouTube - For extra learning material to try and understand more about Django.
+- YouTube - For extra learning material to try and understand more about Django. Also found this video helpful for ideas on how I could build my project <https://www.youtube.com/watch?v=s5xbtuo9pR0>
 - Mentor Jubril - For helping me realise what's needed to build a good project and also for encouragement and understanding.
 
 [Back to top](#royal-sam-golf-club)
+
+
