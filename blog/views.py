@@ -5,6 +5,7 @@ from .models import Post, Comment
 from .forms import CommentForm, ReviewForm
 from django.contrib import messages
 from django.utils.text import slugify
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # This class is to create a view to display posts on the reviews page
@@ -102,7 +103,7 @@ class PostDetail(View):
 # This view is for being able to like posts / reviews
 
 
-class PostLike(View):
+class PostLike(LoginRequiredMixin, View):
     """
     This class is so that the user can like a review / post.
     """
@@ -121,7 +122,7 @@ class PostLike(View):
 # This class is to view for the user to post a review
 
 
-class LeaveReview(View):
+class LeaveReview(LoginRequiredMixin, View):
     """
     This class is so that the user can leave a review.
     """

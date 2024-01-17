@@ -601,5 +601,3 @@ For deployment to Heroku the following steps were made:
 - Mentor Jubril - For helping me realise what's needed to build a good project and also for encouragement and understanding.
 
 [Back to top](#royal-sam-golf-club)
-
-

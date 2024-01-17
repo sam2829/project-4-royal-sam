@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseForbidden
 from .models import *
 from .forms import BookingFormDate, BookingFormTime
 from django.utils import timezone
@@ -67,7 +67,7 @@ class BookATee(View):
 # this is so the user can view the booking time form
 
 
-class BookATime(View):
+class BookATime(LoginRequiredMixin, View):
     """
     This class is so the user can view the booking time form.
     """
@@ -224,7 +224,7 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
 # This class is for the user to edit a booking date
 
 
-class EditBookingDate(View):
+class EditBookingDate(LoginRequiredMixin, View):
     """
     This class is so the user is able to edit the booking date.
     """
@@ -232,6 +232,14 @@ class EditBookingDate(View):
     # Gets the the form to edit date and displays the original data in form
     def get(self, request, item_id, *args, **kwargs):
         booking = get_object_or_404(Booking, id=item_id)
+
+        # Check if user trying to access is the owner of the booking
+        if request.user != booking.user:
+            # Return unauthorized access (403 Forbidden)
+            return HttpResponseForbidden(
+                "You do not have permission to access this booking."
+                )
+
         booking_form_date = BookingFormDate(instance=booking)
         return render(
             request,
@@ -282,7 +290,7 @@ class EditBookingDate(View):
 # This class is for user to edit booking time
 
 
-class EditBookingTime(View):
+class EditBookingTime(LoginRequiredMixin, View):
     """
     This class is so the user can edit the booking time.
     """
@@ -292,6 +300,14 @@ class EditBookingTime(View):
 
         selected_date_str = request.session.get('date')
         booking = get_object_or_404(Booking, id=item_id)
+
+        # Check if user trying to access is the owner of the booking
+        if request.user != booking.user:
+            # Return unauthorized access (403 Forbidden)
+            return HttpResponseForbidden(
+                "You do not have permission to access this booking."
+            )
+
         booking_form_time = BookingFormTime(instance=booking)
 
         if selected_date_str:
@@ -419,7 +435,7 @@ class EditBookingTime(View):
 
 # This class is for the user to confirm deletion a booking
 
-class ConfirmDelete(View):
+class ConfirmDelete(LoginRequiredMixin, View):
     """
     This class is so the user is asked to confirm deletion of a booking.
     """
@@ -427,12 +443,20 @@ class ConfirmDelete(View):
     def get(self, request, item_id):
 
         booking = get_object_or_404(Booking, id=item_id)
+
+         # Check if user trying to access is the owner of the booking
+        if request.user != booking.user:
+            # Return unauthorized access (403 Forbidden)
+            return HttpResponseForbidden(
+                "You do not have permission to access this booking."
+            )
+
         return render(request, 'confirm_delete.html', {'booking': booking})
 
 # This class is for the user to delete a booking
 
 
-class DeleteBooking(View):
+class DeleteBooking(LoginRequiredMixin, View):
     """
     This class is so that the user can delete their booking.
     """
@@ -440,6 +464,14 @@ class DeleteBooking(View):
     def get(self, request, item_id):
 
         booking = get_object_or_404(Booking, id=item_id)
+
+         # Check if user trying to access is the owner of the booking
+        if request.user != booking.user:
+            # Return unauthorized access (403 Forbidden)
+            return HttpResponseForbidden(
+                "You do not have permission to access this booking."
+            )
+            
         booking.delete()
         messages.success(
             request,
