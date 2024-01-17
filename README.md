@@ -179,8 +179,6 @@ Wireframes were used to create a prototype of the project which may change durin
 
 <summary>Desktop</summary>
 
-<br>
-
 Homepage:
 
 ![Desktop Homepage Screenshot](docs/wireframes/desktop-homepage-wireframe.png)
@@ -202,8 +200,6 @@ Reviews Page:
 <details>
 
 <summary>Mobile</summary>
-
-<br>
 
 Homepage:
 
@@ -490,6 +486,8 @@ The error 500 page will allow the user to easily navigate back to the home page 
 I opted for a very few choices of colours throughout the site. The same colours have been implemented across the site and are included in the button's styles.
 
 This hopefully makes the site easy and clear to read / use.
+
+![Colour Scheme Screenshot](docs/readme_screenshots/site-colours-screenshot.png)
 
 ***Imagery***
 

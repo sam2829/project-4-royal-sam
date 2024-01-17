@@ -98,8 +98,6 @@ Full test table:
 
 <summary>Desktop</summary>
 
-<br>
-
 Homepage (User logged out):
 
 ![Home Page Logged Out](docs/testing_screenshots/lighthouse-desktop-home-logged-out.png)
@@ -179,10 +177,7 @@ Delete Booking Page:
 </details>
 
 <details>
-
 <summary>Mobile</summary>
-
-<br>
 
 Homepage (User logged out):
 
