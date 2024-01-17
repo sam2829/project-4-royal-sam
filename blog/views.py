@@ -18,7 +18,7 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(approved=True).order_by('-created_on')
     template_name = 'reviews.html'
-    paginate_by = 4
+    paginate_by = 3
 
 
 # This class is to create a view so the user can see the entire post / review
