@@ -88,6 +88,10 @@ Full test table:
 | Admin delete booking. | As admin they are able to delete a booking. | Logged in as admin and deleted a booking. | I was successfully able to delete a booking. | Pass |
 | Admin add to photo gallery. | As admin they are able to upload new photos onto the site's gallery page. | Logged in as admin and tried uploading new photos to the gallery page. | Photos were successfully added to the gallery page. | Pass |
 | Admin delete photos from gallery. | As admin they able to delete any existing photos from the site's gallery page. | Logged in as admin and tried deleting photos from the gallery. |
+| Error Page 404 works. | When user attempts something that creates a error 404, my custom 404.html page is rendered and user is able to click the link provided to go back to the homepage. | Created a 404 error. | My custom error 404 page was rendered and was able to click on link provided to navigate back to the homepage. | Pass |
+| Error Page 403 works. | When user attempts something that creates a error 403, my custom 403.html page is rendered and user is able to click the link provided to go back to the homepage. | Created a 403 error. | My custom error 403 page was rendered and was able to click on link provided to navigate back to the homepage. | Pass |
+| Error Page 403_csrf works. | When user attempts something that creates a error 403_csrf, my custom 403_csrf.html page is rendered and user is able to click the link provided to go back to the homepage. | Created a 403_csrf error. | My custom error 403_csrf page was rendered and was able to click on link provided to navigate back to the homepage. | Pass |
+| Error Page 500 works. | When user attempts something that creates a error 500, my custom 404.html page is rendered and user is able to click the link provided to go back to the homepage. | Created a 500 error. | My custom error 500 page was rendered and was able to click on link provided to navigate back to the homepage. | Pass |
 
 [Back to top](#royal-sam-golf-club-testing)
 
