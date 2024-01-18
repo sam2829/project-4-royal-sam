@@ -168,7 +168,12 @@ class BookATime(LoginRequiredMixin, View):
             with transaction.atomic():
                 # Check if the selected time is still available
                 selected_time = booking_form_time.cleaned_data['time']
-                if selected_time in existing_times:
+                existing_times_locked = list(
+                    Booking.objects
+                    .filter(date=selected_date, time=selected_time)
+                    .select_for_update()
+                )
+                if existing_times_locked:
                     messages.warning(
                         request, 'The selected time has been booked by '
                                  'another user. Please choose another time.')
