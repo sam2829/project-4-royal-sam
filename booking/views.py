@@ -186,18 +186,6 @@ class BookATime(LoginRequiredMixin, View):
 
         else:
             # If form isnt valid, the booking form is rendered again.
-            available_times = [
-                time[0] for time in AVAILABLE_TIMES if (
-                    selected_date != timezone.now().date() or
-                    datetime.combine(
-                        selected_date,
-                        time[0]
-                    ) > datetime.combine(
-                        timezone.now().date(),
-                        current_time
-                    )
-                )
-            ]
             messages.warning(
                 request, 'The selected time may have already been booked. '
                 'Please try again or select an available time.')
