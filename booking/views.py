@@ -164,14 +164,33 @@ class BookATime(LoginRequiredMixin, View):
 
         # checking form is valid and no other has booked the same time
         if booking_form_time.is_valid():
-            selected_time = booking_form_time.cleaned_data['time']
-            if not self.is_time_available_for_booking(
-                selected_date,
-                selected_time
-            ):
+            try:
+                # check and save within a transaction
+                with transaction.atomic():
+                    booking_time = booking_form_time.save(commit=False)
+                    booking_time.user = request.user
+                    booking_email = request.session.get('booking_email')
+                    booking_time.email = booking_email
+
+                    if selected_date_str:
+                        booking_time.date = selected_date
+
+                    booking_time.save()
+
+                    messages.success(
+                        request,
+                        f' You have successfully booked your tee '
+                        f'time for: {booking_time.user}, {selected_date} '
+                        f'at {booking_time.time} for '
+                        f'{booking_time.number_of_players}.'
+                    )
+                    return redirect('my_bookings')
+
+            except IntegrityError:
                 messages.warning(
                     request, 'The selected time has been booked by '
                              'another user. Please choose another time.')
+                print("integrity error loading")
                 return render(
                     request,
                     "book_a_time.html",
@@ -182,27 +201,8 @@ class BookATime(LoginRequiredMixin, View):
                     },
                 )
 
-            booking_time = booking_form_time.save(commit=False)
-            booking_time.user = request.user
-            booking_email = request.session.get('booking_email')
-            booking_time.email = booking_email
-
-            if selected_date_str:
-                booking_time.date = selected_date
-
-            booking_time.save()
-
-            messages.success(
-                request,
-                f' You have successfully booked your tee '
-                f'time for: {booking_time.user}, {selected_date} '
-                f'at {booking_time.time} for '
-                f'{booking_time.number_of_players}.'
-            )
-            return redirect('my_bookings')
-
         else:
-
+            print("else statement loading")
             # If form isnt valid, the booking form is rendered again.
             return render(
                 request,
@@ -213,12 +213,6 @@ class BookATime(LoginRequiredMixin, View):
                     ),
                 },
             )
-
-    def is_time_available_for_booking(self, selected_date, selected_time):
-        existing_bookings = Booking.objects.filter(
-            date=selected_date, time=selected_time
-        )
-        return not existing_bookings.exists()
 
 
 # This class is so user can view there bookings
