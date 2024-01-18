@@ -162,22 +162,13 @@ class BookATime(LoginRequiredMixin, View):
         booking_form_time = BookingFormTime(
             data=request.POST, available_times=available_times)
 
+        # checking form is valid and no other has booked the same time
         if booking_form_time.is_valid():
-            # Check if the selected time is still available using a 
-            # try-except block
             selected_time = booking_form_time.cleaned_data['time']
-            try:
-                with transaction.atomic():
-                    booking_time = booking_form_time.save(commit=False)
-                    booking_time.user = request.user
-                    booking_email = request.session.get('booking_email')
-                    booking_time.email = booking_email
-
-                    if selected_date_str:
-                        booking_time.date = selected_date
-
-                    booking_time.save()
-            except IntegrityError:
+            if not self.is_time_available_for_booking(
+                selected_date,
+                selected_time
+            ):
                 messages.warning(
                     request, 'The selected time has been booked by '
                              'another user. Please choose another time.')
@@ -185,9 +176,22 @@ class BookATime(LoginRequiredMixin, View):
                     request,
                     "book_a_time.html",
                     {
-                        "booking_form_time": booking_form_time,
+                        "booking_form_time": BookingFormTime(
+                            available_times=available_times
+                        ),
                     },
                 )
+
+            booking_time = booking_form_time.save(commit=False)
+            booking_time.user = request.user
+            booking_email = request.session.get('booking_email')
+            booking_time.email = booking_email
+
+            if selected_date_str:
+                booking_time.date = selected_date
+
+            booking_time.save()
+
             messages.success(
                 request,
                 f' You have successfully booked your tee '
@@ -209,6 +213,13 @@ class BookATime(LoginRequiredMixin, View):
                     ),
                 },
             )
+
+    def is_time_available_for_booking(self, selected_date, selected_time):
+        existing_bookings = Booking.objects.filter(
+            date=selected_date, time=selected_time
+        )
+        return not existing_bookings.exists()
+
 
 # This class is so user can view there bookings
 
