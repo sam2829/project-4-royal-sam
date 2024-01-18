@@ -162,23 +162,43 @@ class BookATime(LoginRequiredMixin, View):
             data=request.POST, available_times=available_times)
 
         if booking_form_time.is_valid():
-            booking_time = booking_form_time.save(commit=False)
-            booking_time.user = request.user
-            booking_email = request.session.get('booking_email')
-            booking_time.email = booking_email
 
-            if selected_date_str:
-                booking_time.date = selected_date
+            # Ensure atomicity, check and save within a transaction
+            with transaction.atomic():
+                # Check if the selected time is still available
+                selected_time = booking_form_time.cleaned_data['time']
+                if selected_time in existing_times:
+                    messages.warning(
+                        request, 'The selected time has been booked by '
+                                 'another user. Please choose another time.')
+                    return render(
+                        request,
+                        "book_a_time.html",
+                        {
+                            "booking_form_time": BookingFormTime(
+                                available_times=available_times
+                            ),
+                        },
+                    )
 
-            booking_time.save()
+                booking_time = booking_form_time.save(commit=False)
+                booking_time.user = request.user
+                booking_email = request.session.get('booking_email')
+                booking_time.email = booking_email
 
-            messages.success(
-                request,
-                f' You have successfully booked your tee '
-                f'time for: {booking_time.user}, {selected_date} '
-                f'at {booking_time.time} for {booking_time.number_of_players}.'
-            )
-            return redirect('my_bookings')
+                if selected_date_str:
+                    booking_time.date = selected_date
+
+                booking_time.save()
+
+                messages.success(
+                    request,
+                    f' You have successfully booked your tee '
+                    f'time for: {booking_time.user}, {selected_date} '
+                    f'at {booking_time.time} for '
+                    f'{booking_time.number_of_players}.'
+                )
+                return redirect('my_bookings')
 
         else:
 
