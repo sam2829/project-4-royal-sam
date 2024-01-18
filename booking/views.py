@@ -7,7 +7,7 @@ from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from datetime import date, time
-from django.db import transaction
+from django.db import IntegrityError, transaction
 
 
 # This class is so the user can view the book a tee date form
