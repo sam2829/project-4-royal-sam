@@ -74,7 +74,7 @@ class BookATime(LoginRequiredMixin, View):
     """
 
     # Booking time form appears, user must select from available times on show,
-    # number of players, buddy and if they are a member
+    # number of players, buggy and if they are a member
     def get(self, request, *args, **kwargs):
 
         selected_date_str = request.session.get('date')
@@ -184,20 +184,72 @@ class BookATime(LoginRequiredMixin, View):
                 f'{booking_time.number_of_players}.'
             )
 
+            return redirect('my_bookings')
+
         else:
             # If form isnt valid, the booking form is rendered again.
             messages.warning(
                 request, 'The selected time may have already been booked. '
                 'Please try again or select an available time.')
-            return render(
-                request,
-                "book_a_time.html",
-                {
-                    "booking_form_time": BookingFormTime(
-                        available_times=available_times
-                    ),
-                },
-            )
+            selected_date_str = request.session.get('date')
+
+        if selected_date_str:
+            selected_date = datetime.strptime(
+                selected_date_str, '%Y-%m-%d').date()
+            existing_times = Booking.objects.filter(
+                date=selected_date).values_list('time', flat=True)
+
+            # Filter out times that are in the past
+            current_time = timezone.now().time()
+            available_times = [
+                time[0]
+                for time in AVAILABLE_TIMES
+                if (
+                    time[0] not in existing_times
+                    and (
+                        selected_date != timezone.now().date()
+                        or datetime.combine(
+                            selected_date,
+                            datetime.strptime(time[0], '%H:%M').time()
+                        ) > datetime.combine(
+                            timezone.now().date(),
+                            current_time
+                        )
+                    )
+                )
+            ]
+
+            # If there is no times available for for selected date user will be
+            # informed and redirected back to book a date form
+
+            if not available_times:
+                messages.warning(
+                    request, 'No tee times available for the selected date. '
+                             'Please choose another date.')
+                return HttpResponseRedirect(reverse('book_a_tee'))
+        else:
+            available_times = [
+                time[0] for time in AVAILABLE_TIMES if (
+                    selected_date != timezone.now().date() or
+                    datetime.combine(
+                        selected_date,
+                        time[0]
+                    ) > datetime.combine(
+                        timezone.now().date(),
+                        current_time
+                    )
+                )
+            ]
+
+        return render(
+            request,
+            "book_a_time.html",
+            {
+                "booking_form_time": BookingFormTime(
+                    available_times=available_times
+                ),
+            },
+        )
 
 
 # This class is so user can view there bookings

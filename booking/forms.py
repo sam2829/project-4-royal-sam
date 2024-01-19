@@ -49,6 +49,7 @@ class BookingFormTime(forms.ModelForm):
                 raise ValidationError(
                     'The selected time has been booked by another user. '
                     'Please choose another time.')
+                print("validation error raised")
 
     class Meta:
         model = Booking
