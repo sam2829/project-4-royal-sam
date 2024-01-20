@@ -15,16 +15,15 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('email', 'body',)
 
-    # This function is to validate the body field and make sure just spaces
-    # arent accepted and that maximum characters isn't exceeded
+    # This function is to validate the body field and make
+    # sure that maximum characters isn't exceeded
     def clean_body(self):
         data = self.cleaned_data['body']
         max_length = self.fields['body'].max_length
-        if data.strip() == '':
-            raise ValidationError("Field should not contain only spaces.")
+
         if len(data) > max_length:
             raise forms.ValidationError(
-                f'The maximum length is {max_length} characters.')
+                f"Body cannot exceed {max_length} characters.")
         return data
 
 
@@ -39,29 +38,27 @@ class ReviewForm(forms.ModelForm):
         model = Post
         fields = ('title', 'content', 'featured_image',)
 
-    # This function is to validate the title field and make sure just spaces
-    # arent accepted and that maximum characters isn't exceeded
+    # This function is to validate the title field and make
+    # sure that maximum characters isn't exceeded
     def clean_title(self):
         data = self.cleaned_data['title']
         max_length = self.fields['title'].max_length
-        if data.strip() == '':
-            raise ValidationError("Field should not contain only spaces.")
+
         if len(data) > max_length:
             raise forms.ValidationError(
-                f'The maximum length is {max_length} characters.')
+                f"Title cannot exceed {max_length} characters.")
         return data
 
-    # This function is to validate the content field and make sure just spaces
-    # arent accepted and that maximum characters isn't exceeded
+    # This function is to validate the content field and make
+    # sure that maximum characters isn't exceeded
+
     def clean_content(self):
         data = self.cleaned_data['content']
         max_length = self.fields['content'].max_length
 
-        if data.strip() == '':
-            raise ValidationError("Field should not contain only spaces.")
         if len(data) > max_length:
             raise forms.ValidationError(
-                f'The maximum length is {max_length} characters.')
+                f"Content cannot exceed {max_length} characters.")
         return data
 
     # This function is so that the image field doesnt appear as required as a
