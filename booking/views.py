@@ -479,11 +479,77 @@ class EditBookingTime(LoginRequiredMixin, View):
             return redirect('my_bookings')
 
         else:
+            # If form isn't valid
+
+            selected_date_str = request.session.get('date')
+            booking = get_object_or_404(Booking, id=item_id)
+
+            # Check if user trying to access is the owner of the booking
+            if request.user != booking.user:
+                # Return unauthorized access (403 Forbidden)
+                return HttpResponseForbidden(render(request, '403.html'))
+
+            booking_form_time = BookingFormTime(instance=booking)
+
+            if selected_date_str:
+                selected_date = datetime.strptime(
+                    selected_date_str, '%Y-%m-%d').date()
+                existing_times = Booking.objects.filter(
+                    date=selected_date).values_list('time', flat=True)
+
+                # Filter out times that are in the past
+                current_time = timezone.now().time()
+                available_times = [
+                    time[0]
+                    for time in AVAILABLE_TIMES
+                    if (
+                        time[0] not in existing_times
+                        and (
+                            selected_date != timezone.now().date()
+                            or datetime.combine(
+                                selected_date,
+                                datetime.strptime(time[0], '%H:%M').time()
+                            ) > datetime.combine(
+                                timezone.now().date(),
+                                current_time
+                            )
+                        )
+                    )
+                ]
+                # If there is no times available for for selected date user
+                # will be informed and redirected back to book a date form
+
+                if not available_times:
+                    messages.warning(
+                        request, 'No tee times available for the selected '
+                                 'date. Please choose another date.')
+                    # Redirect to the edit date form with the correct item_id
+                    return HttpResponseRedirect(
+                        reverse('edit_tee_date', kwargs={'item_id': item_id})
+                    )
+            else:
+                available_times = [
+                    time[0] for time in AVAILABLE_TIMES if (
+                        selected_date != timezone.now().date() or
+                        datetime.combine(
+                            selected_date,
+                            time[0]
+                        ) > datetime.combine(
+                            timezone.now().date(),
+                            current_time
+                        )
+                    )
+                ]
+            messages.warning(
+                request, 'The selected time may have already been booked. '
+                'Please try again and select an available time.')
             return render(
                 request,
                 "edit_tee_time.html",
                 {
-                    "booking_form_time": booking_form_time,
+                    "booking_form_time": BookingFormTime(
+                        available_times=available_times
+                    ),
                 },
             )
 
