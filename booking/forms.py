@@ -36,21 +36,6 @@ class BookingFormTime(forms.ModelForm):
         self.fields['time'].choices = [(time, time)
                                        for time in available_times]
 
-    def clean(self):
-        cleaned_data = super().clean()
-        selected_time = cleaned_data.get('time')
-        selected_date = cleaned_data.get('date')
-
-        if selected_time and selected_date:
-            existing_times = Booking.objects.filter(
-                date=selected_date, time=selected_time)
-
-            if existing_times.exists():
-                raise ValidationError(
-                    'The selected time has been booked by another user. '
-                    'Please choose another time.')
-                print("validation error raised")
-
     class Meta:
         model = Booking
         fields = ('time', 'number_of_players', 'member', 'buggy',)
