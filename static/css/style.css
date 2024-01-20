@@ -337,3 +337,9 @@ h5 {
     padding-bottom: 60px;
     height: 450px;
 }
+
+/* To hide forgotten password link in login form */
+
+.helptext {
+    display: none;
+}
