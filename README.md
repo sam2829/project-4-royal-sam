@@ -191,9 +191,49 @@ Login Page:
 
 ![Desktop Login Page](docs/wireframes/desktop-login-page-wireframe.png)
 
+Logout Page:
+
+![Desktop Logout page](docs/wireframes/desktop-logout-wireframe.png)
+
 Reviews Page:
 
 ![Desktop Reviews Page](docs/wireframes/desktop-reviews-page-wireframe.png)
+
+Full Review Page:
+
+![Desktop Full Review Page](docs/wireframes/desktop-full-review-wireframe.png)
+
+Gallery Page:
+
+![Desktop Gallery Page](docs/wireframes/desktop-gallery-wireframe.png)
+
+Contact Us Page:
+
+![Desktop Contact Us Page](docs/wireframes/desktop-contact-us-wireframe.png)
+
+Book A Tee Page:
+
+![Desktop Book A Tee Page](docs/wireframes/desktop-book-a-tee-wireframe.png)
+
+Book A Time Page:
+
+![Desktop Book A Time](docs/wireframes/desktop-book-a-time-wireframe.png)
+
+My Bookings Page:
+
+![Desktop My Bookings Page](docs/wireframes/desktop-my-bookings-wireframe.png)
+
+Edit Tee Date Page:
+
+![Desktop Edit Tee Date Page](docs/wireframes/desktop-edit-tee-wireframe.png)
+
+Edit Tee Time Page:
+
+![Desktop Edit Tee Time Page](docs/wireframes/desktop-edit-tee-time-wireframe.png)
+
+Delete Page:
+
+![Desktop Delete Booking Page](docs/wireframes/desktop-delete-wireframe.png)
 
 </details>
 
@@ -203,11 +243,59 @@ Reviews Page:
 
 Homepage:
 
+![Mobile Homepage Screenshot](docs/wireframes/Mobile-home-page-wireframe.png)
+
 Register Page:
+
+![Mobile Register Page Screenshot](docs/wireframes/mobile-register-page-wireframe.png)
 
 Login Page:
 
+![Mobile Login Page](docs/wireframes/mobile-login-wireframe.png)
+
+Logout Page:
+
+![Mobile Logout page](docs/wireframes/mobile-logout-wireframe.png)
+
 Reviews Page:
+
+![Mobile Reviews Page](docs/wireframes/mobile-reviews-wireframe.png)
+
+Full Review Page:
+
+![Mobile Full Review Page](docs/wireframes/mobile-full-review-wireframe.png)
+
+Gallery Page:
+
+![Mobile Gallery Page](docs/wireframes/mobile-gallery-wireframe.png)
+
+Contact Us Page:
+
+![Mobile Contact Us Page](docs/wireframes/mobile-contact-us-wireframe.png)
+
+Book A Tee Page:
+
+![Mobile Book A Tee Page](docs/wireframes/mobile-book-a-tee-wireframe.png)
+
+Book A Time Page:
+
+![Mobile Book A Time](docs/wireframes/mobile-book-a-time-wireframe.png)
+
+My Bookings Page:
+
+![Mobile My Bookings Page](docs/wireframes/mobile-my-bookings-wireframe.png)
+
+Edit Tee Date Page:
+
+![Mobile Edit Tee Date Page](docs/wireframes/mobile-edit-tee-wireframe.png)
+
+Edit Tee Time Page:
+
+![Mobile Edit Tee Time Page](docs/wireframes/mobile-edit-time-wireframe.png)
+
+Delete Page:
+
+![Mobile Delete Booking Page](docs/wireframes/mobile-delete-wireframe.png)
 
 </details>
 
