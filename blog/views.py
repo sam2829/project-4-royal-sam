@@ -154,9 +154,7 @@ class LeaveReview(LoginRequiredMixin, View):
             return redirect('reviews')
         else:
 
-            messages.warning(request, 'Something went wrong, please check'
-                             ' form for errors. Note fields should not'
-                             ' contain only spaces.')
+            messages.warning(request, f'{review_form.errors}')
             return render(
                 request,
                 "leave_review.html",
