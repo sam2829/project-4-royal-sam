@@ -81,9 +81,7 @@ class PostDetail(View):
                 },
             )
         else:
-            messages.warning(request, 'Something went wrong, please check'
-                             ' form for errors. Note fields should not'
-                             ' contain only spaces.')
+            messages.warning(request, f'{comment_form.errors}')
             comment_form = CommentForm()
 
         return render(

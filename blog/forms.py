@@ -38,11 +38,11 @@ class CommentForm(forms.ModelForm):
                 f'The maximum allowed characters for the '
                 f'body is {max_length}.')
         return body
-    
+
     # This function restricts the maximum characters in the field
-    #def __init__(self, *args, **kwargs):
-        #super(CommentForm, self).__init__(*args, **kwargs)
-        #self.fields['body'].widget.attrs['maxlength'] = 1000
+    def __init__(self, *args, **kwargs):
+        super(CommentForm, self).__init__(*args, **kwargs)
+        self.fields['body'].widget.attrs['maxlength'] = 1000
 
 
 # This Class is for the Post / review form so that a user can leave a review
@@ -66,8 +66,6 @@ class ReviewForm(forms.ModelForm):
             'content': forms.Textarea(attrs={'maxlength': 1000}),
         }
 
-
-
     # This function is to validate the title field and make
     # sure that maximum characters isn't exceeded
 
@@ -85,7 +83,7 @@ class ReviewForm(forms.ModelForm):
 
     def clean_content(self):
         content = self.cleaned_data.get('content')
-        max_length = 1000 
+        max_length = 1000
         if len(content) > max_length:
             raise forms.ValidationError(
                 f'The maximum allowed characters for the '
