@@ -22,10 +22,6 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('email', 'body',)
-        widgets = {
-            # Set your desired maximum character limit for the body
-            'body': forms.TextInput(attrs={'maxlength': 1000}),
-        }
 
     # This function is to validate the body field and make
     # sure that maximum characters isn't exceeded
@@ -59,12 +55,6 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'content', 'featured_image',)
-        widgets = {
-            # Set your desired maximum character limit for the title
-            'title': forms.TextInput(attrs={'maxlength': 50}),
-            # Set your desired maximum character limit for the content
-            'content': forms.Textarea(attrs={'maxlength': 1000}),
-        }
 
     # This function is to validate the title field and make
     # sure that maximum characters isn't exceeded
