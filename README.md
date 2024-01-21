@@ -87,7 +87,7 @@ This project was developed using agile methodologies by delivering small feature
 
 It was carried out this way to try ensuring that all core requirements were completed first to give the project a complete feel and to make sure the most important user stories were implemented. When clicked on and opened the user story, the user story was assigned a label "must have", "should have" or "could have" so I would know the importance of the user story.
 
-The kanban board was created using Github projects, this helped me be able to see all my user stories and be able to keep track of which ones had been done, to do or in progress.
+The kanban board was created using GitHub projects, this helped me be able to see all my user stories and be able to keep track of which ones had been done, to do or in progress.
 
 ![User Stories Screenshot](docs/readme_screenshots/user-stories-screenshot.png)
 
@@ -309,7 +309,7 @@ The Gallery Image model was also created so that the site admin can upload image
 
 #### Security
 
-In the code I have used if authenticated where needed so that users who are not logged in cannnot access or see information unless logged in.
+In the code I have used if authenticated where needed so that users who are not logged in cannot access or see information unless logged in.
 
 Environment variables were stored in an env.py file for local development for security purposes to ensure that no secret keys, API keys, or any sensitive information was added to the repository. In production, these variables were also added to the Heroku config vars within the project.
 
@@ -382,7 +382,7 @@ Users will be presented by a welcoming message with a background image of the go
 
 ***Register Page***
 
-As a User if I havn't already made an online account, I would like to be able to register an account using the register form from Allauth, so I can then be able to take part in all the site has to offer.
+As a User if I haven't already made an online account, I would like to be able to register an account using the register form from Allauth, so I can then be able to take part in all the site has to offer.
 
 ![Register Screenshot 1](docs/readme_screenshots/register-screenshot-1.png)
 
@@ -390,7 +390,7 @@ As a User if I havn't already made an online account, I would like to be able to
 
 ***Login Page***
 
-As a User if I have already registered an account, I would like to be able to log into my account when ever I wish, whether it to be to book a tee time or leave a review. I would login by using the allauth login form.
+As a User if I have already registered an account, I would like to be able to log into my account whenever I wish, whether it to be to book a tee time or leave a review. I would login by using the allauth login form.
 
 ![Login Page Screenshot 1](docs/readme_screenshots/login-screenshot-1.png)
 
@@ -416,7 +416,7 @@ If the user is logged in, the user is taken to the first part of the booking for
 
 Once the user has filled out the first part of the form correctly, the user will then be asked to fill out the second part of the form where they can easily select which time they would like out of the available times shown, how many players, if they are a member of the golf club and if they require a buggy.
 
-Available times shown will only be times that havn't already been booked and times that havn't already passed.
+Available times shown will only be times that haven't already been booked and times that haven't already passed.
 
 Number of players can only be between numbers 1 and 4.
 
@@ -428,7 +428,7 @@ Once User has successfully booked, they will be redirected to the main my bookin
 
 ***My Bookings Page***
 
-As a User the my bookings page is only available once the user has logged in.
+As a User, the my bookings page is only available once the user has logged in.
 
 If the user has any current bookings this will be displayed in order of their next tee time. Three bookings will be displayed per page and user can click next or previous to paginate through the pages to see all their bookings.
 
@@ -569,7 +569,7 @@ Both error pages will allow the user to easily navigate back to the home page.
 
 ***Error Page 500***
 
-I implememnted and styled a 500 error page that can alert users when an internal server error has occured.
+I implemented and styled a 500 error page that can alert users when an internal server error has occurred.
 
 The error 500 page will allow the user to easily navigate back to the home page of the site.
 
@@ -660,7 +660,7 @@ For version control the following steps were made:
 
 - If any changes were made to my Codeanywhere project.
 - First files were made ready for commit with command - git add filename or git add . to add all files.
-- To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what hanges have occurred.
+- To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what changes have occurred.
 - To then move the changes to GitHub, use the following command - git push
 
 ***Deployment to Heroku***
