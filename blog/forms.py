@@ -61,7 +61,7 @@ class ReviewForm(forms.ModelForm):
         fields = ('title', 'content', 'featured_image',)
         widgets = {
             # Set your desired maximum character limit for the title
-            'title': forms.TextInput(attrs={'maxlength': 200}),
+            'title': forms.TextInput(attrs={'maxlength': 50}),
             # Set your desired maximum character limit for the content
             'content': forms.Textarea(attrs={'maxlength': 1000}),
         }
@@ -71,7 +71,7 @@ class ReviewForm(forms.ModelForm):
 
     def clean_title(self):
         title = self.cleaned_data.get('title')
-        max_length = 200
+        max_length = 50
         if len(title) > max_length:
             raise forms.ValidationError(
                 f'The maximum allowed characters for the '
@@ -95,6 +95,6 @@ class ReviewForm(forms.ModelForm):
     # Also restricts the maximum characcters allowed in the fields
     def __init__(self, *args, **kwargs):
         super(ReviewForm, self).__init__(*args, **kwargs)
-        self.fields['title'].widget.attrs['maxlength'] = 200
+        self.fields['title'].widget.attrs['maxlength'] = 50
         self.fields['content'].widget.attrs['maxlength'] = 1000
         self.fields['featured_image'].required = False
