@@ -74,15 +74,6 @@ h5 {
     background-color: rgba(13, 110, 253, 1);
 }
 
-/* Main section background image */
-
-.bg-image {
-    background-image: url('../background_images/golf-3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 /* main login section */
 
 .main-login {
