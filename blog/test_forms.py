@@ -12,8 +12,15 @@ class TestCommentForm(TestCase):
     def test_comment_form_valid(self):
         # Test the CommentForm is valid with correct data
         # Create user, post to comment on and form data.
-        user = User.objects.create_user(username='testuser', password='testpassword')
-        post = Post.objects.create(title='Test Post', content='Test Content', author=user)
+        user = User.objects.create_user(
+            username='testuser',
+            password='testpassword'
+        )
+        post = Post.objects.create(
+            title='Test Post',
+            content='Test Content',
+            author=user
+        )
         form_data = {'email': 'test@example.com', 'body': 'Test comment body'}
         form = CommentForm(data=form_data)
         # Check form is valid

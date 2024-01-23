@@ -7,7 +7,7 @@ class TestHomeViews(TestCase):
     """
 
     def test_home_view(self):
-        
+
         response = self.client.get('/')
         # Check that the response status code is 200
         self.assertEqual(response.status_code, 200)

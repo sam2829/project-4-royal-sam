@@ -16,4 +16,3 @@ class TestContactUsViews(TestCase):
         self.assertTemplateUsed(response, 'contact_us.html')
         # Check if the Google API key is present
         self.assertIn('GOOGLE_API_KEY', response.context)
-

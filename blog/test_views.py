@@ -22,7 +22,7 @@ class TestPostViews(TestCase):
             approved=True,
             slug='test-post'
         )
-        
+
     def test_post_list_view(self):
         # Test if the PostList view renders successfully
         response = self.client.get(reverse('reviews'))
@@ -31,12 +31,15 @@ class TestPostViews(TestCase):
 
     def test_post_detail_view(self):
         # Test if the PostDetail view renders successfully for a specific post
-        response = self.client.get(reverse('review_details', args=[self.post.slug]))
+        response = self.client.get(
+            reverse('review_details', args=[self.post.slug])
+        )
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'review_details.html')
 
     def test_leave_review_view(self):
-        # Test if the LeaveReview view renders successfully and handles form submission
+        # Test if the LeaveReview view renders successfully and
+        # handles form submission
         self.client.login(username='testuser', password='testpassword')
 
         # Check if the view renders successfully
@@ -47,13 +50,15 @@ class TestPostViews(TestCase):
         # Check if the view handles form submission and redirects
         response_post = self.client.post(
             reverse('leave_review'),
-            data={'title': 'New Review',
-            'content': 'New Content'}
+            data={'title': 'New Review', 'content': 'New Content'}
         )
         self.assertEqual(response_post.status_code, 302)
-  
+
     def test_post_like_view(self):
-        # Test if the PostLike view responds with a redirect when a user likes a post
+        # Test if the PostLike view responds with a
+        # redirect when a user likes a post
         self.client.login(username='testuser', password='testpassword')
-        response = self.client.post(reverse('review_like', args=[self.post.slug]))
+        response = self.client.post(
+            reverse('review_like', args=[self.post.slug])
+        )
         self.assertEqual(response.status_code, 302)

@@ -27,4 +27,3 @@ class TestGalleryViews(TestCase):
         self.assertContains(response, 'image2.jpg')
         # Check that the number of images in the context is correct
         self.assertEqual(len(response.context['images']), 2)
-

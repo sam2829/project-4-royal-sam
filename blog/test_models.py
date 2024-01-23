@@ -55,7 +55,6 @@ class TestPostModel(TestCase):
         another_user.blogpost_like.add(post)
         self.assertEqual(post.number_of_likes(), 2)
 
-    
     def test_post_ordering(self):
         # Test the ordering of posts
         # Create post 1
@@ -143,4 +142,3 @@ class TestCommentModel(TestCase):
         comments = Comment.objects.all()
         self.assertEqual(comments[0], comment1)
         self.assertEqual(comments[1], comment2)
-        
