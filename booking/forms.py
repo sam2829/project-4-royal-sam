@@ -7,7 +7,7 @@ from django import forms
 
 class BookingFormDate(forms.ModelForm):
     """
-    This class is for the booking date form.
+    This class is for booking a date form.
     """
 
     class Meta:
@@ -26,7 +26,7 @@ class BookingFormDate(forms.ModelForm):
 
 class BookingFormTime(forms.ModelForm):
     """
-    This class is for the booking time form.
+    This class is for booking a time form.
     """
     time = forms.ChoiceField(choices=AVAILABLE_TIMES)
 

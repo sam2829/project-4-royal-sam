@@ -280,8 +280,8 @@ class MyBookings(LoginRequiredMixin, generic.ListView):
         ).order_by('date', 'time')
         return bookings
 
-# This class is for the user to edit a booking date
 
+# This class is for the user to edit a booking date
 
 class EditBookingDate(LoginRequiredMixin, View):
     """

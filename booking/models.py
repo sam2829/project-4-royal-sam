@@ -37,7 +37,7 @@ class Booking(models.Model):
     email = models.EmailField()
     date = models.DateField(default=datetime.now)
     time = models.CharField(choices=AVAILABLE_TIMES,
-                            max_length=10, default="7:30")
+                            max_length=10, default="07:30")
     number_of_players = models.CharField(choices=NUMBER_OF_PLAYERS,
                                          max_length=1, default="1")
     member = models.BooleanField(default=False)
@@ -47,8 +47,8 @@ class Booking(models.Model):
 
         ordering = ['date', 'time']
 
-        def __str__(self):
-            return (
-                f"{self.user.username} booked {self.date} at {self.time} for "
-                f"{self.number_of_players} players"
-            )
+    def __str__(self):
+        return (
+            f"{self.user.username} booked {self.date} at {self.time} for "
+            f"{self.number_of_players} players"
+        )
