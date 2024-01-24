@@ -381,3 +381,59 @@ Devices tested and devices using google tools:
 | Users trying to book same booking at the same time. | When two users are going through the booking process at the same time and try to book the same booking, the first user to complete booking but the other user has the page rendered again but doesn't know why and the times aren't now displayed correctly. | I found out that the "is_valid()" function was checking this automatically  for me, so I changed the code so when this happens and the form isn't valid as another user has just made the booking, the user who's booking wasn't valid now has the page rendered again with a message informing them that the booking could now have been taken and to select an available time. The times available are now displaying the correct times. |
 
 [Back to top](#royal-sam-golf-club-testing)
+
+## Automated Testing
+
+In this project I had my first attempt at automated python testing. In this I tried to test as much on the apps as I could. These tests were created to test the functionality of the apps. These can be found in the tests.py files in the respective apps.
+
+***Home***
+
+Views:
+
+![Home Testing Screenshot](docs/testing_screenshots/home-testing-screenshot.png)
+
+***blog***
+
+Views:
+
+![Blog Views Testing Screenshot](docs/testing_screenshots/blog-test-views-screenshot.png)
+
+Models:
+
+![Blog Models Testing Screenshot](docs/testing_screenshots/blog-test-models-screenshot.png)
+
+Forms:
+
+![Blog Forms Testing Screenshot](docs/testing_screenshots/blog-test-forms-screenshot.png)
+
+***booking***
+
+Views:
+
+![Booking Views Testing Screenshot](docs/testing_screenshots/booking-test-views-screenshot.png)
+
+Models:
+
+![Booking Models Testing Screenshot](docs/testing_screenshots/booking-test-models-screenshot.png)
+
+Forms:
+
+![Booking Forms Testing Screenshot](docs/testing_screenshots/booking-test-forms-screenshot.png)
+
+***contact_us***
+
+Views:
+
+![Contact Us Views Testing Screenshot](docs/testing_screenshots/contact-us-test-views-screenshot.png)
+
+***gallery***
+
+Views:
+
+![Gallery Views Testing Screenshot](docs/testing_screenshots/gallery-test-views-screenshot.png)
+
+Models:
+
+![Gallery Models Testing Screenshot](docs/testing_screenshots/gallery-test-models-screenshot.png)
+
+[Back to top](#royal-sam-golf-club-testing)
