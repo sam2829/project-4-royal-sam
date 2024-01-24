@@ -339,9 +339,9 @@ Browser test table:
 
 | Browser Tested | Actual Result | Pass / Fail |
 | --- | --- | --- |
-| Chrome | As Expected | tbc |
-| Firefox | As Expected | tbc |
-| Edge | As Expected | tbc |
+| Chrome | As Expected | Pass |
+| Firefox | As Expected | Pass |
+| Edge | As Expected | Pass |
 
 Devices tested and devices using google tools:
 
