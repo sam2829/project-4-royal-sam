@@ -42,6 +42,7 @@ This is my fourth portfolio project for the Code Institute and my goal with this
   - [Testing](#testing)
   - [Deployment](#deployment)
   - [Credits](#credits)
+  - [Future Additions](#future-additions)
   
 ## User Experience
 
