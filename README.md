@@ -701,3 +701,11 @@ For deployment to Heroku the following steps were made:
 - Mentor Jubril - For helping me realise what's needed to build a good project and also for encouragement and understanding.
 
 [Back to top](#royal-sam-golf-club)
+
+## Future Additions
+
+- Create a forgotten password page so if user has forgotten there password there is a process to create another one.
+- Create a change password option, so if the user feels the need to change their password, when they are logged in there is a process for them to change their password.
+- Email confirmation of booking, so when the user makes a booking they will recieve confirmation to their email.
+- When a user is editing a booking, when they are on the booking time form, all values from that booking are pre selected and not the default values.
+- For myself to carry out more python testing and cover in more detail.
