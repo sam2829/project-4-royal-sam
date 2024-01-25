@@ -78,7 +78,9 @@ class TestBookingViews(TestCase):
         )
         # Simulate a logged-in user
         self.client.force_login(self.user)
-        response = self.client.get(reverse('confirm_delete', args=[booking.id]))
+        response = self.client.get(
+            reverse('confirm_delete', args=[booking.id])
+        )
         # Check that user is being taken to the delete page
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'confirm_delete.html')
@@ -101,7 +103,9 @@ class TestBookingViews(TestCase):
             password='otherpassword'
         )
         self.client.force_login(other_user)
-        response = self.client.get(reverse('confirm_delete', args=[booking.id]))
+        response = self.client.get(
+            reverse('confirm_delete', args=[booking.id])
+        )
         # Check that user is being taken to 403 Forbidden page
         self.assertEqual(response.status_code, 403)
         self.assertTemplateUsed(response, '403.html')
@@ -120,7 +124,9 @@ class TestBookingViews(TestCase):
         )
         # Simulate a logged-in user
         self.client.force_login(self.user)
-        response = self.client.get(reverse('delete_booking', args=[booking.id]))
+        response = self.client.get(
+            reverse('delete_booking', args=[booking.id])
+        )
         # Check that user is redirected to my bookings after delete
         self.assertRedirects(response, reverse('my_bookings'))
 
@@ -142,7 +148,9 @@ class TestBookingViews(TestCase):
             password='otherpassword'
         )
         self.client.force_login(other_user)
-        response = self.client.get(reverse('delete_booking', args=[booking.id]))
+        response = self.client.get(
+            reverse('delete_booking', args=[booking.id])
+        )
         # Check that user is being taken to 403 Forbidden page
         self.assertEqual(response.status_code, 403)
         self.assertTemplateUsed(response, '403.html')
@@ -151,6 +159,6 @@ class TestBookingViews(TestCase):
         # Log in the user
         self.client.login(username='testuser', password='testpassword')
 
-        # # Check that user is being taken my bookings page
+        # Check that user is being taken my bookings page
         response = self.client.get(reverse('my_bookings'))
         self.assertEqual(response.status_code, 200)
