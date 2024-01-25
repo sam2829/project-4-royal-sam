@@ -314,7 +314,7 @@ An entity relationship diagram was created using Lucidchart to show the schemas 
 
 #### Security
 
-In the code I have used if authenticated where needed so that users who are not logged in cannot access or see information unless logged in.
+In the code I have used if authenticated and LoginRequiredMixin where needed so that users who are not logged in cannot access or see information unless logged in. I also checked that the user who is logged in is the same as the user of the booking to protect the users bookings. If they weren't a 403 error would render.
 
 Environment variables were stored in an env.py file for local development for security purposes to ensure that no secret keys, API keys, or any sensitive information was added to the repository. In production, these variables were also added to the Heroku config vars within the project.
 
