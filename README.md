@@ -308,6 +308,10 @@ The Booking model is also linked directly to the built in User Model so all book
 
 The Gallery Image model was also created so that the site admin can upload images of the golf course when they please.
 
+An entity relationship diagram was created using Lucidchart to show the schemas for each of the models and how they are related.
+
+![ERD Screenshot](docs/readme_screenshots/ERD-screenshot.png)
+
 #### Security
 
 In the code I have used if authenticated where needed so that users who are not logged in cannot access or see information unless logged in.
