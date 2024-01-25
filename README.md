@@ -664,6 +664,25 @@ For version control the following steps were made:
 - To commit the changes using the following command - git commit -m "This is my commit" Note the brief description at the end of the command to make you aware of what changes have occurred.
 - To then move the changes to GitHub, use the following command - git push
 
+***Clone Repo***
+
+Creating a clone allows you to make a copy of the repository at the specific point in time. This lets you run a copy of the project locally. This can be done by:
+
+- Navigate to the repository you choose to clone in your GitHub.
+- Clicking on the the arrow of the green button named "Code" at the top of the file.
+- Then select "Local" then under local select "HTTPS" and then copy that url.
+- Navigate to your code editor and within the terminal change the directory to the location you wish to clone the repository to.
+- Type "git clone" and paste the copied HTTPS link from GitHub.
+- Press enter and git will clone the repository to your local machine.
+
+***Forking the GitHub Repository***
+
+Forking the GitHub repository allows you to make a copy of the original repository on your GitHub account to view and make changes without it effecting the original repository. This can be done by:
+
+- Log in to your GitHub account and locate the repository you wish to fork.
+- Near the top of the page, under the "settings" button going across the page, you should see a button saying "Fork".
+- Click the "Fork" button and you should now have a copy of the original repository in your GitHub account.
+
 ***Deployment to Heroku***
 
 For deployment to Heroku the following steps were made:
