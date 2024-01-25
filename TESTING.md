@@ -329,6 +329,18 @@ Due to Django templating language code used in the HTML files, these files could
 
 ![W3C Markup Validator Screenshot](docs/testing_screenshots/HTML-validator-screenshot.png)
 
+During using W3C Markup Validator, I came across errors in the Allauth signup.html. These errors I was not able to rectify as they were all pre-set by Allauth inside their tags so I was unable to modify in my code.
+
+Errors:
+
+![Signup Html Error Screenshot](docs/testing_screenshots/html-error-1.png)
+
+![Signup Html Error Screenshot](docs/testing_screenshots/html-error-2.png)
+
+My code:
+
+![Signup Allauth Html](docs/testing_screenshots/sign-up-html.png)
+
 [Back to top](#royal-sam-golf-club-testing)
 
 ## Responsiveness
