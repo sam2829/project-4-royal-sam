@@ -48,7 +48,7 @@ This is my fourth portfolio project for the Code Institute and my goal with this
 
 ### The Strategy Plane
 
-Royal Sam Golf Club is intended to help golfers be able to book tee times to play at the golf course whether they are a member of a guest of the golf club. User will also be able to manage their bookings and be able to leave reviews and comment on other reviews.
+Royal Sam Golf Club is intended to help golfers be able to book tee times to play at the golf course whether they are a member or a guest of the golf club. User will also be able to manage their bookings and be able to leave reviews and comment on other reviews.
 
 #### The Ideal User
 
@@ -302,7 +302,7 @@ Delete Page:
 
 #### Database Schema
 
-The profile model is linked directly to the built in User Model in conjunction with Django Allauth with the user profile being created when the user registers with the site. The Post (reviews) model has a relationship with the User model by foreign key, this allows for the reviews left to be linked back to the specific user and their profile. The comment model is linked by foreign key to the Post model (reviews) to store comments for the specific review.
+The profile model is linked directly to the built in User Model in conjunction with Django Allauth with the user profile being created when the user registers with the site. The Post (reviews) model has a relationship with the User model by foreign key, this allows for the reviews to be linked back to the specific user and their profile. The comment model is linked by foreign key to the Post model (reviews) to store comments for the specific review.
 
 The Booking model is also linked directly to the built in User Model so all bookings to be linked back to the specific user.
 
@@ -367,7 +367,7 @@ Mobile Device:
 
 ***Footer***
 
-The footer is placed at the bottom of ever page. The social media links are displayed with icons provided by Font Awesome. This is where the user can click on one of the social media links and reach out for news and updates, these icons will also open up in new tabs as they will lead the user away from the site.
+The footer is placed at the bottom of every page. The social media links are displayed with icons provided by Font Awesome. This is where the user can click on one of the social media links and reach out for news and updates, these icons will also open up in new tabs as they will lead the user away from the site.
 
 There is also contact information in the form of email address and telephone number.
 
@@ -395,7 +395,7 @@ As a User if I haven't already made an online account, I would like to be able t
 
 ***Login Page***
 
-As a User if I have already registered an account, I would like to be able to log into my account whenever I wish, whether it to be to book a tee time or leave a review. I would login by using the allauth login form.
+As a User if I have already registered an account, I would like to be able to log into my account whenever I wish, whether it to be to book a tee time or leave a review. I would login by using the Allauth login form.
 
 ![Login Page Screenshot 1](docs/readme_screenshots/login-screenshot-1.png)
 
@@ -673,8 +673,8 @@ For version control the following steps were made:
 Creating a clone allows you to make a copy of the repository at the specific point in time. This lets you run a copy of the project locally. This can be done by:
 
 - Navigate to the repository you choose to clone in your GitHub.
-- Clicking on the the arrow of the green button named "Code" at the top of the file.
-- Then select "Local" then under local select "HTTPS" and then copy that url.
+- Clicking on the arrow of the green button named "Code" at the top of the file.
+- Then select "Local" then under local select "HTTPS" and then copy that URL.
 - Navigate to your code editor and within the terminal change the directory to the location you wish to clone the repository to.
 - Type "git clone" and paste the copied HTTPS link from GitHub.
 - Press enter and git will clone the repository to your local machine.
@@ -728,10 +728,10 @@ For deployment to Heroku the following steps were made:
 
 ## Future Additions
 
-- Create a forgotten password page so if user has forgotten there password there is a process to create another one.
+- Create a forgotten password page so if user has forgotten their password there is a process to create another one.
 - Create a change password option, so if the user feels the need to change their password, when they are logged in there is a process for them to change their password.
-- Email confirmation of booking, so when the user makes a booking they will recieve confirmation to their email.
-- When a user is editing a booking, when they are on the booking time form, all values from that booking are pre selected and not the default values.
+- Email confirmation of booking, so when the user makes a booking they will receive confirmation to their email.
+- When a user is editing a booking, when they are on the booking time form, all values from that booking are pre-selected and not the default values.
 - For myself to carry out more python testing and cover in more detail.
 
 [Back to top](#royal-sam-golf-club)
